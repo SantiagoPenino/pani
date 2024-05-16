@@ -1,0 +1,46 @@
+---
+import Navbar from "./Navbar.astro";
+---
+
+<header class="sticky bg-white flex w-full top-0 justify-between items-center py-2 px-8">
+  <a href="/">
+    <img class="h-10" src="/logo.webp" alt="logo de pani construcciones" />
+  </a>
+  <input class="z-10 inline-flex hidden" type="checkbox" id="check" />
+  <label class="z-10 cursor-pointer inline-flex lg:hidden" for="check">
+    <svg
+      id="menu"
+      class="block"
+      width="48"
+      height="48"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="#018fd0"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M4 6l16 0"></path>
+      <path d="M4 12l16 0"></path>
+      <path d="M4 18l16 0"></path>
+    </svg>
+    <svg
+      id="close"
+      class="hidden"
+      width="48"
+      height="48"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="#018fd0"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path d="M18 6l-12 12"></path>
+      <path d="M6 6l12 12"></path>
+    </svg>
+  </label>
+  <Navbar />
+</header>
