@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import WhatsappButton from "../components/WhatsappButton.astro";
 interface Props {
   title: string;
 }
@@ -17,7 +18,8 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-white">
+  <body class="bg-white relative">
+    <WhatsappButton/>
     <Header />
     <main>
       <slot />
