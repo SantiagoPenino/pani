@@ -3,9 +3,9 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Pani Construcciones">
-  <div class="h-screen">
+  <section class="h-screen flex flex-col justify-around items-center">
     <div
-      class="my-1 p-4 bg-[url('/hero.jpg')] bg-cover bg-no-repeat h-[200px] w-full flex justify-center items-center"
+      class="mt-10 bg-[url('/hero.jpg')] bg-cover bg-no-repeat min-h-[200px] w-full flex justify-center items-center"
     >
       <strong
         class="text-2xl uppercase text-white text-center style-text-shadow leading-relaxed"
@@ -14,22 +14,20 @@ import Layout from "../layouts/Layout.astro";
         manos!
       </strong>
     </div>
-    <section>
-      <h1 class="font[Montserrat] font-bold text-2xl text-center uppercase p-6">
+      <h1 class="font[Montserrat] font-bold text-2xl text-center uppercase px-2">
         Proyectos llave en mano
       </h1>
-      <p class="px-4 text-center line-clamp-2">
+      <p class="px-4 text-center">
         Usted tiene el terreno, nosotros construimos y le entregamos las llaves
         de su casa!
       </p>
-      <p class="py-6 px-4 text-center font-bold line-clamp-3">
+      <p class="px-2 text-center font-bold">
         Por asesoramiento contactenos por <span class="text-custom-blue"
           >Correo</span
         > o a través de <span class="text-custom-blue">Whatsapp</span> acerca de
         todas las posibilidades.
       </p>
     </section>
-  </div>
 </Layout>
 
 <style>
