@@ -1,37 +1,61 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Cards from "../components/Cards.astro";
+import { premium } from "../components/CardsData.astro";
+import { executivePlus } from "../components/CardsData.astro";
 ---
 
 <Layout title="Pani Construcciones">
   <section class="min-h-screen flex flex-col justify-between items-center">
     <div
-      class="flex-grow mt-12 bg-[url('/hero.jpg')] bg-cover bg-center bg-no-repeat min-h-[200px] w-full lg:h-screen flex justify-center items-center"
+      class="flex-grow mt-12 lg:mt-0 bg-[url('/hero.jpg')] bg-cover bg-center bg-no-repeat min-h-[200px] w-full lg:h-screen flex justify-center items-center"
     >
       <strong
-        class="text-3xl lg:text-7xl uppercase  text-white text-center style-text-shadow leading-relaxed lg:leading-[6rem]"
+        class="text-3xl lg:text-7xl uppercase text-white text-center style-text-shadow leading-relaxed lg:leading-[6rem]"
       >
         Si tienes un terreno... <br /> La llave de tus sueños <br /> ¡está en tus
         manos!
       </strong>
     </div>
     <div class="flex flex-col flex-grow justify-evenly">
-      <h1 class="font[Montserrat] font-bold text-2xl lg:text-5xl text-center uppercase p-2 lg:pt-10 lg:pb-4 ">
+      <h1
+        class="font[Montserrat] font-bold text-2xl lg:text-5xl text-center uppercase p-2 lg:pt-10 lg:pb-4 lg:mt-10"
+      >
         Proyectos llave en mano
       </h1>
-      <p class="px-2 text-center lg:pb-4">
-        Usted tiene el terreno, nosotros construimos <br /> y le entregamos las llaves
+      <p class="px-2 text-center lg:pb-4 line-clamp-2">
+        Usted tiene el terreno, nosotros construimos y le entregamos las llaves
         de su casa!
       </p>
-      <p class="p-2 mb-2 text-center font-bold line-clamp-3">
-        Por asesoramiento contactenos por <a href="mailto:info@steelframingmontevideo.com.uy"><span class="text-custom-blue"
-          >Correo</span
-        ></a> o a través de <a href="https://wa.me/598099491227"><span class="text-custom-blue">Whatsapp</span></a> acerca de
-        todas las posibilidades.
+      <p class="p-2 lg:mb-20 text-center font-bold line-clamp-3">
+        Por asesoramiento contactenos por <a
+          href="mailto:info@steelframingmontevideo.com.uy"
+          ><span class="text-custom-blue">Correo</span></a
+        > o a través de <a href="https://wa.me/598099491227"
+          ><span class="text-custom-blue">Whatsapp</span></a
+        > acerca de todas las posibilidades.
       </p>
     </div>
   </section>
   <section>
-    
+    <div class="w-[80%] flex flex-col mx-auto">
+      <h2
+        class="uppercase font-bold py-2 px-4 text-2xl mb-4 text-center w-full bg-custom-blue text-white"
+      >
+        Línea Premium (U$S 1690/<span class="normal-case">m&sup2</span>)
+      </h2>
+      <div class="flex flex-wrap justify-center">
+        {premium.map((card) => <Cards {...card} />)}
+      </div>
+      <h2
+        class="uppercase font-bold py-2 px-4 text-2xl m-4 text-center w-full bg-custom-blue text-white"
+      >
+        Línea ejecutiva plus (U$S 1550/<span class="normal-case">m&sup2</span>)
+      </h2>
+      <div class="flex flex-wrap justify-center">
+        {executivePlus.map((card) => <Cards {...card} />)}
+      </div>
+    </div>
   </section>
 </Layout>
 

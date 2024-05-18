@@ -2,7 +2,10 @@
 import Navbar from "./Navbar.astro";
 ---
 
-<header class="fixed bg-white flex w-full top-0 justify-between items-center py-1 px-8">
+<header
+  id="header"
+  class="fixed bg-white flex w-full top-0 justify-between items-center py-1 px-8 z-10 shadow-md transition-top duration-500"
+>
   <a href="/">
     <img class="h-14" src="/logo.webp" alt="logo de pani construcciones" />
   </a>
@@ -44,3 +47,18 @@ import Navbar from "./Navbar.astro";
   </label>
   <Navbar />
 </header>
+
+<script>
+  let lastScrollTop = 0;
+  let header = document.getElementById("header");
+
+  window.addEventListener("scroll", function () {
+    let currentScroll =
+      window.scrollY ||
+      window.pageYOffset ||
+      document.documentElement.scrollTop;
+    header.style.top =
+      currentScroll > lastScrollTop && currentScroll > 200 ? "-100px" : "0";
+    lastScrollTop = currentScroll;
+  });
+</script>
