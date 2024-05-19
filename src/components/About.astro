@@ -3,23 +3,23 @@ import { servicios } from "../components/Servicios.astro";
 import CallToAction from "./CallToAction.astro";
 ---
 
-<div class="bg-custom-white mt-10 grid grid-cols-1 md:grid-cols-2 w-full p-8">
+<div class="bg-custom-white mt-10 grid grid-cols-1 md:grid-cols-2 w-full p-8 pb-10">
   <div class="lg:col-span-1 flex flex-col items-center px-4 w-full">
     <img class="h-20" src="/logo.webp" alt="logo de pani construcciones" />
-    <h3 class="font-[Montserrat] uppercase font-bold text-2xl mt-8 mb-2">¿Por qué elegirnos?</h3>
-    <p class="w-[90%] py-6 px-10 leading-loose">
+    <h3 class="font-[Montserrat] uppercase font-bold text-xl md:text-2xl mt-8 mb-2">¿Por qué elegirnos?</h3>
+    <p class="w-[90%] py-6 lg:px-10 leading-loose">
         Pani Construcciones es una empresa de larga trayectoria en la construcción de proyectos basados en Steel Framing, construcción en seco y construcción tradicional.
     </p>
-    <p class="w-[90%] py-4 px-10 leading-loose">
+    <p class="w-[90%] py-4 lg:px-10 leading-loose">
         Nos especializamos en nuevos proyectos y ampliaciones usando la última tecnología en construcción.
     </p>
-    <a href="/proyectos" class=" m-2 uppercase text-custom-blue border-2 border-custom-blue py-2 px-4 rounded hover:bg-custom-blue hover:text-white active:scale-90">
+    <a href="/proyectos" class=" my-4 lg:m-2 uppercase text-custom-blue border-2 border-custom-blue py-2 px-4 rounded lg:hover:bg-custom-blue lg:hover:text-white lg:active:scale-90">
         Nuestros trabajos
       </a>
       
   </div>
   <div class="lg:col-span-1 flex flex-col items-center w-full">
-    <div class="mb-2 text-center flex flex-col justify-center items-center">
+    <div class="mt-4 lg:mt-4 lg:mb-2 text-center flex flex-col justify-center items-center">
     <svg
       fill="none"
       width="100"
@@ -39,11 +39,11 @@ import CallToAction from "./CallToAction.astro";
     </svg>
     <h3 class="font-[Montserrat] uppercase font-bold text-2xl mt-6 mb-2">Nuestros servicios</h3>
 </div>
-    <ul class="lg:grid lg:grid-cols-2 list-disc list-inside gap-1 py-4">
+    <ul class="grid grid-cols-1 lg:grid-cols-2 list-disc list-inside lg:gap-1 py-4">
       {servicios.map((servicio) => <li class="py-1 border-b border-gray-200 last:border-0">{servicio}</li>)}
     </ul>
   </div>
-  <div class="lg:col-span-2 flex flex-col justify-evenly items-center px-2 m-2">
+  <div class="md:col-span-2 flex flex-col justify-evenly items-center px-2 m-2">
     <svg
       fill="none"
       width="100"
@@ -60,7 +60,7 @@ import CallToAction from "./CallToAction.astro";
       ></path>
       <path d="M9 12l2 2l4 -4"></path>
     </svg>
-    <strong class="font-[Montserrat] uppercase text-xl lg:text-2xl mt-4 mb-8">¡La mejor calidad/precio del mercado!</strong>
+    <strong class="font-[Montserrat] uppercase text-center text-xl lg:text-2xl mt-4 mb-10">¡La mejor calidad/precio del mercado!</strong>
     <CallToAction/>
   </div>
 </div>
