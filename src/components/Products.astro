@@ -9,7 +9,7 @@ import { premium, executivePlus, executive, basic } from "../components/CardsDat
     >
       Línea Premium (U$S 1690/<span class="normal-case">m&sup2</span>)
     </h2>
-    <div class="flex flex-wrap justify-center">
+    <div class="grid flex-wrap justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {premium.map((card) => <Cards {...card} />)}
     </div>
     <h2
@@ -17,7 +17,7 @@ import { premium, executivePlus, executive, basic } from "../components/CardsDat
     >
       Línea ejecutiva plus (U$S 1550/<span class="normal-case">m&sup2</span>)
     </h2>
-    <div class="flex flex-wrap justify-center">
+    <div class="grid flex-wrap justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {executivePlus.map((card) => <Cards {...card} />)}
     </div>
     <h2
@@ -25,7 +25,7 @@ import { premium, executivePlus, executive, basic } from "../components/CardsDat
     >
       Línea ejecutiva (U$S 1485/<span class="normal-case">m&sup2</span>)
     </h2>
-    <div class="flex flex-wrap justify-center">
+    <div class="grid flex-wrap justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {executive.map((card) => <Cards {...card} />)}
     </div>
     <h2
@@ -33,6 +33,6 @@ import { premium, executivePlus, executive, basic } from "../components/CardsDat
     >
       Línea básica (U$S 1425/<span class="normal-case">m&sup2</span>)
     </h2>
-    <div class="flex flex-wrap justify-center">
+    <div class="grid flex-wrap justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {basic.map((card) => <Cards {...card} />)}
     </div>
