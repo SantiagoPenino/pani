@@ -1,6 +1,5 @@
 ---
 interface Props {
-  code: string;
   imgSrc: string;
   imgAlt: string;
   price: string;
@@ -9,13 +8,13 @@ interface Props {
   bathrooms: string;
 }
 
-const {code, imgSrc, imgAlt, price, size, bedrooms, bathrooms } = Astro.props;
+const {imgSrc, imgAlt, price, size, bedrooms, bathrooms } = Astro.props;
 ---
-<a href={`/productos/${code}`} class="block">
-<div class="flex flex-col p-4 rounded transition-transform hover:scale-110">
-  <img class="w-80 rounded-t-lg object-cover" src=`/productos/${imgSrc}.webp` alt={imgAlt} />
+<a href={`/productos/${imgSrc}`} class="block">
+<div class="flex flex-col py-4 md:px-4 rounded transition-transform hover:scale-110 w-full md:w-80">
+  <img class=" rounded-t-lg object-cover" src=`/productos/${imgSrc}.webp` alt={imgAlt} />
   <div
-    class="flex w-80 bg-custom-gray text-white justify-between p-3 rounded-b-lg"
+    class="flex  bg-custom-gray text-white justify-between p-3 rounded-b-lg"
   >
     <div>
       <p>{`U$S ${price}`}</p>
