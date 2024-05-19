@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro"
+import {premium, executivePlus, executive, basic} from "../components/CardsData.astro";
+
+const allCards = [...premium, ...executivePlus, ...executive, ...basic];
+
+export async function getStaticPaths(){
+    return allCards.map((card) => ({params: {imgSrc: card.imgSrc}}))
+}
+
+const { imgSrc } = Astro.params;
+const cardData = allCards.find((card) => card.imgSrc === imgSrc);
+
+if(!cardData){
+    throw new Error(`No se encontró un producto con el código ${imgSrc}`);
+    }
+
+const {imgAlt, price, size, bedrooms, bathrooms} = cardData;
+---
+
+<Layout title=`Código: ${[imgSrc]}`>
+<h1>{[imgAlt]}</h1>
+<h1>{[price]}</h1>
+<h1>{[size]}</h1>
+<h1>{[bedrooms]}</h1>
+<h1>{[bathrooms]}</h1>
+
+<h1>Código {[imgSrc]}</h1>
+</Layout>
