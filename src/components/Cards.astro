@@ -8,24 +8,33 @@ interface Props {
   bathrooms: string;
 }
 
-const {imgSrc, imgAlt, price, size, bedrooms, bathrooms } = Astro.props;
+const { imgSrc, imgAlt, price, size, bedrooms, bathrooms } = Astro.props;
 ---
+
 <a href={`/productos/${imgSrc}`} class="block">
-<div class="flex flex-col py-4 md:p-4 lg:p-6 rounded transition-transform items-center lg:hover:scale-110 w-full flex-grow">
-  <img class="w-full md:rounded-t-lg object-cover" src=`/productos/${imgSrc}.webp` alt={imgAlt} />
   <div
-    class="w-full flex bg-custom-gray text-white justify-between p-3 md:rounded-b-lg"
+    class="flex flex-col py-4 md:p-4 lg:p-6 rounded transition-transform items-center w-full flex-grow"
   >
-    <div>
-      <p>{`U$S ${price}`}</p>
+    <div class="w-full h-full overflow-hidden">
+      <img
+        class="w-full md:rounded-t-lg object-cover lg:hover:scale-150 transition-transform duration-300" 
+        src=`/productos/${imgSrc}.webp`
+        alt={imgAlt}
+      />
     </div>
-    <div class="flex">
-      <p>{`${size}m²`}</p>
-      <div class="h-6 w-1 bg-custom-blue mx-2"></div>
-      <p>{`${bedrooms}D`}</p>
-      <div class="h-6 w-1 bg-custom-blue mx-2"></div>
-      <p>{`${bathrooms}B`}</p>
+    <div
+      class="w-full flex bg-custom-gray text-white justify-between p-3 md:rounded-b-lg"
+    >
+      <div>
+        <p>{`U$S ${price}`}</p>
+      </div>
+      <div class="flex">
+        <p>{`${size}m²`}</p>
+        <div class="h-6 w-1 bg-custom-blue mx-2"></div>
+        <p>{`${bedrooms}D`}</p>
+        <div class="h-6 w-1 bg-custom-blue mx-2"></div>
+        <p>{`${bathrooms}B`}</p>
+      </div>
     </div>
   </div>
-</div>
 </a>
