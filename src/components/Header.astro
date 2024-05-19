@@ -6,9 +6,11 @@ import Navbar from "./Navbar.astro";
   id="header"
   class="fixed bg-white flex w-full top-0 justify-between items-center py-1 px-8 z-10 shadow-md transition-top duration-500"
 >
-  <a href="/">
-    <img class="h-14" src="/logo.webp" alt="logo de pani construcciones" />
+  <a class="flex justify-center items-center" href="/">
+    <img class="h-10" src="/logo.png" alt="logo de pani construcciones" />
+    <p class="text-custom-blue text-xl uppercase font-[Montserrat] pt-3 pb-2 px-2 font-bold">Pani Construcciones</p>
   </a>
+
   <input class="z-10 inline-flex hidden" type="checkbox" id="check" />
   <label class="z-10 cursor-pointer inline-flex lg:hidden" for="check">
     <svg
@@ -18,7 +20,7 @@ import Navbar from "./Navbar.astro";
       height="48"
       viewBox="0 0 24 24"
       stroke-width="2"
-      stroke="#008fd0"
+      stroke="#006494"
       fill="none"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -35,7 +37,7 @@ import Navbar from "./Navbar.astro";
       height="48"
       viewBox="0 0 24 24"
       stroke-width="1.5"
-      stroke="#008fd0"
+      stroke="#006494"
       fill="none"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -55,7 +57,6 @@ import Navbar from "./Navbar.astro";
   window.addEventListener("scroll", function () {
     let currentScroll =
       window.scrollY ||
-      window.pageYOffset ||
       document.documentElement.scrollTop;
     header.style.top =
       currentScroll > lastScrollTop && currentScroll > 200 ? "-100px" : "0";
