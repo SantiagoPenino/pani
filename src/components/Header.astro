@@ -8,9 +8,32 @@ import Navbar from "./Navbar.astro";
 >
   <a class="flex justify-center items-center" href="/">
     <img class="h-10" src="/logo.png" alt="logo de pani construcciones" />
-    <p class="text-custom-blue text-xl uppercase font-[Montserrat] pt-3 pb-2 px-2 font-bold">Pani Construcciones</p>
+    <p
+      class="text-custom-blue text-xl uppercase font-[Montserrat] pt-3 pb-2 px-2 font-bold"
+    >
+      Pani Construcciones
+    </p>
   </a>
 
+  <Navbar />
+  <div class="items-center flex">
+    <a
+      class="hover:scale-110 transition-transform duration-300"
+      href="https://www.facebook.com/PaniConstrucciones2022"
+      target="_blank"
+      ><img class="h-10" src="/social/facebook.svg" alt="logo de facebook" /></a
+    >
+    <a
+      class="hover:scale-110 transition-transform duration-300"
+      href="https://www.instagram.com/pani_construcciones"
+      target="_blank"
+      ><img
+        class="h-10"
+        src="/social/instagram.svg"
+        alt="logo de instagram"
+      /></a
+    >
+  </div>
   <input class="z-10 inline-flex hidden" type="checkbox" id="check" />
   <label class="z-10 cursor-pointer inline-flex lg:hidden" for="check">
     <svg
@@ -47,7 +70,6 @@ import Navbar from "./Navbar.astro";
       <path d="M6 6l12 12"></path>
     </svg>
   </label>
-  <Navbar />
 </header>
 
 <script>
@@ -55,9 +77,7 @@ import Navbar from "./Navbar.astro";
   let header = document.getElementById("header");
 
   window.addEventListener("scroll", function () {
-    let currentScroll =
-      window.scrollY ||
-      document.documentElement.scrollTop;
+    let currentScroll = window.scrollY || document.documentElement.scrollTop;
     header.style.top =
       currentScroll > lastScrollTop && currentScroll > 200 ? "-100px" : "0";
     lastScrollTop = currentScroll;

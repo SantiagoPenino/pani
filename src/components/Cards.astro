@@ -1,6 +1,6 @@
 ---
 interface Props {
-  imgSrc: string;
+  code: string;
   imgAlt: string;
   price: string;
   size: string;
@@ -8,32 +8,32 @@ interface Props {
   bathrooms: string;
 }
 
-const { imgSrc, imgAlt, price, size, bedrooms, bathrooms } = Astro.props;
+const { code, imgAlt, price, size, bedrooms, bathrooms } = Astro.props;
 ---
 
-<a href={`/${imgSrc}`} class="block">
+<a href={`/${code}`} class="block">
   <div
     class="flex flex-col py-4 md:p-4 lg:p-6 rounded transition-transform items-center w-full flex-grow"
   >
     <div class="w-full h-full overflow-hidden">
       <img
         class="w-full md:rounded-t-lg object-cover lg:hover:scale-150 transition-transform duration-300" 
-        src=`/productos/${imgSrc}.webp`
+        src=`/productos/${code}.webp`
         alt={imgAlt}
       />
     </div>
     <div
       class="w-full flex bg-custom-gray text-white justify-between p-3 md:rounded-b-lg"
     >
-      <div>
+      <div class="flex items-center">
         <p>{`U$S ${price}`}</p>
       </div>
-      <div class="flex">
+      <div class="flex items-center">
         <p>{`${size}m²`}</p>
-        <div class="h-6 w-1 bg-custom-blue mx-2"></div>
-        <p>{`${bedrooms}D`}</p>
-        <div class="h-6 w-1 bg-custom-blue mx-2"></div>
-        <p>{`${bathrooms}B`}</p>
+        <div class="h-6 w-1 bg-custom-blue mx-1 flex items-center"></div>
+        <>{bedrooms}<img class="pl-1 h-5" src="/productos/icons/bedroom.svg" alt="bed icon" /></>
+        <div class="h-6 w-1 bg-custom-blue mx-1 items-center"></div>
+        <>{bathrooms}<img class="pl-1 h-5" src="/productos/icons/bathroom.svg" alt="bath icon"/></>
       </div>
     </div>
   </div>

@@ -1,0 +1,101 @@
+---
+import Layout from "../layouts/Layout.astro";
+import About from "../components/About.astro";
+import { allProducts } from "../products.js";
+
+export function getStaticPaths() {
+  const paths = allProducts.map((product) => ({
+    params: { code: product.code },
+  }));
+
+  return paths;
+}
+const { code } = Astro.params;
+const productData = allProducts.find((product) => product.code === code);
+
+if (!productData) {
+  return {
+    notFound: true,
+  };
+}
+
+const {
+  imgAlt,
+  price,
+  size,
+  line,
+  roof,
+  description,
+  cover,
+  paint,
+  serie,
+  counter,
+  estimated,
+} = productData;
+---
+
+<Layout title={`Código: ${code}`}>
+  <div class="w-full">
+    <div
+      class="flex justify-between items-center px-10 py-2 bg-custom-gray text-white font-[Montserrat]"
+    >
+      <h1 class="text-2xl font-bold uppercase">{line}</h1>
+      <h2 class="text-2xl uppercase font-bold">Código: {code}</h2>
+    </div>
+    <div class="w-full flex justify-center">
+      <img src={`/productos/${code}.webp`} alt={imgAlt} />
+    </div>
+    <div class="p-4 w-full flex justify-center items-center">
+      <div class="w-full flex flex-col items-start justify-center pl-20">
+        <h2
+          class="font-bold pt-4 pb-2 text-xl border-b-4 border-custom-blue inline-block"
+        >
+          {size}m² | Techo {roof}
+        </h2>
+        <p class="p-4">{description}</p>
+        <h2
+          class="uppercase font-bold pb-2 text-xl border-b-4 border-custom-blue inline-block"
+        >
+          Características
+        </h2>
+        <ul class="list-disc list-inside p-4 space-y-2">
+          <li>Cimentación de platea de hormigón reforzada.</li>
+          <li>Muros de perfilería de Steel Framing (acero galvanizado).</li>
+          <li>Cubierta de Isopanel de {cover}</li>
+          <li>
+            Revestimiento con escudo térmico (sístema EIFS) en exteriores.
+          </li>
+          <li>Terminación exterior con revoque fino.</li>
+          <li>Pintura interior {paint}.</li>
+          <li>Pintura exterior Sherwin Williams Loxon.</li>
+          <li>Aberturas en aluminio serie {serie}.</li>
+          <li>Mosquiteros en aberturas de aluminio.</li>
+          <li>Pisos y revestimientos de porcelanato.</li>
+          <li>Loza sanitaria y griferías.</li>
+          <li>{counter} de granito, color a elección.</li>
+          <li>
+            Muebles en melaminico 18mm, diseño a medida y color a elección.
+          </li>
+          <li>
+            Instalación sanitaria y eléctrica completas según reglamentos y
+            ordenanzas vigentes.
+          </li>
+        </ul>
+      </div>
+      <div class="w-full flex flex-col justify-center items-center">
+        <p class="py-4">Tiempo de obra: {estimated} días hábiles.</p>
+        <p class="text-custom-blue font-bold text-5xl">U$S {price}</p>
+        <p class="text-sm font-bold italic">con terminación de techo {roof}</p>
+        <p class="py-4 w-[75%]">
+          Se incluye mano de obra, materiales, anteproyecto y proyecto
+          ejecutivo. Trámites, gestiones y pagos ante BPS, DGI, MTSS, FOCER e
+          Intendencia.
+        </p>
+        <p class="text-sm font-bold">
+          (*) Consultar por opcionales y accesorios.
+        </p>
+      </div>
+    </div>
+    <About />
+  </div>
+</Layout>

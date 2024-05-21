@@ -1,38 +1,34 @@
 ---
 import Cards from "../components/Cards.astro";
-import { premium, executivePlus, executive, basic } from "../components/CardsData.astro";
+import {premium, executivePlus, executive, basic} from "../products.js"
 ---
 
 <div class="w-full md:w-[80%] flex flex-col mx-auto">
     <h2
       class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full bg-custom-blue text-white md:rounded-lg font-[Montserrat]"
     >
-      Línea Premium (U$S 1690/<span class="normal-case">m&sup2</span>)
-    </h2>
+      Línea Premium</h2>
     <div class="grid flex-wrap justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {premium.map((card) => <Cards {...card} />)}
     </div>
     <h2
       class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full bg-custom-blue text-white md:rounded-lg font-[Montserrat]"
     >
-      Línea ejecutiva plus (U$S 1550/<span class="normal-case">m&sup2</span>)
-    </h2>
+      Línea ejecutiva plus</h2>
     <div class="grid flex-wrap justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {executivePlus.map((card) => <Cards {...card} />)}
     </div>
     <h2
       class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full bg-custom-blue text-white md:rounded-lg font-[Montserrat]"
     >
-      Línea ejecutiva (U$S 1485/<span class="normal-case">m&sup2</span>)
-    </h2>
+      Línea ejecutiva</h2>
     <div class="grid flex-wrap justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {executive.map((card) => <Cards {...card} />)}
     </div>
     <h2
       class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full bg-custom-blue text-white md:rounded-lg font-[Montserrat]"
     >
-      Línea básica (U$S 1425/<span class="normal-case">m&sup2</span>)
-    </h2>
+      Línea básica</h2>
     <div class="grid flex-wrap justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {basic.map((card) => <Cards {...card} />)}
     </div>
