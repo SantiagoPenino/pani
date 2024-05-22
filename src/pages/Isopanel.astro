@@ -1,7 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Cards from "../components/Cards.astro";
+import { isopanel } from "../products.js";
 ---
 
 <Layout title="Proyectos Isopanel">
-
+    <div class="w-full md:w-[80%] flex flex-col mx-auto">
+        <h2 class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-2 text-center w-full bg-custom-blue text-white md:rounded-sm font-[Montserrat]"
+    >
+      Proyectos en isopanel</h2>
+    <div class="grid flex-wrap justify-center grid-cols-1 lg:grid-cols-3">
+      {isopanel.map((card) => <Cards {...card} />)}
+    </div>
+    </div>
 </Layout>

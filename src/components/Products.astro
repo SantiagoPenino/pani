@@ -1,6 +1,6 @@
 ---
 import Cards from "../components/Cards.astro";
-import {premium, executivePlus, executive, basic, isopanel} from "../products.js"
+import {premium, executivePlus, executive, basic,} from "../products.js"
 ---
 
 <div class="w-full md:w-[80%] flex flex-col mx-auto">
@@ -31,13 +31,6 @@ import {premium, executivePlus, executive, basic, isopanel} from "../products.js
       Línea básica</h2>
     <div class="grid flex-wrap justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {basic.map((card) => <Cards {...card} />)}
-    </div>
-    <h2 id="isopanel"
-      class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full bg-custom-blue text-white md:rounded-sm font-[Montserrat]"
-    >
-      Línea isopanel</h2>
-    <div class="grid flex-wrap justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      {isopanel.map((card) => <Cards {...card} />)}
     </div>
     </div>
     
