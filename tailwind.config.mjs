@@ -9,6 +9,8 @@ export default {
         "custom-gray": "#061826",
         "custom-white": "#DEE5E5",
         "custom-yellow": "#FF9F1C",
+        "custom-whatsapp":"#25d366",
+        "custom-green":"#128C7E",
       },
     },
   },

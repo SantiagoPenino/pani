@@ -3,18 +3,37 @@ import CallToAction from "./CallToAction.astro";
 ---
 
 <nav
+  id="navbar"
   class="absolute overflow-hidden w-full h-0 top-full left-0 lg:top-0 lg:w-auto bg-white lg:h-auto lg:relative lg:flex"
 >
   <ul
-    class="flex flex-col h-full lg:flex-row lg:space-x-5 justify-center lg:justify-between items-center text-lg uppercase lg:normal-case py-20 lg:py-2 font-bold px-2"
+    class="flex flex-col h-full lg:flex-row lg:space-x-5 justify-center lg:justify-between items-center text-lg uppercase lg:normal-case py-20 lg:py-2 font-bold px-2 -mt-4 lg:mt-0"
   >
-    <li class="flex-grow lg:flex-none lg:hover:text-custom-blue relative group">
-      <a href="/">Inicio</a><span
+    <li
+      class="lg:mt-2 flex-grow lg:flex-none lg:hover:text-custom-blue relative group"
+    >
+      <a href="/#home">Inicio</a><span
         class="block lg:group-hover:scale-x-100 transition-transform origin-center h-1 bg-custom-blue absolute bottom-[-1] left-0 right-0 scale-x-0"
       ></span>
     </li>
-    <li class="flex-grow lg:flex-none lg:hover:text-custom-blue relative group">
+    <li
+      class="lg:mt-2 flex-grow lg:flex-none lg:hover:text-custom-blue relative group"
+    >
       <a href="/proyectos">Proyectos</a><span
+        class="block lg:group-hover:scale-x-100 transition-transform origin-center h-1 bg-custom-blue absolute bottom-[-1] left-0 right-0 scale-x-0"
+      ></span>
+    </li>
+    <li
+      class="lg:mt-2 flex-grow lg:flex-none lg:hover:text-custom-blue relative group"
+    >
+      <a href="/#steelframing">Steel Framing</a><span
+        class="block lg:group-hover:scale-x-100 transition-transform origin-center h-1 bg-custom-blue absolute bottom-[-1] left-0 right-0 scale-x-0"
+      ></span>
+    </li>
+    <li
+      class="lg:mt-2 flex-grow lg:flex-none lg:hover:text-custom-blue relative group"
+    >
+      <a href="/#isopanel">Isopanel</a><span
         class="block lg:group-hover:scale-x-100 transition-transform origin-center h-1 bg-custom-blue absolute bottom-[-1] left-0 right-0 scale-x-0"
       ></span>
     </li>
@@ -25,3 +44,18 @@ import CallToAction from "./CallToAction.astro";
     </li>
   </ul>
 </nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const checkbox = document.getElementById("check");
+    const navbarLinks = document.querySelectorAll("#navbar a");
+
+    navbarLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (checkbox instanceof HTMLInputElement) {
+          checkbox.checked = false;
+        }
+      });
+    });
+  });
+</script>

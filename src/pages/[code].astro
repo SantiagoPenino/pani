@@ -58,13 +58,26 @@ const {
         >
           Características
         </h2>
+        {line==="Isopanel"?(
+        <ul class="list-disc list-inside p-2 lg:p-4 space-y-2">
+          <li>Cimentación de platea de hormigón reforzada.</li>
+          <li>Muros de Isopanel de 10cm de espesor.</li>
+          <li>Cubierta de Isopanel de {cover}</li>
+          <li>Terminación exterior con pintura texturada.</li>
+          <li>Terminación interior de yeso.</li>
+          <li>Pintura interior {paint}.</li>
+          <li>Aberturas en aluminio serie {serie}.</li>
+          <li>Pisos y revestimientos de cerámica.</li>
+          <li>Loza sanitaria y griferías.</li>
+          <li>{counter} de granito, color a elección.</li>
+          <li>Muebles en melaminico 18mm, diseño a medida y color a elección.</li>
+          <li>Instalación sanitaria y eléctrica completas según reglamentos y ordenanzas vigentes.</li>
+        </ul>):(
         <ul class="list-disc list-inside p-2 lg:p-4 space-y-2">
           <li>Cimentación de platea de hormigón reforzada.</li>
           <li>Muros de perfilería de Steel Framing (acero galvanizado).</li>
           <li>Cubierta de Isopanel de {cover}</li>
-          <li>
-            Revestimiento con escudo térmico (sístema EIFS) en exteriores.
-          </li>
+          <li>Revestimiento con escudo térmico (sístema EIFS) en exteriores.</li>
           <li>Terminación exterior con revoque fino.</li>
           <li>Pintura interior {paint}.</li>
           <li>Pintura exterior Sherwin Williams Loxon.</li>
@@ -80,7 +93,7 @@ const {
             Instalación sanitaria y eléctrica completas según reglamentos y
             ordenanzas vigentes.
           </li>
-        </ul>
+        </ul>)}
       </div>
       <div class="w-full flex flex-col justify-center items-center">
         <p class="py-4">Tiempo de obra: {estimated} días hábiles.</p>

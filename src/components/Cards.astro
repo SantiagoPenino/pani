@@ -17,13 +17,13 @@ const { code, imgAlt, price, size, bedrooms, bathrooms } = Astro.props;
   >
     <div class="w-full h-full overflow-hidden">
       <img
-        class="w-full md:rounded-t-lg object-cover lg:hover:scale-150 transition-transform duration-300" 
+        class="w-full md:rounded-t-sm object-cover lg:hover:scale-150 transition-transform duration-300" 
         src=`/productos/${code}.webp`
         alt={imgAlt}
       />
     </div>
     <div
-      class="w-full flex bg-custom-gray text-white justify-between p-3 md:rounded-b-lg"
+      class="w-full flex bg-custom-gray text-white justify-between p-3 md:rounded-b-sm"
     >
       <div class="flex items-center">
         <p>{`U$S ${price}`}</p>

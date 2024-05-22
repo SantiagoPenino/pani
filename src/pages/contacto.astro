@@ -3,5 +3,89 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Contacto">
+  <div class="lg:w-[80%] flex flex-col mx-auto items-center">
+    <h1
+      class="text-xl lg:text-2xl uppercase font-bold font-[Montserrat] pt-4 border-b-4 border-custom-blue inline-block"
+    >
+      Contáctate con nosotros
+    </h1>
+    <p class="lg:w-[75%] pt-4 text-center uppercase text-sm lg:text-base">
+      Si desea comunicarse con nosotros o solicitar un presupuesto por favor
+      complete el siguiente formulario de contacto y le responderemos a la mayor
+      brevedad posible.
+    </p>
 
+    <form class="flex flex-col py-2 px-8 m-2 lg:m-4 lg:w-[50%]">
+      <div class="w-full flex flex-col gap-4 justify-center items-center">
+        <input
+          class="w-[80%] focus:outline-none placeholder-opacity-50 placeholder-custom-black px-2 border-b-2 border-custom-white"
+          placeholder="Nombre"
+          type="text"
+          id="name"
+          name="name"
+          required
+        />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Telefóno"
+          class="w-[80%] focus:outline-none placeholder-opacity-50 placeholder-custom-black px-2 border-b-2 border-custom-white"
+        />
+        <input
+          class="w-[80%] focus:outline-none placeholder-opacity-50 placeholder-custom-black px-2 border-b-2 border-custom-white"
+          placeholder="Correo electrónico"
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
+        <textarea
+          class="w-[80%] my-4 focus:outline-none placeholder-opacity-50 placeholder-custom-black px-2 border-2 rounded-sm border-custom-white h-40 resize-none px-2"
+          placeholder="Escriba su mensaje"
+          id="message"
+          name="message"
+          required></textarea>
+        <button
+          class="w-[50%] bg-custom-blue text-white font-bold py-2 px-4 rounded-sm transition-transform duration-200 ease-in-out lg:active:scale-90 lg:hover:scale-110"
+          type="submit">Enviar</button
+        >
+      </div>
+    </form>
+    <div class="flex flex-col space-x-2 items-center my-2 lg:mb-8">
+      <p class="p-2 text-sm lg:text-base">Seguinos para enterarte de nuestras novedades:</p>
+      <div class="flex">
+        <a
+          href="https://www.facebook.com/PaniConstrucciones2022"
+          target="_blank"
+          ><img
+            class="h-10"
+            src="/social/facebook.svg"
+            alt="logo de facebook"
+          /></a
+        >
+        <a href="https://www.instagram.com/pani_construcciones" target="_blank"
+          ><img
+            class="h-10"
+            src="/social/instagram.svg"
+            alt="logo de instagram"
+          /></a
+        >
+        <a
+          href="https://www.tiktok.com/@pani_construcciones?_t=8mUGSnQQdqX&_r=1"
+          target="_blank"
+          ><img class="h-10" src="/social/tiktok.svg" alt="logo de tiktok" /></a
+        >
+        <a
+          href="https://youtube.com/@paniconstrucciones6209?si=MwhaBePU0K1-EA7F"
+          target="_blank"
+          ><img
+            class="h-10"
+            src="/social/youtube.svg"
+            alt="logo de youtube"
+          /></a
+        >
+      </div>
+    </div>
+  </div>
 </Layout>
