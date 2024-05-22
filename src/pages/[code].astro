@@ -52,14 +52,14 @@ const {
         >
           {size}m² | Techo {roof}
         </h2>
-        <p class="py-4 px-2">{description}</p>
+        <p class="py-4 px-2 text-xs lg:text-base">{description}</p>
         <h2
           class="uppercase font-bold pb-2 text-xl border-b-4 border-custom-blue inline-block"
         >
           Características
         </h2>
         {line==="Isopanel"?(
-        <ul class="list-disc list-inside p-2 lg:p-4 space-y-2">
+        <ul class="list-disc list-inside p-2 lg:p-4 space-y-2 text-xs lg:text-base">
           <li>Cimentación de platea de hormigón reforzada.</li>
           <li>Muros de Isopanel de 10cm de espesor.</li>
           <li>Cubierta de Isopanel de {cover}</li>
@@ -73,7 +73,7 @@ const {
           <li>Muebles en melaminico 18mm, diseño a medida y color a elección.</li>
           <li>Instalación sanitaria y eléctrica completas según reglamentos y ordenanzas vigentes.</li>
         </ul>):(
-        <ul class="list-disc list-inside p-2 lg:p-4 space-y-2">
+        <ul class="list-disc list-inside p-2 lg:p-4 space-y-2 text-xs lg:text-base">
           <li>Cimentación de platea de hormigón reforzada.</li>
           <li>Muros de perfilería de Steel Framing (acero galvanizado).</li>
           <li>Cubierta de Isopanel de {cover}</li>
@@ -96,15 +96,15 @@ const {
         </ul>)}
       </div>
       <div class="w-full flex flex-col justify-center items-center">
-        <p class="py-4">Tiempo de obra: {estimated} días hábiles.</p>
+        <p class="py-4 text-xs lg:text-base">Tiempo de obra: {estimated} días hábiles.</p>
         <p class="text-custom-blue font-bold text-5xl">U$S {price}</p>
         <p class="text-sm font-bold italic">con terminación de techo {roof}</p>
-        <p class="py-4 w-[75%]">
+        <p class="py-4 w-[75%] text-xs lg:text-base">
           Se incluye mano de obra, materiales, anteproyecto y proyecto
           ejecutivo. Trámites, gestiones y pagos ante BPS, DGI, MTSS, FOCER e
           Intendencia.
         </p>
-        <p class="text-sm font-bold">
+        <p class="text-sm font-bold text-xs lg:text-base">
           (*) Consultar por opcionales y accesorios.
         </p>
       </div>
