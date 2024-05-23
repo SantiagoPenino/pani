@@ -6,9 +6,10 @@ interface Props {
   size: string;
   bedrooms: string;
   bathrooms: string;
+  category: string;
 }
 
-const { code, imgAlt, price, size, bedrooms, bathrooms } = Astro.props;
+const { code, imgAlt, price, size, bedrooms, bathrooms, category } = Astro.props;
 ---
 
 <a href={`/${code}`} class="block">
@@ -18,7 +19,7 @@ const { code, imgAlt, price, size, bedrooms, bathrooms } = Astro.props;
     <div class="w-full h-full overflow-hidden">
       <img
         class="w-full md:rounded-t-sm object-cover lg:hover:scale-150 transition-transform duration-300" 
-        src=`/productos/${code}.webp`
+        src=`/productos/${category}/${code}.webp`
         alt={imgAlt}
       />
     </div>

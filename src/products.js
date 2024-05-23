@@ -1,5 +1,6 @@
 export const premium = [
   {
+    category: "premium",
     line: "Premium",
     code: "140p-a",
     imgAlt: "maqueta de la casa 140 premium a",
@@ -17,6 +18,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "140p-b",
     imgAlt: "maqueta de la casa 140 premium b",
@@ -34,6 +36,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "150p-a",
     imgAlt: "maqueta de la casa 150 premium a",
@@ -51,6 +54,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "150p-b",
     imgAlt: "maqueta de la casa 150 premium b",
@@ -68,6 +72,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "150p-c",
     imgAlt: "maqueta de la casa 150 premium c",
@@ -85,6 +90,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "150p-d",
     imgAlt: "maqueta de la casa 150 premium d",
@@ -102,6 +108,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "150p-e",
     imgAlt: "maqueta de la casa 150 premium e",
@@ -119,6 +126,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "150p-f",
     imgAlt: "maqueta de la casa 150 premium f",
@@ -136,6 +144,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "150p-g",
     imgAlt: "maqueta de la casa 150 premium g",
@@ -153,6 +162,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "150p-h",
     imgAlt: "maqueta de la casa 150 premium h",
@@ -170,6 +180,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "150p-i",
     imgAlt: "maqueta de la casa 150 premium i",
@@ -187,6 +198,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "163p-a",
     imgAlt: "maqueta de la casa 163 premium a",
@@ -204,6 +216,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "178p-a",
     imgAlt: "maqueta de la casa 178 premium a",
@@ -221,6 +234,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "235p-a",
     imgAlt: "maqueta de la casa 235 premium a",
@@ -238,6 +252,7 @@ export const premium = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "premium",
     line: "Premium",
     code: "285p-a",
     imgAlt: "maqueta de la casa 285 premium a",
@@ -258,6 +273,7 @@ export const premium = [
 
 export const executivePlus = [
   {
+    category: "exeplus",
     line: "Ejecutiva Plus",
     code: "115ep-a",
     imgAlt: "maqueta de la casa 115 ejecutiva plus a",
@@ -275,6 +291,7 @@ export const executivePlus = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "exeplus",
     line: "Ejecutiva Plus",
     code: "120ep-a",
     imgAlt: "maqueta de la casa 120 ejecutiva plus a",
@@ -292,6 +309,7 @@ export const executivePlus = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "exeplus",
     line: "Ejecutiva Plus",
     code: "135ep-a",
     imgAlt: "maqueta de la casa 135 ejecutiva plus a",
@@ -309,6 +327,7 @@ export const executivePlus = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "exeplus",
     line: "Ejecutiva Plus",
     code: "140ep-a",
     imgAlt: "maqueta de la casa 140 ejecutiva plus a",
@@ -326,6 +345,7 @@ export const executivePlus = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "exeplus",
     line: "Ejecutiva Plus",
     code: "145ep-a",
     imgAlt: "maqueta de la casa 145 ejecutiva plus a",
@@ -343,6 +363,7 @@ export const executivePlus = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "exeplus",
     line: "Ejecutiva Plus",
     code: "150ep-a",
     imgAlt: "maqueta de la casa 150 ejecutiva plus a",
@@ -360,6 +381,7 @@ export const executivePlus = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "exeplus",
     line: "Ejecutiva Plus",
     code: "150ep-b",
     imgAlt: "maqueta de la casa 150 ejecutiva plus b",
@@ -378,6 +400,7 @@ export const executivePlus = [
     extras: "Este proyecto incluye 54m² de cochera cubierta y depósito.",
   },
   {
+    category: "exeplus",
     line: "Ejecutiva Plus",
     code: "160ep-a",
     imgAlt: "maqueta de la casa 160 ejecutiva plus a",
@@ -395,6 +418,7 @@ export const executivePlus = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "exeplus",
     line: "Ejecutiva Plus",
     code: "165ep-a",
     imgAlt: "maqueta de la casa 165 ejecutiva plus a",
@@ -415,6 +439,7 @@ export const executivePlus = [
 
 export const executive = [
   {
+    category: "executive",
     line: "Ejecutiva",
     code: "70e-a",
     imgAlt: "maqueta de la casa 70 ejecutiva a",
@@ -431,6 +456,7 @@ export const executive = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "executive",
     line: "Ejecutiva",
     code: "70e-b",
     imgAlt: "maqueta de la casa 70 ejecutiva b",
@@ -447,6 +473,7 @@ export const executive = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "executive",
     line: "Ejecutiva",
     code: "75e-a",
     imgAlt: "maqueta de la casa 75 ejecutiva a",
@@ -463,6 +490,7 @@ export const executive = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "executive",
     line: "Ejecutiva",
     code: "90e-a",
     imgAlt: "maqueta de la casa 90 ejecutiva a",
@@ -479,6 +507,7 @@ export const executive = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "executive",
     line: "Ejecutiva",
     code: "100e-a",
     imgAlt: "maqueta de la casa 100 ejecutiva a",
@@ -495,6 +524,7 @@ export const executive = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "executive",
     line: "Ejecutiva",
     code: "115e-a",
     imgAlt: "maqueta de la casa 115 ejecutiva a",
@@ -511,6 +541,7 @@ export const executive = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "executive",
     line: "Ejecutiva",
     code: "120e-a",
     imgAlt: "maqueta de la casa 120 ejecutiva a",
@@ -528,6 +559,7 @@ export const executive = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "executive",
     line: "Ejecutiva",
     code: "135e-a",
     imgAlt: "maqueta de la casa 135 ejecutiva a",
@@ -545,6 +577,7 @@ export const executive = [
     counter: "Mesadas de cocina y baños",
   },
   {
+    category: "executive",
     line: "Ejecutiva",
     code: "140e-a",
     imgAlt: "maqueta de la casa 140 ejecutiva a",
@@ -564,6 +597,7 @@ export const executive = [
 ];
 export const basic = [
   {
+    category: "basic",
     line: "Básica",
     code: "35b-a",
     imgAlt: "maqueta de la casa 35 basica a",
@@ -580,6 +614,7 @@ export const basic = [
     counter: "Mesada de cocina",
   },
   {
+    category: "basic",
     line: "Básica",
     code: "45b-a",
     imgAlt: "maqueta de la casa 45 basica a",
@@ -596,6 +631,7 @@ export const basic = [
     counter: "Mesada de cocina",
   },
   {
+    category: "basic",
     line: "Básica",
     code: "55b-a",
     imgAlt: "maqueta de la casa 55 basica a",
@@ -612,6 +648,7 @@ export const basic = [
     counter: "Mesada de cocina",
   },
   {
+    category: "basic",
     line: "Básica",
     code: "60b-a",
     imgAlt: "maqueta de la casa 60 basica a",
@@ -628,6 +665,7 @@ export const basic = [
     counter: "Mesada de cocina",
   },
   {
+    category: "basic",
     line: "Básica",
     code: "70b-a",
     imgAlt: "maqueta de la casa 70 basica a",
@@ -644,6 +682,7 @@ export const basic = [
     counter: "Mesada de cocina",
   },
   {
+    category: "basic",
     line: "Básica",
     code: "70b-b",
     imgAlt: "maqueta de la casa 70 basic b",
@@ -662,6 +701,7 @@ export const basic = [
 ];
 export const isopanel = [
   {
+    category: "isopanel",
     line: "Isopanel",
     code: "35i-a",
     imgAlt: "maqueta de la casa 35 isopanel a",
@@ -678,6 +718,7 @@ export const isopanel = [
     counter: "Mesada de cocina",
   },
   {
+    category: "isopanel",
     line: "Isopanel",
     code: "45i-a",
     imgAlt: "maqueta de la casa 45 isopanel a",
@@ -694,6 +735,7 @@ export const isopanel = [
     counter: "Mesada de cocina",
   },
   {
+    category: "isopanel",
     line: "Isopanel",
     code: "55i-a",
     imgAlt: "maqueta de la casa 55 isopanel a",
@@ -710,6 +752,7 @@ export const isopanel = [
     counter: "Mesada de cocina",
   },
   {
+    category: "isopanel",
     line: "Isopanel",
     code: "60i-a",
     imgAlt: "maqueta de la casa 60 isopanel a",
@@ -726,6 +769,7 @@ export const isopanel = [
     counter: "Mesada de cocina",
   },
   {
+    category: "isopanel",
     line: "Isopanel",
     code: "70i-a",
     imgAlt: "maqueta de la casa 70 isopanel a",
@@ -742,6 +786,7 @@ export const isopanel = [
     counter: "Mesada de cocina",
   },
   {
+    category: "isopanel",
     line: "Isopanel",
     code: "70i-b",
     imgAlt: "maqueta de la casa 70 isopanel b",
@@ -758,6 +803,7 @@ export const isopanel = [
     counter: "Mesada de cocina",
   },
   {
+    category: "isopanel",
     line: "Isopanel",
     code: "75i-a",
     imgAlt: "maqueta de la casa 75 isopanel a",
@@ -774,6 +820,7 @@ export const isopanel = [
     counter: "Mesada de cocina",
   },
   {
+    category: "isopanel",
     line: "Isopanel",
     code: "90i-a",
     imgAlt: "maqueta de la casa 90 isopanel a",
@@ -790,6 +837,7 @@ export const isopanel = [
     counter: "Mesada de cocina",
   },
   {
+    category: "isopanel",
     line: "Isopanel",
     code: "100i-a",
     imgAlt: "maqueta de la casa 100 isopanel a",

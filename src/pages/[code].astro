@@ -20,6 +20,7 @@ if (!productData) {
 }
 
 const {
+  category,
   imgAlt,
   price,
   size,
@@ -43,9 +44,11 @@ const {
       <h2 class="text-lg lg:text-2xl uppercase font-bold">Código: {code}</h2>
     </div>
     <div class="w-full flex justify-center">
-      <img src={`/productos/${code}.webp`} alt={imgAlt} />
+      <img src={`/productos/${category}/${code}.webp`} alt={imgAlt} />
     </div>
-    <div class="p-2 lg:p-4 w-full flex flex-col lg:flex-row justify-center items-center">
+    <div
+      class="p-2 lg:p-4 w-full flex flex-col lg:flex-row justify-center items-center"
+    >
       <div class="w-full flex flex-col items-start justify-center p-2 lg:pl-20">
         <h2
           class="font-bold pt-4 pb-2 text-xl border-b-4 border-custom-blue inline-block"
@@ -58,47 +61,62 @@ const {
         >
           Características
         </h2>
-        {line==="Isopanel"?(
-        <ul class="list-disc list-inside p-2 lg:p-4 space-y-2 text-xs lg:text-base">
-          <li>Cimentación de platea de hormigón reforzada.</li>
-          <li>Muros de Isopanel de 10cm de espesor.</li>
-          <li>Cubierta de Isopanel de {cover}</li>
-          <li>Terminación exterior con pintura texturada.</li>
-          <li>Terminación interior de yeso.</li>
-          <li>Pintura interior {paint}.</li>
-          <li>Aberturas en aluminio serie {serie}.</li>
-          <li>Pisos y revestimientos de cerámica.</li>
-          <li>Loza sanitaria y griferías.</li>
-          <li>{counter} de granito, color a elección.</li>
-          <li>Muebles en melaminico 18mm, diseño a medida y color a elección.</li>
-          <li>Instalación sanitaria y eléctrica completas según reglamentos y ordenanzas vigentes.</li>
-        </ul>):(
-        <ul class="list-disc list-inside p-2 lg:p-4 space-y-2 text-xs lg:text-base">
-          <li>Cimentación de platea de hormigón reforzada.</li>
-          <li>Muros de perfilería de Steel Framing (acero galvanizado).</li>
-          <li>Cubierta de Isopanel de {cover}</li>
-          <li>Revestimiento con escudo térmico (sístema EIFS) en exteriores.</li>
-          <li>Terminación exterior con revoque fino.</li>
-          <li>Pintura interior {paint}.</li>
-          <li>Pintura exterior Sherwin Williams Loxon.</li>
-          <li>Aberturas en aluminio serie {serie}.</li>
-          <li>Mosquiteros en aberturas de aluminio.</li>
-          <li>Pisos y revestimientos de porcelanato.</li>
-          <li>Loza sanitaria y griferías.</li>
-          <li>{counter} de granito, color a elección.</li>
-          <li>
-            Muebles en melaminico 18mm, diseño a medida y color a elección.
-          </li>
-          <li>
-            Instalación sanitaria y eléctrica completas según reglamentos y
-            ordenanzas vigentes.
-          </li>
-        </ul>)}
+        {
+          line === "Isopanel" ? (
+            <ul class="list-disc list-inside p-2 lg:p-4 space-y-2 text-xs lg:text-base">
+              <li>Cimentación de platea de hormigón reforzada.</li>
+              <li>Muros de Isopanel de 10cm de espesor.</li>
+              <li>Cubierta de Isopanel de {cover}</li>
+              <li>Terminación exterior con pintura texturada.</li>
+              <li>Terminación interior de yeso.</li>
+              <li>Pintura interior {paint}.</li>
+              <li>Aberturas en aluminio serie {serie}.</li>
+              <li>Pisos y revestimientos de cerámica.</li>
+              <li>Loza sanitaria y griferías.</li>
+              <li>{counter} de granito, color a elección.</li>
+              <li>
+                Muebles en melaminico 18mm, diseño a medida y color a elección.
+              </li>
+              <li>
+                Instalación sanitaria y eléctrica completas según reglamentos y
+                ordenanzas vigentes.
+              </li>
+            </ul>
+          ) : (
+            <ul class="list-disc list-inside p-2 lg:p-4 space-y-2 text-xs lg:text-base">
+              <li>Cimentación de platea de hormigón reforzada.</li>
+              <li>Muros de perfilería de Steel Framing (acero galvanizado).</li>
+              <li>Cubierta de Isopanel de {cover}</li>
+              <li>
+                Revestimiento con escudo térmico (sístema EIFS) en exteriores.
+              </li>
+              <li>Terminación exterior con revoque fino.</li>
+              <li>Pintura interior {paint}.</li>
+              <li>Pintura exterior Sherwin Williams Loxon.</li>
+              <li>Aberturas en aluminio serie {serie}.</li>
+              <li>Mosquiteros en aberturas de aluminio.</li>
+              <li>Pisos y revestimientos de porcelanato.</li>
+              <li>Loza sanitaria y griferías.</li>
+              <li>{counter} de granito, color a elección.</li>
+              <li>
+                Muebles en melaminico 18mm, diseño a medida y color a elección.
+              </li>
+              <li>
+                Instalación sanitaria y eléctrica completas según reglamentos y
+                ordenanzas vigentes.
+              </li>
+            </ul>
+          )
+        }
       </div>
       <div class="w-full flex flex-col justify-center items-center">
-        <p class="py-4 text-xs lg:text-base">Tiempo de obra: {estimated} días hábiles.</p>
+        <p class="py-4 text-xs lg:text-base">
+          Tiempo de obra: {estimated} días hábiles.
+        </p>
         <p class="text-custom-blue font-bold text-5xl">U$S {price}</p>
-        <p class="text-xs lg:text-sm font-bold italic">con terminación de techo {roof}</p>
+        <p class="text-xs lg:text-sm font-bold italic">
+          con terminación de techo {roof}
+        </p>
         <p class="py-4 w-[75%] text-xs lg:text-base">
           Se incluye mano de obra, materiales, anteproyecto y proyecto
           ejecutivo. Trámites, gestiones y pagos ante BPS, DGI, MTSS, FOCER e
