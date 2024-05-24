@@ -1,0 +1,28 @@
+---
+const { src, alt } = Astro.props;
+---
+
+<div class="relative">
+  <img id="plano-img" class="p-2 w-[75%] cursor-pointer" src={src} alt={alt} onclick="toggleModal">
+
+  <div id="modal" class="w-screen lg:w-auto z-20 fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden" onclick="toggleModal">
+    <div class="bg-custom-blue p-4 rounded-md transition-transform transform">
+      <img src={src} alt={alt} class="p-2 max-w-full max-h-full">
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById('modal');
+    const planoImg = document.getElementById('plano-img');
+
+    planoImg.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+    });
+
+    modal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+  });
+</script>
