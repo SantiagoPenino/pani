@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
 import Blueprint from "../components/Blueprint.astro";
+import Image from "../components/Image.astro";
 import { allProducts } from "../products.js";
 
 export function getStaticPaths() {
@@ -33,6 +34,7 @@ const {
   serie,
   counter,
   estimated,
+  images,
 } = productData;
 ---
 
@@ -45,7 +47,11 @@ const {
       <h2 class="text-lg lg:text-2xl uppercase font-bold">Código: {code}</h2>
     </div>
     <div class="w-full flex justify-center -mt-1">
-      <img class="w-full " src={`/productos/${category}/${code}.webp`} alt={imgAlt} />
+      <img
+        class="w-full"
+        src={`/productos/${category}/${code}.webp`}
+        alt={imgAlt}
+      />
     </div>
     <div
       class="p-2 lg:p-4 w-full flex flex-col lg:flex-row justify-center items-center"
@@ -111,7 +117,10 @@ const {
         }
       </div>
       <div class="w-full flex flex-col justify-center items-center">
-        <Blueprint src={`/productos/${category}/${code}/plano.webp`} alt={`plano de obra del proyecto ${code}`} />
+        <Blueprint
+          src={`/productos/${category}/${code}/plano.webp`}
+          alt={`plano de obra del proyecto ${code}`}
+        />
         <p class="py-4 text-xs lg:text-base">
           Tiempo de obra: {estimated} días hábiles.
         </p>
@@ -129,150 +138,14 @@ const {
         </p>
       </div>
     </div>
-    <About />
-  </div>
-</Layout> 
-
-
-
-
-
-
-
-<!-- ---
-import Layout from "../layouts/Layout.astro";
-import About from "../components/About.astro";
-import Blueprint from "../components/Blueprint.astro";
-import { allProducts } from "../products.js";
-
-export function getStaticPaths() {
-  const paths = allProducts.map((product) => ({
-    params: { code: product.code },
-  }));
-
-  return paths;
-}
-const { code } = Astro.params;
-const productData = allProducts.find((product) => product.code === code);
-
-if (!productData) {
-  return {
-    notFound: true,
-  };
-}
-
-const {
-  category,
-  imgAlt,
-  price,
-  size,
-  line,
-  roof,
-  description,
-  cover,
-  paint,
-  serie,
-  counter,
-  estimated,
-} = productData;
----
-
-<Layout title={`Código: ${code}`}>
-  <div class="w-full">
-    <div class="flex justify-between items-center px-2 lg:px-10 py-3 bg-custom-gray text-white font-[Montserrat]">
-      <h1 class="text-lg lg:text-2xl font-bold uppercase">{line}</h1>
-      <h2 class="text-lg lg:text-2xl uppercase font-bold">Código: {code}</h2>
-    </div>
-    <div class="w-full flex justify-center -mt-1">
-      <img class="w-full" src={`/productos/${category}/${code}.webp`} alt={imgAlt} />
-    </div>
-    <div class="p-2 lg:p-4 w-full flex flex-col lg:flex-row justify-center items-center">
-      <div class="w-full flex flex-col items-start justify-center p-2 lg:pl-20">
-        <h2 class="font-bold pt-4 pb-2 text-xl border-b-4 border-custom-blue inline-block">
-          {size}m² | Techo {roof}
-        </h2>
-        <p class="py-4 px-2 text-xs lg:text-base">{description}</p>
-        <h2 class="uppercase font-bold pb-2 text-xl border-b-4 border-custom-blue inline-block">
-          Características
-        </h2>
-        {
-          line === "Isopanel" ? (
-            <ul class="list-disc list-inside p-2 lg:p-4 space-y-2 text-xs lg:text-base">
-              <li>Cimentación de platea de hormigón reforzada.</li>
-              <li>Muros de Isopanel de 10cm de espesor.</li>
-              <li>Cubierta de Isopanel de {cover}</li>
-              <li>Terminación exterior con pintura texturada.</li>
-              <li>Terminación interior de yeso.</li>
-              <li>Pintura interior {paint}.</li>
-              <li>Aberturas en aluminio serie {serie}.</li>
-              <li>Pisos y revestimientos de cerámica.</li>
-              <li>Loza sanitaria y griferías.</li>
-              <li>{counter} de granito, color a elección.</li>
-              <li>Muebles en melaminico 18mm, diseño a medida y color a elección.</li>
-              <li>Instalación sanitaria y eléctrica completas según reglamentos y ordenanzas vigentes.</li>
-            </ul>
-          ) : (
-            <ul class="list-disc list-inside p-2 lg:p-4 space-y-2 text-xs lg:text-base">
-              <li>Cimentación de platea de hormigón reforzada.</li>
-              <li>Muros de perfilería de Steel Framing (acero galvanizado).</li>
-              <li>Cubierta de Isopanel de {cover}</li>
-              <li>Revestimiento con escudo térmico (sístema EIFS) en exteriores.</li>
-              <li>Terminación exterior con revoque fino.</li>
-              <li>Pintura interior {paint}.</li>
-              <li>Pintura exterior Sherwin Williams Loxon.</li>
-              <li>Aberturas en aluminio serie {serie}.</li>
-              <li>Mosquiteros en aberturas de aluminio.</li>
-              <li>Pisos y revestimientos de porcelanato.</li>
-              <li>Loza sanitaria y griferías.</li>
-              <li>{counter} de granito, color a elección.</li>
-              <li>Muebles en melaminico 18mm, diseño a medida y color a elección.</li>
-              <li>Instalación sanitaria y eléctrica completas según reglamentos y ordenanzas vigentes.</li>
-            </ul>
-          )
-        }
-      </div>
-      <div class="w-full flex flex-col justify-center items-center">
-        <img id="plano-img" class="p-2 w-[75%] cursor-pointer" src={`/productos/${category}/${code}/plano.webp`} alt={`plano de obra del proyecto ${code}`} onclick="toggleModal">
-        <p class="py-4 text-xs lg:text-base">
-          Tiempo de obra: {estimated} días hábiles.
-        </p>
-        <p class="text-custom-blue font-bold text-5xl">U$S {price}</p>
-        <p class="text-xs lg:text-sm font-bold italic">
-          con terminación de techo {roof}
-        </p>
-        <p class="py-4 w-[75%] text-xs lg:text-base">
-          Se incluye mano de obra, materiales, anteproyecto y proyecto ejecutivo. Trámites, gestiones y pagos ante BPS, DGI, MTSS, FOCER e Intendencia.
-        </p>
-        <p class="lg:text-sm font-bold text-xs">
-          (*) Consultar por opcionales y accesorios.
-        </p>
-      </div>
+    <div class="w-[80%] mx-auto flex flex-col lg:flex-wrap justify-center items-center ">
+      {
+        images.map((image) => (
+          <Image src={`/productos/${category}/${code}/${image}.webp`} />
+        ))
+      }
     </div>
     <About />
   </div>
-
-  <div id="modal" class="z-20 fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden" onclick="toggleModal">
-    <div class="bg-white p-4 rounded">
-      <img src={`/productos/${category}/${code}/plano.webp`} alt={`plano de obra del proyecto ${code}`} class="max-w-full max-h-full">
-    </div>
-  </div>
-
 </Layout>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const modal = document.getElementById('modal');
-    const planoImg = document.getElementById('plano-img');
-
-    planoImg.addEventListener('click', () => {
-      modal.classList.remove('hidden');
-    });
-
-    modal.addEventListener('click', () => {
-      modal.classList.add('hidden');
-    });
-  });
-</script> -->
-
-
 
