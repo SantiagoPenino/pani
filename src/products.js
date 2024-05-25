@@ -16,6 +16,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6,7,8,9]
   },
   {
     category: "premium",
@@ -34,6 +35,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6,7,8,9]
   },
   {
     category: "premium",
@@ -52,6 +54,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5]
   },
   {
     category: "premium",
@@ -70,6 +73,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6]
   },
   {
     category: "premium",
@@ -88,6 +92,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6]
   },
   {
     category: "premium",
@@ -106,6 +111,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6]
   },
   {
     category: "premium",
@@ -124,6 +130,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6]
   },
   {
     category: "premium",
@@ -142,6 +149,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6]
   },
   {
     category: "premium",
@@ -160,6 +168,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6]
   },
   {
     category: "premium",
@@ -178,6 +187,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6,7,8]
   },
   {
     category: "premium",
@@ -196,6 +206,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5]
   },
   {
     category: "premium",
@@ -214,6 +225,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6,7,8,9,10,11,12,13]
   },
   {
     category: "premium",
@@ -232,6 +244,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6,7,8,9,10,11,12]
   },
   {
     category: "premium",
@@ -250,6 +263,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6]
   },
   {
     category: "premium",
@@ -268,6 +282,7 @@ export const premium = [
     paint: "lavable",
     serie: "Gala con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5]
   },
 ];
 
@@ -289,6 +304,7 @@ export const executivePlus = [
     paint: "color blanco",
     serie: "Probba con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4]
   },
   {
     category: "exeplus",
@@ -307,6 +323,7 @@ export const executivePlus = [
     paint: "color blanco",
     serie: "Probba con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2]
   },
   {
     category: "exeplus",
@@ -325,6 +342,8 @@ export const executivePlus = [
     paint: "color blanco",
     serie: "Probba con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6,7,8]
+    
   },
   {
     category: "exeplus",
@@ -343,6 +362,7 @@ export const executivePlus = [
     paint: "color blanco",
     serie: "Probba con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4]
   },
   {
     category: "exeplus",
@@ -361,6 +381,7 @@ export const executivePlus = [
     paint: "color blanco",
     serie: "Probba con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4]
   },
   {
     category: "exeplus",
@@ -379,6 +400,7 @@ export const executivePlus = [
     paint: "color blanco",
     serie: "Probba con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5]
   },
   {
     category: "exeplus",
@@ -398,6 +420,7 @@ export const executivePlus = [
     serie: "Probba con DVH",
     counter: "Mesadas de cocina y baños",
     extras: "Este proyecto incluye 54m² de cochera cubierta y depósito.",
+    images:[1,2,3,4]
   },
   {
     category: "exeplus",
@@ -416,6 +439,7 @@ export const executivePlus = [
     paint: "color blanco",
     serie: "Probba con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4]
   },
   {
     category: "exeplus",
@@ -434,6 +458,7 @@ export const executivePlus = [
     paint: "color blanco",
     serie: "Probba con DVH",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6,7]
   },
 ];
 
@@ -454,6 +479,7 @@ export const executive = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesadas de cocina y baños",
+    images:[1,2]
   },
   {
     category: "executive",
@@ -471,6 +497,7 @@ export const executive = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4]
   },
   {
     category: "executive",
@@ -488,6 +515,7 @@ export const executive = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3]
   },
   {
     category: "executive",
@@ -505,6 +533,7 @@ export const executive = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3]
   },
   {
     category: "executive",
@@ -522,6 +551,7 @@ export const executive = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4]
   },
   {
     category: "executive",
@@ -539,6 +569,7 @@ export const executive = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4]
   },
   {
     category: "executive",
@@ -557,6 +588,7 @@ export const executive = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesadas de cocina y baños",
+    images:[1,2]
   },
   {
     category: "executive",
@@ -575,6 +607,7 @@ export const executive = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4,5,6,7,8]
   },
   {
     category: "executive",
@@ -593,6 +626,7 @@ export const executive = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesadas de cocina y baños",
+    images:[1,2,3,4]
   },
 ];
 export const basic = [
@@ -612,6 +646,7 @@ export const basic = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2]
   },
   {
     category: "basic",
@@ -629,6 +664,7 @@ export const basic = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2,3,4]
   },
   {
     category: "basic",
@@ -646,6 +682,7 @@ export const basic = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2,3,4]
   },
   {
     category: "basic",
@@ -663,6 +700,7 @@ export const basic = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2,3]
   },
   {
     category: "basic",
@@ -680,6 +718,7 @@ export const basic = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2]
   },
   {
     category: "basic",
@@ -697,6 +736,7 @@ export const basic = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2,3,4]
   },
 ];
 export const isopanel = [
@@ -716,6 +756,7 @@ export const isopanel = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2]
   },
   {
     category: "isopanel",
@@ -733,6 +774,7 @@ export const isopanel = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2,3,4]
   },
   {
     category: "isopanel",
@@ -750,6 +792,7 @@ export const isopanel = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2,3,4]
   },
   {
     category: "isopanel",
@@ -767,6 +810,7 @@ export const isopanel = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2,3]
   },
   {
     category: "isopanel",
@@ -784,6 +828,7 @@ export const isopanel = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2]
   },
   {
     category: "isopanel",
@@ -801,6 +846,7 @@ export const isopanel = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2,3,4]
   },
   {
     category: "isopanel",
@@ -818,6 +864,7 @@ export const isopanel = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2,3]
   },
   {
     category: "isopanel",
@@ -835,6 +882,7 @@ export const isopanel = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2,3]
   },
   {
     category: "isopanel",
@@ -852,6 +900,7 @@ export const isopanel = [
     paint: "color blanco",
     serie: "Probba con vidrio simple",
     counter: "Mesada de cocina",
+    images:[1,2,3,4]
   },
 ];
 
@@ -860,5 +909,5 @@ export const allProducts = [
   ...executivePlus,
   ...executive,
   ...basic,
-  ...isopanel
+  ...isopanel,
 ];
