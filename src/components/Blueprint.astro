@@ -3,29 +3,24 @@ const { src, alt } = Astro.props;
 ---
 
 <div class="relative">
-  <img
-    id="plano-img"
-    class="p-2 w-[50%] cursor-pointer mx-auto"
-    src={src}
-    alt={alt}
-  />
+  <img class="img p-2 w-[50%] cursor-pointer mx-auto" src={src} alt={alt} />
 
   <div
     id="modal"
-    class="w-screen lg:w-auto mx-auto z-20 fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden"
+    class="modal w-screen lg:w-auto mx-auto z-20 fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden"
   >
     <div
-      class="bg-custom-blue lg:min-w-[45%] p-2 rounded transition-transform transform"
+      class="bg-custom-blue lg:w-[40%] p-2 rounded-md transition-transform transform"
     >
-      <img src={src} alt={alt} class="w-full h-full object-cover " />
+      <img src={src} alt={alt} class="w-full" />
     </div>
   </div>
 </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const modal = document.getElementById("modal");
-    const planoImg = document.getElementById("plano-img");
+    const modal = document.querySelector(".modal");
+    const planoImg = document.querySelector(".img");
 
     planoImg.addEventListener("click", () => {
       modal.classList.remove("hidden");

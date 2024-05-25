@@ -138,7 +138,9 @@ const {
         </p>
       </div>
     </div>
-    <div class="w-[80%] mx-auto flex flex-col lg:flex-wrap justify-center items-center ">
+    <div
+      class="w-[80%] mx-auto flex flex-col lg:flex-row lg:flex-wrap justify-center items-center"
+    >
       {
         images.map((image) => (
           <Image src={`/productos/${category}/${code}/${image}.webp`} />
@@ -148,4 +150,3 @@ const {
     <About />
   </div>
 </Layout>
-
