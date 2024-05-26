@@ -1,36 +1,40 @@
 ---
 import Cards from "../components/Cards.astro";
-import {premium, executivePlus, executive, basic,} from "../products.js"
+import { premium, executivePlus, executive, basic } from "../products.js";
 ---
 
-<div class="w-full md:w-[80%] flex flex-col mx-auto">
-    <h2 id="steelframing"
-      class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full bg-custom-blue text-white md:rounded-sm font-[Montserrat]"
-    >
-      Línea Premium</h2>
-    <div class="grid flex-wrap justify-center grid-cols-1 lg:grid-cols-3">
-      {premium.map((card) => <Cards {...card} />)}
-    </div>
-    <h2
-      class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full bg-custom-blue text-white md:rounded-sm font-[Montserrat]"
-    >
-      Línea ejecutiva plus</h2>
-    <div class="grid flex-wrap justify-center grid-cols-1 lg:grid-cols-3">
-      {executivePlus.map((card) => <Cards {...card} />)}
-    </div>
-    <h2
-      class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full bg-custom-blue text-white md:rounded-sm font-[Montserrat]"
-    >
-      Línea ejecutiva</h2>
-    <div class="grid flex-wrap justify-center grid-cols-1 lg:grid-cols-3">
-      {executive.map((card) => <Cards {...card} />)}
-    </div>
-    <h2
-      class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full bg-custom-blue text-white md:rounded-sm font-[Montserrat]"
-    >
-      Línea básica</h2>
-    <div class="grid flex-wrap justify-center grid-cols-1 lg:grid-cols-3">
-      {basic.map((card) => <Cards {...card} />)}
-    </div>
-    </div>
-    
+<div class="w-full h-auto md:w-[80%] flex flex-col mx-auto">
+  <h2
+    id="steelframing"
+    class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full h-auto bg-custom-blue text-white md:rounded-sm font-[Montserrat]"
+  >
+    Línea Premium
+  </h2>
+  <div class="grid flex-wrap h-auto w-auto justify-center grid-cols-1 lg:grid-cols-3">
+    {premium.map((card) => <Cards {...card} />)}
+  </div>
+  <h2
+    class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full h-auto bg-custom-blue text-white md:rounded-sm font-[Montserrat]"
+  >
+    Línea ejecutiva plus
+  </h2>
+  <div class="grid flex-wrap h-auto w-auto justify-center grid-cols-1 lg:grid-cols-3">
+    {executivePlus.map((card) => <Cards {...card} />)}
+  </div>
+  <h2
+    class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full h-auto bg-custom-blue text-white md:rounded-sm font-[Montserrat]"
+  >
+    Línea ejecutiva
+  </h2>
+  <div class="grid flex-wrap h-auto w-auto justify-center grid-cols-1 lg:grid-cols-3">
+    {executive.map((card) => <Cards {...card} />)}
+  </div>
+  <h2
+    class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full h-auto bg-custom-blue text-white md:rounded-sm font-[Montserrat]"
+  >
+    Línea básica
+  </h2>
+  <div class="grid flex-wrap h-auto w-auto justify-center grid-cols-1 lg:grid-cols-3">
+    {basic.map((card) => <Cards {...card} />)}
+  </div>
+</div>
