@@ -1,38 +1,44 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 const { src, alt } = Astro.props;
 ---
+
+<ViewTransitions />
 
 <div class="relative">
   <img
     id="plano"
-    class="p-2 w-[50%] cursor-pointer mx-auto"
+    class="p-2 w-screen h-auto lg:w-[50%] cursor-pointer mx-auto"
     src={src}
     alt={alt}
   />
 
   <div
     id="modal"
-    class="w-screen lg:w-auto mx-auto z-20 fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden"
+    class="w-screen h-auto mx-auto z-20 fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center hidden"
   >
     <div
-      class="bg-custom-blue lg:w-[45%] p-2 rounded-md transition-transform transform"
+      class="w:screen h-auto lg:h-screen lg:w-auto p-2 rounded-md"
     >
-      <img src={src} alt={alt} class="w-full" />
+      <img src={src} alt={alt} class="w-screen h-auto lg:w-auto lg:h-full" />
     </div>
   </div>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
+<script is:inline data-astro-rerun>
+  document.addEventListener("astro:page-load", () => {
     const modal = document.getElementById("modal");
     const planoImg = document.getElementById("plano");
 
-    planoImg.addEventListener("click", () => {
-      modal.classList.remove("hidden");
-    });
+    if (planoImg && modal) {
+      planoImg.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+      });
 
-    modal.addEventListener("click", () => {
-      modal.classList.add("hidden");
-    });
+      modal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+      });
+    }
   });
 </script>
+
