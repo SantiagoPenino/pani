@@ -58,4 +58,13 @@ const { title } = Astro.props;
     height: 100vh;
     transition: 0.3s ease;
   }
+  .no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinner {
+  -moz-appearance: textfield;
+}
 </style>

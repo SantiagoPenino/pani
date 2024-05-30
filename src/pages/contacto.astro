@@ -26,11 +26,12 @@ import Layout from "../layouts/Layout.astro";
           required
         />
         <input
-          type="tel"
+          type="number"
           id="phone"
           name="phone"
           placeholder="Telefóno"
-          class="w-[80%] focus:outline-none placeholder-opacity-50 placeholder-custom-black px-2 border-b-2 border-custom-white"
+          class="w-[80%] focus:outline-none placeholder-opacity-50 placeholder-custom-black px-2 border-b-2 border-custom-white no-spinner"
+          required
         />
         <input
           class="w-[80%] focus:outline-none placeholder-opacity-50 placeholder-custom-black px-2 border-b-2 border-custom-white"
@@ -45,11 +46,12 @@ import Layout from "../layouts/Layout.astro";
           placeholder="Escriba su mensaje"
           id="message"
           name="message"
-          required></textarea>
+          required>
+        </textarea>
         <button
           class="w-[50%] bg-custom-blue text-white font-bold py-2 px-4 rounded-full transition-transform duration-200 ease-in-out lg:active:scale-90 lg:hover:scale-110"
-          type="submit">Enviar</button
-        >
+          type="submit">Enviar
+          </button>
       </div>
     </form>
     <div class="flex flex-col space-x-2 items-center my-2 lg:mb-8">
