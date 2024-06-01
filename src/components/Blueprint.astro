@@ -1,9 +1,6 @@
 ---
-import { ViewTransitions } from "astro:transitions";
 const { src, alt } = Astro.props;
 ---
-
-<ViewTransitions />
 
 <div class="relative">
   <img
@@ -20,7 +17,7 @@ const { src, alt } = Astro.props;
     <div
       class="w:screen h-auto lg:h-screen lg:w-auto landscape:w-auto landscape:h-screen p-2 rounded-md"
     >
-      <img src={src} alt={alt} class="w-screen h-auto lg:w-auto lg:h-full" />
+      <img src={src} alt={alt} transition:name="blueprint-image" class="w-screen h-auto lg:w-auto lg:h-full" />
     </div>
   </div>
 </div>
