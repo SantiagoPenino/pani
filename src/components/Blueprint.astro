@@ -4,7 +4,7 @@ const { src, alt } = Astro.props;
 
 <div class="relative">
   <img
-    id="plano"
+    id="img"
     class="p-2 w-screen h-auto lg:w-[50%] cursor-pointer mx-auto"
     src={src}
     alt={alt}
@@ -12,12 +12,12 @@ const { src, alt } = Astro.props;
 
   <div
     id="modal"
-    class="w-screen h-auto mx-auto z-40 fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden"
+    class="w-screen h-auto mx-auto z-30 fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden"
   >
     <div
       class="w:screen h-auto lg:h-screen lg:w-auto landscape:w-auto landscape:h-screen p-2 rounded-md"
     >
-      <img src={src} alt={alt} transition:name="blueprint-image" class="w-screen h-auto lg:w-auto lg:h-full" />
+      <img src={src} alt={alt} class="w-screen h-auto lg:w-auto lg:h-full" />
     </div>
   </div>
 </div>
@@ -25,10 +25,10 @@ const { src, alt } = Astro.props;
 <script is:inline data-astro-rerun>
   document.addEventListener("astro:page-load", () => {
     const modal = document.getElementById("modal");
-    const planoImg = document.getElementById("plano");
+    const modalImg = document.getElementById("img");
 
-    if (planoImg && modal) {
-      planoImg.addEventListener("click", () => {
+    if (modalImg && modal) {
+      modalImg.addEventListener("click", () => {
         modal.classList.remove("hidden");
       });
 
