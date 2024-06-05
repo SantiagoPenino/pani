@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
-import Blueprint from "../components/Blueprint.astro";
-import Image from "../components/Image.astro";
+import Modal from "../components/Modal.astro";
 import { allProducts } from "../products.js";
 
 export function getStaticPaths() {
@@ -119,7 +118,7 @@ const {
         }
       </div>
       <div class="w-full flex flex-col justify-center items-center">
-        <Blueprint
+        <Modal
           src={`/productos/${category}/${code}/plano.webp`}
           alt={`plano de obra del proyecto ${code}`}
         />
@@ -141,14 +140,16 @@ const {
       </div>
     </div>
     <div
-      class="w-[80%] mx-auto flex flex-col lg:flex-row lg:flex-wrap justify-center items-center"
-    >
-      {
-        images.map((image) => (
-          <Image src={`/productos/${category}/${code}/${image}.webp`} />
-        ))
-      }
-    </div>
+  class="w-full lg:w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-3"
+>
+  {
+    images.map((image) => (
+      <div >
+        <Modal src={`/productos/${category}/${code}/${image}.webp`} alt={image} />
+      </div>
+    ))
+  }
+</div>
     <About />
   </div>
 </Layout>
