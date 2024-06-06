@@ -39,7 +39,7 @@ const {
 ---
 
 <Layout title={`Código: ${code}`}>
-  <div class="w-full">
+  <section class="w-full">
     <div
       class="flex justify-between items-center px-2 lg:px-10 py-3 bg-custom-gray text-white font-[Montserrat]"
     >
@@ -57,14 +57,22 @@ const {
     <div
       class="p-2 w-full h-auto flex flex-col lg:flex-row justify-center items-center"
     >
-      <div class="w-full h-auto flex flex-col items-start justify-center p-2 lg:pl-20">
+      <div
+        class="w-full h-auto flex flex-col items-start justify-center p-2 lg:pl-20"
+      >
         <h2
           class="font-bold pt-4 pb-2 text-xl border-b-4 border-custom-blue inline-block"
         >
           {size}m² | Techo {roof}
         </h2>
-        <p class="pt-6 px-2 text-xs lg:text-base lg:whitespace-nowrap">{description}</p>
-        {extras && <p class=" py-4 px-2 text-xs lg:text-base italic">{extras}</p>}
+        <p class="pt-6 px-2 text-xs lg:text-base lg:whitespace-nowrap">
+          {description}
+        </p>
+        {
+          extras && (
+            <p class=" py-4 px-2 text-xs lg:text-base italic">{extras}</p>
+          )
+        }
         <h2
           class="uppercase font-bold pt-4 pb-2 text-xl border-b-4 border-custom-blue inline-block"
         >
@@ -140,17 +148,20 @@ const {
         </p>
       </div>
     </div>
-    <div
-  class="w-full lg:w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-3"
->
-  {
-    images.map((image) => (
-      <div >
-        <Modal src={`/productos/${category}/${code}/${image}.webp`} alt={image} />
-      </div>
-    ))
-  }
-</div>
+    <div class="w-full lg:w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-3">
+      {
+        images.map((image) => (
+          <div>
+            <Modal
+              src={`/productos/${category}/${code}/${image}.webp`}
+              alt={image}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+  <section>
     <About />
-  </div>
+  </section>
 </Layout>

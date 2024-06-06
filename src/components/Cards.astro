@@ -14,14 +14,13 @@ const { code, imgAlt, price, size, bedrooms, bathrooms, category } = Astro.props
 
 <a href={`/${code}`} class="block">
   <div
-    class="flex flex-col py-4 md:p-4 lg:p-6 rounded transition-transform items-center w-full flex-grow h-auto"
+    class="flex flex-col py-4 md:p-4 lg:p-6 rounded transition-transform items-center w-full h-auto"
   >
     <div class="overflow-hidden aspect-w-16 aspect-h-9">
       <img
-        class="max-w-[800px] w-full h-auto -mb-1 md:rounded-t-sm object-cover lg:hover:scale-150 transition-transform duration-300" 
+        class="lg:w-80 h-auto -mb-1 md:rounded-t-sm object-cover lg:hover:scale-150 transition-transform duration-300" 
         src=`/productos/${category}/${code}.webp`
         alt={imgAlt}
-        loading = "lazy"
       />
     </div>
     <div
