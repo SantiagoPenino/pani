@@ -56,6 +56,7 @@ import Social from "./Social.astro";
       <a
         class="px-1 text-sm md:text-base"
         href="mailto:info@steelframingmontevideo.com.uy"
+        aria-label="Enviar mensaje a por correo electrónico"
       >
         <p>info@steelframingmontevideo.com.uy</p>
       </a>
@@ -79,7 +80,10 @@ import Social from "./Social.astro";
         <path d="M11 4h2"></path>
         <path d="M12 17v.01"></path>
       </svg>
-      <p class="px-1 w-auto h-auto"><a href="tel:099491227">099 491 227</a></p>
+      <p class="px-1 w-auto h-auto">
+        <a href="tel:099491227" aria-label="Llamar a número celular"
+          >099 491 227</a>
+      </p>
       <svg
         class="p-1"
         width="44"
@@ -96,7 +100,9 @@ import Social from "./Social.astro";
           d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
         ></path>
       </svg><p class="px-1 w-auto h-auto">
-        <a href="tel:26820961">2 682 0961</a>
+        <a href="tel:26820961" aria-label="Llamar a número de teléfono"
+          >2 682 0961</a
+        >
       </p>
     </div>
   </div>
@@ -104,6 +110,8 @@ import Social from "./Social.astro";
     <p class="text-sm md:text-base uppercase font-bold w-auto h-auto">
       Todos los derechos reservados © 2024
     </p>
-    <!-- <a href="#"><p class="font-bold">penino.dev</p></a> -->
+  </div>
+  <div class="bg-custom-black flex justify-center items-center text-sm w-full h-auto">
+    <a href="#"><p class="text-white uppercase">Sitio desarrollado por penino.dev</p></a>
   </div>
 </div>
