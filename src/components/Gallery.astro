@@ -1,64 +1,124 @@
 ---
-const finished = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36];
+const finished = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+  23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
+];
 ---
 
-<div id="animation-carousel" class="relative w-full" data-carousel="static">
-  <!-- Carousel wrapper -->
-  <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-    <!-- Map de elementos -->
-    {finished.map((image, index) => (
-      <div class={`hidden duration-200 ease-linear ${index === 0 ? 'block' : ''}`} data-carousel-item={index === 0 ? 'active' : ''}>
-        <img src=`/obras/${image}.webp` class="absolute block w-auto h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-      </div>
-    ))}
+<div
+  id="animation-carousel"
+  class="relative mx-auto w-full lg:w-[80%] lg:p-6"
+  data-carousel="static"
+>
+  <div
+    class="relative overflow-hidden max-h-screen flex items-center justify-center"
+  >
+    <div
+      class="w-full flex transition-transform duration-500 ease-in-out"
+      id="carousel-items"
+    >
+      {
+        finished.map((image) => (
+          <div class="w-full flex-shrink-0">
+            <img
+              src={`/obras/${image}.webp`}
+              class="block w-full h-full lg:h-[400px] object-cover"
+              alt={`Imagen ${image}`}
+            />
+          </div>
+        ))
+      }
+    </div>
   </div>
-  <!-- Slider controls -->
-  <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-      <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+  <button
+    type="button"
+    class="absolute top-1/2 left-0 lg:left-3 z-30 flex items-center justify-center px-4 cursor-pointer group focus:outline-none"
+    data-carousel-prev
+    disabled
+  >
+    <span
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-custom-blue/50 transition-transform duration-200 ease-linear lg:dark:group-hover:bg-custom-blue group-focus:outline-none"
+    >
+      <svg
+        class="w-4 h-4 text-white dark:text-custom-white rtl:rotate-180"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 6 10"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 1 1 5l4 4"></path>
       </svg>
       <span class="sr-only">Previous</span>
     </span>
   </button>
-  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-      <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+  <button
+    type="button"
+    class="absolute top-1/2 right-0 lg:right-3 z-30 flex items-center justify-center px-4 cursor-pointer group focus:outline-none"
+    data-carousel-next
+  >
+    <span
+      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-custom-blue/50 transition-transform duration-200 ease-linear lg:dark:group-hover:bg-custom-blue group-focus:outline-none"
+    >
+      <svg
+        class="w-4 h-4 text-white dark:text-custom-white rtl:rotate-180"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 6 10"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="m1 9 4-4-4-4"></path>
       </svg>
       <span class="sr-only">Next</span>
     </span>
   </button>
 </div>
 
-<script is:inline data-astro-rerun>
-  document.addEventListener('astro:page-load', () => {
-    const prevButton = document.querySelector('[data-carousel-prev]');
-    const nextButton = document.querySelector('[data-carousel-next]');
-    const items = document.querySelectorAll('[data-carousel-item]');
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const prevButton = document.querySelector("[data-carousel-prev]");
+    const nextButton = document.querySelector("[data-carousel-next]");
+    const itemsContainer = document.getElementById("carousel-items");
+    const items = document.querySelectorAll("#carousel-items > div");
+    const totalItems = items.length;
 
     let activeIndex = 0;
 
-    function updateCarousel(newIndex) {
-      items[activeIndex].classList.add('hidden');
-      items[activeIndex].classList.remove('block');
-      items[activeIndex].setAttribute('data-carousel-item', '');
-
-      activeIndex = newIndex;
-
-      items[activeIndex].classList.remove('hidden');
-      items[activeIndex].classList.add('block');
-      items[activeIndex].setAttribute('data-carousel-item', 'active');
+    function updateButtons() {
+      prevButton.disabled = activeIndex === 0;
+      nextButton.disabled = activeIndex === totalItems - 1;
     }
 
-    prevButton.addEventListener('click', () => {
-      const newIndex = (activeIndex - 1 + items.length) % items.length;
-      updateCarousel(newIndex);
+    function updateCarousel(newIndex) {
+      const offset = -newIndex * 100;
+      itemsContainer.style.transform = `translateX(${offset}%)`;
+      activeIndex = newIndex;
+      updateButtons();
+    }
+
+    prevButton.addEventListener("click", () => {
+      if (activeIndex > 0) {
+        const newIndex = activeIndex - 1;
+        updateCarousel(newIndex);
+      }
     });
 
-    nextButton.addEventListener('click', () => {
-      const newIndex = (activeIndex + 1) % items.length;
-      updateCarousel(newIndex);
+    nextButton.addEventListener("click", () => {
+      if (activeIndex < totalItems - 1) {
+        const newIndex = activeIndex + 1;
+        updateCarousel(newIndex);
+      }
     });
+
+    updateButtons();
   });
 </script>
