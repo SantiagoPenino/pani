@@ -4,7 +4,7 @@ const { src, alt } = Astro.props;
 
 <div class="relative">
   <img
-    class={`toggle-modal p-2 w-screen h-auto lg:w-80 cursor-pointer mx-auto rounded`}
+    class={`toggle-modal p-2 w-screen max-w-80 h-auto lg:w-80 cursor-pointer mx-auto rounded`}
     src={src}
     alt={alt}
     loading="lazy"
@@ -20,7 +20,7 @@ const { src, alt } = Astro.props;
         src={src}
         alt={alt}
         loading="lazy"
-        class="w-screen h-auto lg:w-auto lg:h-full"
+        class="w-screen h-auto max-w-[1920px] lg:w-auto lg:h-full"
       />
     </div>
   </div>
