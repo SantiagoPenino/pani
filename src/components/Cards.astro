@@ -18,9 +18,11 @@ const { code, imgAlt, price, size, bedrooms, bathrooms, category } = Astro.props
   >
     <div class="overflow-hidden aspect-w-16 aspect-h-9">
       <img
+        width="360px" height="200px"
         class="w-screen lg:w-full h-auto -mb-1 md:rounded-t-sm object-cover lg:hover:scale-150 transition-transform duration-300" 
         src=`/productos/${category}/${code}.webp`
         alt={imgAlt}
+        loading="lazy"
       />
     </div>
     <div
