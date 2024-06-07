@@ -1,25 +1,22 @@
 ---
 const { src, alt } = Astro.props;
 ---
-
 <div class="relative">
   <img
-    class={`toggle-modal p-2 w-screen lg:max-w-80 h-auto lg:w-80 cursor-pointer mx-auto rounded`}
+    class="toggle-modal p-2 w-screen h-auto lg:w-96 cursor-pointer mx-auto rounded"
     src={src}
     alt={alt}
     loading="lazy"
   />
 
   <div
-    class={`w-screen h-auto mx-auto z-30 fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden `}
+    class="modal-backdrop w-screen h-auto mx-auto z-30 fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
   >
-    <div
-      class="w-screen h-auto lg:h-screen lg:w-auto landscape:w-auto landscape:h-screen landscape:z-50 p-2"
-    >
+    <div class="modal-content w-screen h-auto lg:h-screen lg:w-auto landscape:w-auto landscape:h-screen landscape:z-50 p-2">
       <img
         src={src}
         alt={alt}
-        class="w-screen h-auto max-w-[1920px] lg:w-auto lg:h-full"
+        class="modal-image w-screen h-auto max-w-[1920px] lg:w-auto lg:h-full transition-transform duration-300 transform scale-0"
       />
     </div>
   </div>
@@ -31,13 +28,33 @@ const { src, alt } = Astro.props;
 
     modalElements.forEach((modalElement) => {
       const modal = modalElement.nextElementSibling;
+      const modalImage = modal.querySelector(".modal-image");
 
-      modalElement.addEventListener("click", () => {
+      modalElement.addEventListener("click", (event) => {
+        const rect = modalElement.getBoundingClientRect();
+        const originX = rect.left + rect.width / 2;
+        const originY = rect.top + rect.height / 2;
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+
+        const originPercentX = (originX / viewportWidth) * 100;
+        const originPercentY = (originY / viewportHeight) * 100;
+
+        modalImage.style.transformOrigin = `${originPercentX}% ${originPercentY}%`;
+
         modal.classList.remove("hidden");
+        setTimeout(() => {
+          modalImage.classList.remove("scale-0");
+          modalImage.classList.add("scale-100");
+        }, 10);
       });
 
       modal.addEventListener("click", () => {
-        modal.classList.add("hidden");
+        modalImage.classList.remove("scale-100");
+        modalImage.classList.add("scale-0");
+        setTimeout(() => {
+          modal.classList.add("hidden");
+        }, 200);
       });
     });
   });
