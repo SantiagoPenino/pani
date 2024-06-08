@@ -2,7 +2,22 @@
 import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
 import Modal from "../components/Modal.astro";
-import { allProducts } from "../products.js";
+import {
+  premium,
+  executivePlus,
+  executive,
+  basic,
+  isopanel,
+} from "..//proyectos.json";
+
+export const allProducts = [
+  ...premium,
+  ...executivePlus,
+  ...executive,
+  ...basic,
+  ...isopanel,
+];
+
 
 export function getStaticPaths() {
   const paths = allProducts.map((product) => ({
@@ -69,7 +84,7 @@ const {
         </p>
         {
           extras && (
-            <p class=" py-4 px-2 text-xs lg:text-base italic">{extras}</p>
+            <p class=" p-2 px-2 text-xs lg:text-base italic">{extras}</p>
           )
         }
         <h2
