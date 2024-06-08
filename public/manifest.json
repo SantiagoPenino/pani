@@ -6,7 +6,9 @@
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#006494",
-    "orientation": "portrait",
+    "orientation": "any",
+    "add_to_home_screen": "standalone",
+    "browser_action":"fullscreen",
     "icons": [
     {
       "src": "/favicon.png",
