@@ -7,8 +7,6 @@
     "background_color": "#fff",
     "theme_color": "#006494",
     "orientation": "any",
-    "add_to_home_screen": "standalone",
-    "browser_action":"fullscreen",
     "icons": [
     {
       "src": "/favicon.png",
