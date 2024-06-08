@@ -1,0 +1,17 @@
+{
+    "name": "Pani Construcciones",
+    "short_name": "Pani",
+    "description": "Empresa constructora en steelframing e isopanel",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#006494",
+    "orientation": "portrait",
+    "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "90x90",
+      "type": "image/png"
+    }
+  ]
+  }
