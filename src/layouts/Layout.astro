@@ -23,7 +23,7 @@ const { title } = Astro.props;
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap"
-      as="style"
+      as="font" crossorigin
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap"
@@ -39,9 +39,6 @@ const { title } = Astro.props;
     </main>
     <Footer />
     <style is:global>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
       html {
         scroll-behavior: smooth;
