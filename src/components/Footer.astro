@@ -1,5 +1,6 @@
 ---
 import Social from "./Social.astro";
+import Powered from "./Powered.astro";
 ---
 
 <div class="flex flex-wrap bg-custom-black w-full h-auto">
@@ -7,7 +8,8 @@ import Social from "./Social.astro";
     class="flex flex-col text-white w-full h-auto lg:w-1/2 p-2 justify-center items-center"
   >
     <img
-    width="375px" height="100px"
+      width="375px"
+      height="100px"
       class="hidden w-auto h-auto lg:flex p-2"
       src="/logoweb.webp"
       alt="logo de pani construcciones"
@@ -83,7 +85,8 @@ import Social from "./Social.astro";
       </svg>
       <p class="px-1 w-auto h-auto">
         <a href="tel:099491227" aria-label="Llamar a número celular"
-          >099 491 227</a>
+          >099 491 227</a
+        >
       </p>
       <svg
         class="p-1"
@@ -112,7 +115,9 @@ import Social from "./Social.astro";
       Todos los derechos reservados © 2024
     </p>
   </div>
-  <div class="bg-custom-black flex justify-center items-center text-xs w-full h-auto">
-    <a href="#"><p class="text-white uppercase">Sitio desarrollado por penino.dev</p></a>
+  <div
+    class="bg-custom-black flex justify-center items-center w-full h-auto"
+  >
+    <Powered />
   </div>
 </div>
