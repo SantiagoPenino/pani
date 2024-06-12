@@ -65,7 +65,7 @@ description={`Descubre la casa ${code}, una residencia moderna y eficiente const
     <div class="aspect-w-16 aspect-h-9 flex justify-center -mt-1">
       <img
         class="max-w-[1920px] w-full h-auto"
-        src={`/productos/${category}/${code}.webp`}
+        src={`images/proyectos/${category}/${code}.webp`}
         alt={imgAlt}
       />
     </div>
@@ -143,7 +143,7 @@ description={`Descubre la casa ${code}, una residencia moderna y eficiente const
       </div>
       <div class="w-full flex flex-col justify-center items-center">
         <Modal
-          src={`/productos/${category}/${code}/plano.webp`}
+          src={`images/proyectos/${category}/${code}/plano.webp`}
           alt={`plano de obra del proyecto ${code}`}
         />
         <p class="py-4 text-xs lg:text-base">
@@ -168,7 +168,7 @@ description={`Descubre la casa ${code}, una residencia moderna y eficiente const
         images.map((image) => (
           <div class="w-full lg:w-1/3 px-4 lg:px-10 mx-auto flex-grow">
             <Modal
-              src={`/productos/${category}/${code}/${image}.webp`}
+              src={`images/proyectos/${category}/${code}/${image}.webp`}
               alt={`Imagen de maqueta de proyecto ${code}`}
             />
           </div>
