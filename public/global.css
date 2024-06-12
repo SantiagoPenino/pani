@@ -46,3 +46,13 @@ body{
     -moz-appearance: textfield;
     appearance: textfield;
   }
+
+  @keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.fadeInOut {
+  animation: fadeInOut 9s ease forwards;
+}
