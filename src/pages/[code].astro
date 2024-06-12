@@ -57,14 +57,14 @@ const {
 description={`Descubre la casa ${code}, una residencia moderna y eficiente construida en ${line === 'Isopanel' ? 'Isopanel': 'Steel Framing'}. Explora sus características, planos y materiales utilizados. ¡Construye tu hogar ideal con nosotros!`}>
   <section class="w-full">
     <div
-      class="flex justify-between items-center px-2 lg:px-10 py-3 bg-custom-gray text-white font-[Montserrat]"
+      class="flex justify-between items-center px-2 lg:px-10 py-3 bg-custom-gray text-white font-[Archivo]"
     >
-      <h1 class="text-lg lg:text-2xl font-bold uppercase">{line}</h1>
-      <h2 class="text-lg lg:text-2xl uppercase font-bold">Código: {code}</h2>
+      <h1 class="text-lg lg:text-2xl font-bold uppercase font-[DMSans]">{line}</h1>
+      <h2 class="text-lg lg:text-2xl uppercase font-bold font-[DMSans]">Código: {code}</h2>
     </div>
     <div class="aspect-w-16 aspect-h-9 flex justify-center -mt-1">
       <img
-        class="max-w-[1920px] w-full h-auto"
+        class="w-full h-auto"
         src={`/proyectos/${category}/${code}.webp`}
         alt={imgAlt}
       />
