@@ -1,29 +1,13 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap'); */
-
-@font-face {
-  font-family: Inter;
-  src: url('/fonts/Inter.ttf');
-}
 @font-face {
   font-family: Archivo;
-  src: url('/fonts/Archivo.ttf');
+  src: url('/assets/fonts/Archivo.ttf');
 }
+
 @font-face {
   font-family: DMSans;
-  src: url('/fonts/DMSans.ttf');
+  src: url('/assets/fonts/DMSans.ttf');
 }
-@font-face {
-  font-family: Manrope;
-  src: url('/fonts/Manrope.ttf');
-}
-@font-face {
-  font-family: Montserrat;
-  src: url('/fonts/Montserrat.ttf');
-}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
@@ -34,6 +18,7 @@ html {
       scroll-padding-top: 6rem;
     }
   }
+
 body{
   font-family: DMSans , sans-serif;
 }
