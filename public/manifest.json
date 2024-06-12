@@ -9,18 +9,18 @@
     "orientation": "any",
     "icons": [
     {
-      "src": "icons/favicon.png",
+      "src": "/favicon.png",
       "sizes": "90x90",
       "type": "image/png"
     },
     {
-      "src": "icons/pani_144.png",
+      "src": "/pani_144.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/pani_512.png",
+      "src": "/pani_512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
