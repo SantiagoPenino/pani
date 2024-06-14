@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        "custom-original": "#008fd0",
         "custom-blue": "#006494",
         "custom-black": "#171614",
         "custom-gray": "#061826",

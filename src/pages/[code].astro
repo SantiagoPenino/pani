@@ -163,10 +163,10 @@ description={`Descubre la casa ${code}, una residencia moderna y eficiente const
         </p>
       </div>
     </div>
-    <div class="w-full lg:w-[80%] mx-auto px-4 flex flex-wrap justify-center">
+    <div class="w-full lg:w-[80%] mx-auto px-4 flex flex-wrap justify-center lg:grid lg:grid-cols-3">
       {
         images.map((image) => (
-          <div class="w-full lg:w-1/3 px-4 lg:px-10 mx-auto flex-grow">
+          <div class="w-full px-4 lg:px-10 mx-auto">
             <Modal
               src={`/assets/images/proyectos/${category}/${code}/${image}.webp`}
               alt={`Imagen de maqueta de proyecto ${code}`}
