@@ -1,11 +1,13 @@
 @font-face {
   font-family: Archivo;
   src: url('/assets/fonts/Archivo.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: DMSans;
   src: url('/assets/fonts/DMSans.ttf');
+  font-display: swap;
 }
 
 html {
