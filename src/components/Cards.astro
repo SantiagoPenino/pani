@@ -1,4 +1,6 @@
 ---
+import { fade } from 'astro:transitions';
+
 interface Props {
   code: string;
   imgAlt: string;
@@ -12,7 +14,7 @@ interface Props {
 const { code, imgAlt, price, size, bedrooms, bathrooms, category } = Astro.props;
 ---
 
-<div
+<div transition:animate={fade({duration:'1s'})}
 class="flex flex-col py-4 lg:p-6 rounded transition-transform items-center w-full h-auto"
 >
 <a href={`/${code}`} class="block">
