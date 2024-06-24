@@ -1,4 +1,5 @@
 ---
+import { fade } from "astro:transitions";
 import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
 import Modal from "../components/Modal.astro";
@@ -17,7 +18,6 @@ export const allProducts = [
   ...basic,
   ...isopanel,
 ];
-
 
 export function getStaticPaths() {
   const paths = allProducts.map((product) => ({
@@ -53,18 +53,25 @@ const {
 } = productData;
 ---
 
-<Layout title={`Casa en ${line === 'Isopanel' ? 'Isopanel': 'Steel Framing'} código: ${code} | Pani Construcciones`} 
-description={`Descubre la casa ${code}, una residencia moderna y eficiente construida en ${line === 'Isopanel' ? 'Isopanel': 'Steel Framing'}. Explora sus características, planos y materiales utilizados. ¡Construye tu hogar ideal con nosotros!`}>
+<Layout
+  title={`Casa en ${line === "Isopanel" ? "Isopanel" : "Steel Framing"} código: ${code} | Pani Construcciones`}
+  description={`Descubre la casa ${code}, una residencia moderna y eficiente construida en ${line === "Isopanel" ? "Isopanel" : "Steel Framing"}. Explora sus características, planos y materiales utilizados. ¡Construye tu hogar ideal con nosotros!`}
+>
   <section class="w-full">
     <div
       class="flex justify-between items-center px-2 lg:px-10 py-3 bg-custom-gray text-white font-[Archivo]"
     >
-      <h1 class="text-lg lg:text-2xl font-bold uppercase font-[DMSans]">{line}</h1>
-      <h2 class="text-lg lg:text-2xl uppercase font-bold font-[DMSans]">Código: {code}</h2>
+      <h1 class="text-lg lg:text-2xl font-bold uppercase font-[DMSans]">
+        {line}
+      </h1>
+      <h2 class="text-lg lg:text-2xl uppercase font-bold font-[DMSans]">
+        Código: {code}
+      </h2>
     </div>
     <div class="aspect-w-16 aspect-h-9 flex justify-center -mt-1">
       <img
-        class="w-full h-auto animate-scale"
+        transition:animate={fade({ duration: "1s" })}
+        class="w-full h-auto"
         src={`/assets/images/proyectos/${category}/${code}.webp`}
         alt={imgAlt}
       />
@@ -163,7 +170,9 @@ description={`Descubre la casa ${code}, una residencia moderna y eficiente const
         </p>
       </div>
     </div>
-    <div class="w-full lg:w-[80%] mx-auto px-4 flex flex-wrap justify-center lg:grid lg:grid-cols-3">
+    <div
+      class="w-full lg:w-[80%] mx-auto px-4 flex flex-wrap justify-center lg:grid lg:grid-cols-3"
+    >
       {
         images.map((image) => (
           <div class="w-full px-4 lg:px-10 mx-auto">
