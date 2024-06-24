@@ -6,4 +6,7 @@ dotenv.config();
 
 export default defineConfig({
   integrations: [tailwind()],
+  build: {
+    minify: "esbuild",
+  },
 });

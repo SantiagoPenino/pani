@@ -1,5 +1,4 @@
 ---
-import { fade } from "astro:transitions";
 import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
 import Modal from "../components/Modal.astro";
@@ -70,7 +69,6 @@ const {
     </div>
     <div class="aspect-w-16 aspect-h-9 flex justify-center -mt-1">
       <img
-        transition:animate={fade({ duration: "1s" })}
         class="w-full h-auto"
         src={`/assets/images/proyectos/${category}/${code}.webp`}
         alt={imgAlt}
