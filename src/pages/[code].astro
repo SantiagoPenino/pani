@@ -45,9 +45,11 @@ const {
   cover,
   paint,
   serie,
+  floor,
   counter,
   estimated,
   images,
+  coating,
   extras,
 } = productData;
 ---
@@ -107,8 +109,8 @@ const {
               <li>Terminación exterior con pintura texturada.</li>
               <li>Terminación interior de yeso.</li>
               <li>Pintura interior {paint}.</li>
-              <li>Aberturas en aluminio serie {serie}.</li>
-              <li>Pisos y revestimientos de cerámica.</li>
+              <li>Aberturas en aluminio serie {serie}, color a elección.</li>
+              <li>Pisos y revestimientos de {floor}.</li>
               <li>Loza sanitaria y griferías.</li>
               <li>{counter} de granito, color a elección.</li>
               <li>
@@ -124,15 +126,17 @@ const {
               <li>Cimentación de platea de hormigón reforzada.</li>
               <li>Muros de perfilería de Steel Framing (acero galvanizado).</li>
               <li>Cubierta de Isopanel de {cover}</li>
-              <li>
-                Revestimiento con escudo térmico (sístema EIFS) en exteriores.
-              </li>
+              <li>{coating}</li>
               <li>Terminación exterior con revoque fino.</li>
               <li>Pintura interior {paint}.</li>
               <li>Pintura exterior Sherwin Williams Loxon.</li>
-              <li>Aberturas en aluminio serie {serie}.</li>
-              <li>Mosquiteros en aberturas de aluminio.</li>
-              <li>Pisos y revestimientos de porcelanato.</li>
+              <li>Aberturas en aluminio serie {serie}, color a elección.</li>
+              {line === "Premium" ? (
+                <li>Mosquiteros en aberturas de aluminio.</li>
+              ) : (
+                ""
+              )}
+              <li>Pisos y revestimientos de {floor}.</li>
               <li>Loza sanitaria y griferías.</li>
               <li>{counter} de granito, color a elección.</li>
               <li>

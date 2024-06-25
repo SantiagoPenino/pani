@@ -16,6 +16,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8, 9]
     },
@@ -35,6 +37,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8, 9]
     },
@@ -54,6 +58,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5]
     },
@@ -73,6 +79,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6]
     },
@@ -92,6 +100,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6]
     },
@@ -111,6 +121,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6]
     },
@@ -130,6 +142,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6]
     },
@@ -149,6 +163,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6]
     },
@@ -168,6 +184,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6]
     },
@@ -187,6 +205,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8]
     },
@@ -206,6 +226,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5]
     },
@@ -225,6 +247,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     },
@@ -244,6 +268,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     },
@@ -263,6 +289,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6]
     },
@@ -282,6 +310,8 @@
       "paint": "lavable",
       "serie": "Gala con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5]
     }
@@ -303,6 +333,8 @@
       "paint": "color blanco",
       "serie": "Probba con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -322,6 +354,8 @@
       "paint": "color blanco",
       "serie": "Probba con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2]
     },
@@ -341,6 +375,8 @@
       "paint": "color blanco",
       "serie": "Probba con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8]
     },
@@ -360,6 +396,8 @@
       "paint": "color blanco",
       "serie": "Probba con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -379,6 +417,8 @@
       "paint": "color blanco",
       "serie": "Probba con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -398,6 +438,8 @@
       "paint": "color blanco",
       "serie": "Probba con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5]
     },
@@ -417,6 +459,8 @@
       "paint": "color blanco",
       "serie": "Probba con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras": "Este proyecto incluye 54m² de cochera cubierta y depósito.",
       "images": [1, 2, 3, 4]
     },
@@ -436,6 +480,8 @@
       "paint": "color blanco",
       "serie": "Probba con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -455,6 +501,8 @@
       "paint": "color blanco",
       "serie": "Probba con DVH",
       "counter": "Mesadas de cocina y baños",
+      "floor":"porcelanato",
+      "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7]
     }
@@ -476,6 +524,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesadas de cocina y baños",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2]
     },
@@ -495,6 +545,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesadas de cocina y baños",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -514,6 +566,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesadas de cocina y baños",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2, 3]
     },
@@ -533,6 +587,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesadas de cocina y baños",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2, 3]
     },
@@ -552,6 +608,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesadas de cocina y baños",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -571,6 +629,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesadas de cocina y baños",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -590,6 +650,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesadas de cocina y baños",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2]
     },
@@ -609,6 +671,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesadas de cocina y baños",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8]
     },
@@ -628,6 +692,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesadas de cocina y baños",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2, 3, 4]
     }
@@ -649,6 +715,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2]
     },
@@ -668,6 +736,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -687,6 +757,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -706,6 +778,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2, 3]
     },
@@ -725,6 +799,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2]
     },
@@ -744,6 +820,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"Muros perimetrales con placa cementicia.",
       "extras":"",
       "images": [1, 2, 3, 4]
     }
@@ -765,6 +843,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"",
       "extras":"",
       "images": [1, 2]
     },
@@ -784,6 +864,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -803,6 +885,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -822,6 +906,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"",
       "extras":"",
       "images": [1, 2, 3]
     },
@@ -841,6 +927,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"",
       "extras":"",
       "images": [1, 2]
     },
@@ -860,6 +948,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -879,6 +969,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"",
       "extras":"",
       "images": [1, 2, 3]
     },
@@ -898,6 +990,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"",
       "extras":"",
       "images": [1, 2, 3]
     },
@@ -917,6 +1011,8 @@
       "paint": "color blanco",
       "serie": "Probba con vidrio simple",
       "counter": "Mesada de cocina",
+      "floor":"cerámica",
+      "coating":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     }
