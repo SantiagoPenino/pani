@@ -57,3 +57,16 @@ body{
 .fadeInOut {
   animation: fadeInOut 9s ease forwards;
 }
+
+@keyframes scale-up {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.animate-scale-up {
+  animation: scale-up 0.5s ease-in-out;
+}
