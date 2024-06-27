@@ -18,6 +18,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8, 9]
     },
@@ -39,6 +40,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8, 9]
     },
@@ -60,6 +62,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4, 5]
     },
@@ -213,6 +216,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8]
     },
@@ -234,6 +238,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4, 5]
     },
@@ -255,6 +260,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     },
@@ -276,6 +282,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     },
@@ -297,6 +304,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6]
     },
@@ -318,6 +326,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4, 5]
     }
@@ -473,6 +482,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -494,6 +504,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2]
     },
@@ -515,6 +526,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8]
     },
@@ -536,6 +548,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -557,6 +570,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -578,6 +592,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4, 5]
     },
@@ -599,6 +614,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras": "Este proyecto incluye 54m² de cochera cubierta y depósito.",
       "images": [1, 2, 3, 4]
     },
@@ -620,6 +636,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -641,6 +658,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"porcelanato",
       "coating": "Revestimiento con escudo térmico (sístema EIFS) en exteriores.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7]
     }
@@ -664,6 +682,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2]
     },
@@ -685,6 +704,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -706,6 +726,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3]
     },
@@ -793,6 +814,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3]
     },
@@ -814,6 +836,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -835,6 +858,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -856,6 +880,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2]
     },
@@ -877,6 +902,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4, 5, 6, 7, 8]
     },
@@ -898,6 +924,7 @@
       "counter": "Mesadas de cocina y baños",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     }
@@ -921,6 +948,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2]
     },
@@ -942,6 +970,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -963,6 +992,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -984,6 +1014,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3]
     },
@@ -1005,6 +1036,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2]
     },
@@ -1026,6 +1058,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"Muros perimetrales con placa cementicia.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -1115,6 +1148,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"",
+      "front":"",
       "extras":"",
       "images": [1, 2]
     },
@@ -1136,6 +1170,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -1157,6 +1192,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -1178,6 +1214,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3]
     },
@@ -1199,6 +1236,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"",
+      "front":"",
       "extras":"",
       "images": [1, 2]
     },
@@ -1220,6 +1258,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     },
@@ -1241,6 +1280,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3]
     },
@@ -1313,28 +1353,6 @@
     {
       "category": "isopanel",
       "line": "Isopanel",
-      "code": "85i-b",
-      "imgAlt": "maqueta de la casa 85 isopanel b",
-      "price": "109.500",
-      "size": "85",
-      "bedrooms": "3",
-      "bathrooms": "2",
-      "roof": "plano",
-      "description": "3 dormitorios, 2 baños completos y living/cocina/comedor.",
-      "estimated": "55",
-      "cover": "10cm.",
-      "paint": "color blanco",
-      "serie": "Probba con vidrio simple",
-      "counter": "Mesada de cocina",
-      "floor":"cerámica",
-      "coating":"",
-      "front":"Revestimiento de WPC clásico en fachada.",
-      "extras":"",
-      "images": [1, 2, 3]
-    },
-    {
-      "category": "isopanel",
-      "line": "Isopanel",
       "code": "90i-a",
       "imgAlt": "maqueta de la casa 90 isopanel a",
       "price": "108.000",
@@ -1350,28 +1368,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"",
-      "extras":"",
-      "images": [1, 2, 3]
-    },
-    {
-      "category": "isopanel",
-      "line": "Isopanel",
-      "code": "90i-b",
-      "imgAlt": "maqueta de la casa 90 isopanel b",
-      "price": "110.700",
-      "size": "90",
-      "bedrooms": "3",
-      "bathrooms": "2",
-      "roof": "plano",
-      "description": "3 dormitorios, 2 baños completos y living/cocina/comedor.",
-      "estimated": "55",
-      "cover": "10cm.",
-      "paint": "color blanco",
-      "serie": "Probba con vidrio simple",
-      "counter": "Mesada de cocina",
-      "floor":"cerámica",
-      "coating":"",
-      "front":"Revestimiento de WPC clásico en fachada.",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3]
     },
@@ -1393,6 +1390,7 @@
       "counter": "Mesada de cocina",
       "floor":"cerámica",
       "coating":"",
+      "front":"",
       "extras":"",
       "images": [1, 2, 3, 4]
     }

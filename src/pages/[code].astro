@@ -50,6 +50,7 @@ const {
   estimated,
   images,
   coating,
+  front,
   extras,
 } = productData;
 ---
@@ -128,6 +129,7 @@ const {
               <li>Cubierta de Isopanel de {cover}</li>
               <li>{coating}</li>
               <li>Terminación exterior con revoque fino.</li>
+              {front !== "" ? <li>{front}</li> : ""}
               <li>Pintura interior {paint}.</li>
               <li>Pintura exterior Sherwin Williams Loxon.</li>
               <li>Aberturas en aluminio serie {serie}, color a elección.</li>
