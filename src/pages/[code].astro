@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import About from "../components/About.astro";
 import Modal from "../components/Modal.astro";
 import {
   premium,
@@ -175,7 +174,7 @@ const {
       </div>
     </div>
     <div
-      class="w-full lg:w-[80%] mx-auto px-4 flex flex-wrap justify-center lg:grid lg:grid-cols-3"
+      class="w-full mb-2 lg:mb-8 lg:w-[80%] mx-auto px-4 flex flex-wrap justify-center lg:grid lg:grid-cols-3"
     >
       {
         images.map((image) => (
@@ -188,8 +187,5 @@ const {
         ))
       }
     </div>
-  </section>
-  <section>
-    <About />
   </section>
 </Layout>
