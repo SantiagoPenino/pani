@@ -36,13 +36,12 @@ document.addEventListener("astro:page-load", () => {
           e.target
         );
 
-        message.textContent =
-          "Gracias por contactarnos. En breve nos pondremos en contacto contigo.";
+        message.textContent = "Mensaje enviado.";
         message.classList.add("text-green-500");
         messageWrapper.appendChild(message);
         form.reset();
       } catch (error) {
-        message.textContent = "Error al enviar el formulario: " + error.text;
+        message.textContent = "Error al enviar mensaje.";
         message.classList.add("text-red-500");
         messageWrapper.appendChild(message);
       }
