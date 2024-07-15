@@ -52,11 +52,26 @@ const {
   front,
   extras,
 } = productData;
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": `Proyecto ${code}`,
+  "image": `https://paniconstrucciones.com/assets/images/proyectos/${category}/${code}.webp`,
+  "description": description,
+  "brand": "Pani Construcciones",
+  "offers": {
+    "@type": "Offer",
+    "url": `https://paniconstrucciones.com/${code}`,
+    "priceCurrency": "USD",
+    "price": price,
+}}
 ---
 
 <Layout
   title={`Proyecto ${code} | Pani Construcciones`}
-  description={`Descubre el proyecto ${code}, una residencia moderna construida en ${line === "Isopanel" ? "Isopanel" : "Steel Framing"}. Explora sus características, su plano y materiales utilizados. ¡Construyé tu hogar con nosotros!`}>
+  description={`Descubre el proyecto ${code}, una residencia moderna construida en ${line === "Isopanel" ? "Isopanel" : "Steel Framing"}. Explora sus características, su plano y materiales utilizados. ¡Construyé tu hogar con nosotros!`}
+  schemaData={schemaData || null}>
   <section class="w-full">
     <div
       class="flex justify-between items-center px-2 lg:px-10 py-3 bg-custom-gray text-white font-[Archivo]"

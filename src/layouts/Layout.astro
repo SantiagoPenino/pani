@@ -6,8 +6,9 @@ import WhatsappButton from "../components/WhatsappButton.astro";
 interface Props {
   title: string;
   description: string;
+  schemaData?: any;
 }
-const { title, description } = Astro.props;
+const { title, description, schemaData } = Astro.props;
 ---
 
 <!doctype html>
@@ -27,9 +28,15 @@ const { title, description } = Astro.props;
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#006494" />
     <link rel="stylesheet" href="/global.css" />
+    {schemaData && (
+      <script is:inline type="application/ld+json">
+        {JSON.stringify(schemaData)}
+      </script>
+    )}
     <title>{title}</title>
     <ViewTransitions />
-  </head><body class="bg-white relative mt-18 lg:mt-22">
+  </head>
+  <body class="bg-white relative mt-18 lg:mt-22">
     <WhatsappButton />
     <Header />
     <main>
