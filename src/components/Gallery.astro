@@ -94,6 +94,10 @@ const finished = [
     const items = document.querySelectorAll("#carousel-items > div");
     const totalItems = items.length;
 
+    if (!prevButton || !nextButton || !itemsContainer) {
+      return;
+    }
+
     let activeIndex = 0;
 
     function updateButtons() {
