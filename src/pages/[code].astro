@@ -56,22 +56,24 @@ const {
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": `Proyecto ${code}`,
-  "image": `https://paniconstrucciones.com/assets/images/proyectos/${category}/${code}.webp`,
-  "description": description,
-  "brand": "Pani Construcciones",
-  "offers": {
+  name: `Proyecto ${code}`,
+  image: `https://paniconstrucciones.com/assets/images/proyectos/${category}/${code}.webp`,
+  description: description,
+  brand: "Pani Construcciones",
+  offers: {
     "@type": "Offer",
-    "url": `https://paniconstrucciones.com/${code}`,
-    "priceCurrency": "USD",
-    "price": price,
-}}
+    url: `https://paniconstrucciones.com/${code}`,
+    priceCurrency: "USD",
+    price: price,
+  },
+};
 ---
 
 <Layout
   title={`Proyecto ${code} | Pani Construcciones`}
   description={`Descubre el proyecto ${code}, una residencia moderna construida en ${line === "Isopanel" ? "Isopanel" : "Steel Framing"}. Explora sus características, su plano y materiales utilizados. ¡Construyé tu hogar con nosotros!`}
-  schemaData={schemaData || null}>
+  schemaData={schemaData || null}
+>
   <section class="w-full">
     <div
       class="flex justify-between items-center px-2 lg:px-10 py-3 bg-custom-gray text-white font-[Archivo]"
@@ -85,7 +87,8 @@ const schemaData = {
     </div>
     <div class="aspect-w-16 aspect-h-9 flex justify-center -mt-1">
       <img
-      width="1360px" height="768px"
+        width="1360px"
+        height="768px"
         class="w-full h-auto"
         src={`/assets/images/proyectos/${category}/${code}.webp`}
         alt={imgAlt}
@@ -187,7 +190,9 @@ const schemaData = {
         <p class="lg:text-sm font-bold text-xs">
           (*) Consultar por opcionales y accesorios:
         </p>
-        <p class="lg:text-sm font-bold text-xs">(parrillero, pérgola, deck, piscina, vereda perimetral, etc).</p>
+        <p class="lg:text-sm font-bold text-xs">
+          (parrillero, pérgola, deck, piscina, vereda perimetral, etc).
+        </p>
       </div>
     </div>
     <div
