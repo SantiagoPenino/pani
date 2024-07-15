@@ -29,7 +29,7 @@ const { title, description, schemaData } = Astro.props;
     <meta name="theme-color" content="#006494" />
     <link rel="stylesheet" href="/global.css" />
     {schemaData && (
-      <script is:inline type="application/ld+json">
+      <script type="application/ld+json">
         {JSON.stringify(schemaData)}
       </script>
     )}
