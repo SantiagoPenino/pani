@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://paniconstrucciones.com/sitemap.xml
