@@ -4,11 +4,20 @@ import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 import WhatsappButton from "../components/WhatsappButton.astro";
 import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+
+export function getCanonicalUrl(pathname) {
+  const baseUrl = "https://paniconstrucciones.com";
+  return `${baseUrl}${pathname}`;
+}
+
 interface Props {
   title: string;
   description: string;
 }
+
 const { title, description } = Astro.props;
+const canonicalUrl = getCanonicalUrl(Astro.url.pathname);
+
 ---
 
 <!doctype html>
@@ -27,7 +36,7 @@ const { title, description } = Astro.props;
       property="og:image"
       content="/assets/images/proyectos/premium/235p-a.webp"
     />
-    <link rel="canonical" href="https://www.paniconstrucciones.com" />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#006494" />
