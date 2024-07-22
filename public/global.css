@@ -57,3 +57,50 @@ body{
 .fadeInOut {
   animation: fadeInOut 3s ease forwards;
 }
+
+.whatsapp-button {
+  position: relative;
+  width: 3rem; 
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden; 
+  transition: width 0.5s ease;
+}
+
+.whatsapp-button.expanded {
+  width: 15.5rem; 
+}
+
+.whatsapp-icon {
+  width: 2rem; 
+  height: 2rem;
+}
+
+.whatsapp-text {
+  position: relative;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color: #fff; /* Color del texto */
+}
+
+.whatsapp-button.expanded .whatsapp-text {
+  opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .whatsapp-button {
+    width: 4rem; 
+    height: 4rem;
+  }
+  
+  .whatsapp-button.expanded {
+    width: 20rem; 
+  }
+  
+  .whatsapp-icon {
+    width: 2rem; 
+    height: 2rem;
+  }}
