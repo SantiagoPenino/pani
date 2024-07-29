@@ -13,6 +13,7 @@ export function getCanonicalUrl(pathname) {
 interface Props {
   title: string;
   description: string;
+  imageUrl?: string;
 }
 
 const { title, description } = Astro.props;
@@ -28,13 +29,13 @@ const canonicalUrl = getCanonicalUrl(Astro.url.pathname);
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="max-image-preview:large" />
-    <meta property="og:url" content="https://paniconstrucciones.com" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta
       property="og:image"
-      content="/assets/images/proyectos/premium/235p-a.webp"
+      content= imageUrl
     />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
