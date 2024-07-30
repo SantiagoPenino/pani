@@ -54,8 +54,8 @@ const {
   extras,
 } = productData;
 
-const proyectUrl = `www.paniconstrucciones.com/${code}`;
-const imageUrl = `https://paniconstrucciones.netlify.app/assets/images/proyectos/${category}/${code}.webp`;
+const proyectUrl = `https://paniconstrucciones.com/${code}`;
+const imageUrl = `https://paniconstrucciones.com/assets/images/proyectos/${category}/${code}.webp`;
 ---
 
 <Layout
@@ -70,11 +70,14 @@ const imageUrl = `https://paniconstrucciones.netlify.app/assets/images/proyectos
       <h1 class="text-lg lg:text-2xl font-bold uppercase font-[DMSans]">
         {line}
       </h1>
+      <a href={`https://wa.me/?text=${encodeURIComponent(proyectUrl)}`} target="_blank" rel="noopener noreferrer">
+        <svg class="w-5" viewBox="0 0 512 512"><path fill="#fff" d="M307 34.8c-11.5 5.1-19 16.6-19 29.2l0 64-112 0C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96l96 0 0 64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"/></svg>
+      </a>
       <h2 class="text-lg lg:text-2xl uppercase font-bold font-[DMSans]">
         Código: {code}
       </h2>
     </div>
-    <div class="aspect-w-16 aspect-h-9 flex justify-center -mt-1">
+    <div class="flex flex-col justify-center -mt-1">
       <img
         width="1360px"
         height="768px"
@@ -89,9 +92,6 @@ const imageUrl = `https://paniconstrucciones.netlify.app/assets/images/proyectos
       <div
         class="w-full h-auto flex flex-col items-start justify-center p-2 lg:pl-20"
       >
-      <a href={`https://wa.me/?text=${encodeURIComponent(proyectUrl)}`} target="_blank" rel="noopener noreferrer" class="text-green-600 hover:text-green-800 transition">
-        Compartir en WhatsApp
-      </a>
         <h2
           class="font-bold pt-4 pb-2 text-xl border-b-4 border-custom-blue inline-block"
         >
@@ -195,7 +195,7 @@ const imageUrl = `https://paniconstrucciones.netlify.app/assets/images/proyectos
         <a class="bg-custom-blue text-white font-[Archivo] uppercase font-bold py-2 px-4 rounded-full transition-transform duration-200 ease-in-out lg:active:scale-90 lg:hover:scale-110" href="/contacto">Contacto</a>
       </button>
       <button>
-        <a class="bg-custom-whatsapp text-white font-[Archivo] uppercase font-bold py-2 px-4 rounded-full transition-transform duration-200 ease-in-out lg:active:scale-90 lg:hover:scale-110" href={`https://wa.me/598099491227?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20${code}%20de%20la%20línea%20${line}.`}>Whatsapp</a>
+        <a class="bg-custom-green text-white font-[Archivo] uppercase font-bold py-2 px-4 rounded-full transition-transform duration-200 ease-in-out lg:active:scale-90 lg:hover:scale-110" href={`https://wa.me/598099491227?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20${code}%20de%20la%20línea%20${line}.`}>Whatsapp</a>
 
       </button>
     </div>
