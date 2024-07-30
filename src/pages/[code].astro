@@ -54,8 +54,8 @@ const {
   extras,
 } = productData;
 
-const proyectUrl = `https://www.paniconstrucciones.com/${code}`;
-const imageUrl = `/assets/images/proyectos/${category}/${code}.webp`;
+const proyectUrl = `https://paniconstrucciones.netlify.app/${code}`;
+const imageUrl = `https://paniconstrucciones.netlify.app/assets/images/proyectos/${category}/${code}.webp`;
 ;
 ---
 
@@ -91,7 +91,7 @@ const imageUrl = `/assets/images/proyectos/${category}/${code}.webp`;
         class="w-full h-auto flex flex-col items-start justify-center p-2 lg:pl-20"
       >
       <a href={`https://wa.me/?text=${encodeURIComponent(proyectUrl)}`} target="_blank" rel="noopener noreferrer" class="text-green-600 hover:text-green-800 transition">
-        Share</i>
+        Share
       </a>
         <h2
           class="font-bold pt-4 pb-2 text-xl border-b-4 border-custom-blue inline-block"
