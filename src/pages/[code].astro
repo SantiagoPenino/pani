@@ -54,14 +54,13 @@ const {
   extras,
 } = productData;
 
-const proyectUrl = `https://paniconstrucciones.netlify.app/${code}`;
-const imageUrl = `/assets/images/proyectos/${category}/${code}.webp`;
+const proyectUrl = `www.paniconstrucciones.com/${code}`;
+const imageUrl = `https://paniconstrucciones.netlify.app/assets/images/proyectos/${category}/${code}.webp`;
 ---
 
 <Layout
   title={`Proyecto ${code} | Pani Construcciones`}
   description={`Conoce el proyecto ${code}, una residencia moderna en ${line === "Isopanel" ? "Isopanel" : "Steel Framing"}. Descubre sus características. ¡Construye tu casa con nosotros!`}
-
   imageUrl = {imageUrl}
 >
   <section class="w-full">
