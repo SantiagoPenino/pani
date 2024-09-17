@@ -90,6 +90,12 @@ body{
   opacity: 1;
 }
 
+.contact {
+  background-image: url('/assets/images/contact.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 @media (min-width: 1024px) {
   .whatsapp-button {
     width: 4rem; 

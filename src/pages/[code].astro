@@ -8,6 +8,7 @@ import {
   basic,
   isopanel,
 } from "../../public/proyectos.json";
+import CallToAction from "../components/CallToAction.astro";
 
 export const allProducts = [
   ...premium,
@@ -201,13 +202,10 @@ const imageUrl = `https://paniconstrucciones.com/assets/images/proyectos/${categ
       Más información sobre este proyecto
     </h5>
     <div class="flex justify-center items-center gap-10 mb-10">
-      <a
-        class="bg-custom-blue text-white font-[Archivo] uppercase font-bold py-2 px-4 rounded-full transition-transform duration-200 ease-in-out lg:active:scale-90 lg:hover:scale-110"
-        href="/contacto">Contacto</a
-      >
+      <CallToAction/>
 
       <a
-        class="bg-custom-green text-white font-[Archivo] uppercase font-bold py-2 px-4 rounded-full transition-transform duration-200 ease-in-out lg:active:scale-90 lg:hover:scale-110"
+        class="bg-custom-green text-white font-[Archivo] uppercase font-bold py-4 px-4 rounded-full transition-transform duration-200 ease-in-out lg:active:scale-90 lg:hover:scale-110"
         href={`https://wa.me/598099491227?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20${code}%20de%20la%20línea%20${line}.`}
         >Whatsapp</a
       >

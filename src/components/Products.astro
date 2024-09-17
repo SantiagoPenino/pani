@@ -1,13 +1,21 @@
 ---
 import Cards from "../components/Cards.astro";
-import { premium, executivePlus, executive, basic } from "../../public/proyectos.json";
+import Contact from "./Contact.astro";
+import {
+  premium,
+  executivePlus,
+  executive,
+  basic,
+} from "../../public/proyectos.json";
 ---
 
 <div class="w-full h-auto md:w-[80%] flex flex-col mx-auto">
   <h2
-  id="steelframing"
-  class="font-[Archivo] w-full h-auto flex items-center uppercase justify-center text-md md:text-xl font-bold bg-gradient-to-r from-custom-blue to-custom-original text-white py-2 mt-2"
->Proyectos en steelframing</h2>
+    id="steelframing"
+    class="font-[Archivo] w-full h-auto flex items-center uppercase justify-center text-md md:text-xl font-bold bg-gradient-to-r from-custom-blue to-custom-original text-white py-2 mt-2"
+  >
+    Proyectos en steelframing
+  </h2>
   <h3
     class="uppercase font-bold py-2 px-4 text-lg md:text-2xl mb-4 text-center w-full h-auto bg-gradient-to-r from-custom-blue to-custom-original text-white md:rounded-sm font-[Archivo]"
   >
@@ -24,6 +32,7 @@ import { premium, executivePlus, executive, basic } from "../../public/proyectos
   <div class="grid h-auto w-auto justify-center grid-cols-1 lg:grid-cols-3">
     {executivePlus.map((card) => <Cards {...card} />)}
   </div>
+  <Contact />
   <h3
     class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full h-auto bg-gradient-to-r from-custom-blue to-custom-original text-white md:rounded-sm font-[Archivo]"
   >
