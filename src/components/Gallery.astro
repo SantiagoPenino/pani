@@ -1,7 +1,6 @@
 ---
 const finished = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
-  23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
+  { id: 1, details: "Solanas Design Village | 166m²", city: "Maldonado" }, { id: 2, details: "Mirador de la Tahona | 150m²", city: "Canelones" }
 ];
 ---
 
@@ -18,16 +17,21 @@ const finished = [
       id="carousel-items"
     >
       {
-        finished.map((image) => (
-          <div class="w-full flex-shrink-0">
+        finished.map(({ id, details, city }) => (
+          <div class="w-full flex-shrink-0 relative">
             <img
               width="1360"
               height="595"
-              src={`/assets/images/obras/${image}.webp`}
+              src={`/assets/images/obras/${id}.webp`}
               class="block w-full mx-auto h-full lg:w-auto object-contain"
-              alt={`Imagen de obra realizada ${image}`}
+              alt={`Imagen de obra en ${details}`}
               loading="lazy"
             />
+            <div class="absolute w-full bottom-0 left-0 bg-custom-black/75 text-white px-2 lg:py-2">
+              <p class="text-center text-base font-bold lg:text-xl">
+                {details} | {city}
+              </p>
+            </div>
           </div>
         ))
       }
