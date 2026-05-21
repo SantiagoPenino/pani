@@ -3,24 +3,61 @@ import Layout from "../layouts/Layout.astro";
 import Cards from "../components/Cards.astro";
 import About from "../components/About.astro";
 import Contact from "../components/Contact.astro";
-import {isopanel} from "../../public/proyectos.json";
+import { isopanel } from "../../public/proyectos.json";
 ---
 
-<Layout title="Proyectos en Isopanel | Pani Construcciones" description="Descrubre nuestros proyectos detallados en Isopanel y encuentra la solución perfecta para tu nuevo hogar.">
-  <section class="w-full h-auto md:w-[80%] flex flex-col mx-auto">
-    <h2
-      class="uppercase w-full h-auto font-bold py-2 px-4 text-lg md:text-2xl mb-4 lg:mt-2 text-center w-full bg-custom-blue text-white md:rounded-sm font-[Archivo]"
-    >
-      Proyectos en isopanel
-    </h2>
-    <div
-      class="grid flex-wrap w-auto h-auto justify-center grid-cols-1 lg:grid-cols-3"
-    >
+<Layout
+  title="Proyectos en Isopanel | Pani Construcciones"
+  description="Descubrí nuestros proyectos en Isopanel y encontrá la solución perfecta para tu nuevo hogar. Construcciones modernas, eficientes y de alta calidad."
+>
+  <!-- Hero de página -->
+  <div class="bg-gradient-to-br from-custom-gray via-custom-blue-dark to-custom-blue text-white px-5 lg:px-10 py-14 lg:py-20 text-center -mt-[4.5rem] lg:-mt-[5.5rem] pt-28 lg:pt-32">
+    <span class="section-badge bg-white/15 border border-white/20 inline-flex mb-4">
+      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+      </svg>
+      Proyectos en Isopanel
+    </span>
+    <h1 class="font-archivo font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-3">
+      Construcciones<br/>
+      <span class="text-custom-original">en Isopanel</span>
+    </h1>
+    <p class="text-white/65 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+      Soluciones constructivas modernas, eficientes y versátiles. Desde módulos habitacionales hasta grandes viviendas.
+    </p>
+    <div class="section-divider mt-6" style="background: linear-gradient(to right, rgba(255,255,255,0.4), rgba(255,255,255,0.8), rgba(255,255,255,0.4));"></div>
+  </div>
+
+  <!-- Proyectos -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7">
       {isopanel.map((card) => <Cards {...card} />)}
     </div>
-    <Contact/>
+
+    <Contact />
   </section>
+
+  <!-- About -->
   <section>
     <About />
   </section>
+
+  <!-- Intersection Observer -->
+  <script is:inline>
+    document.addEventListener("astro:page-load", () => {
+      const reveals = document.querySelectorAll(".reveal:not(.visible)");
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.08 }
+      );
+      reveals.forEach((el) => io.observe(el));
+    });
+  </script>
 </Layout>

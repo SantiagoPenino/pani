@@ -1,123 +1,132 @@
 ---
-import Social from "./Social.astro";
 import Powered from "./Powered.astro";
 ---
 
-<div class="flex flex-wrap bg-custom-black w-full h-auto">
-  <div
-    class="flex flex-col text-white w-full h-auto lg:w-1/2 p-2 justify-center items-center"
-  >
-    <img
-      width="375px"
-      height="100px"
-      class="hidden w-auto h-auto lg:flex p-2"
-      src="/assets//icons/logo.webp"
-      alt="logo de pani construcciones"
-    />
-    <Social />
+<footer class="bg-custom-black text-white">
+
+  <!-- Cuerpo principal -->
+  <div class="max-w-6xl mx-auto px-5 lg:px-10 py-12 lg:py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Col 1 — Logo + redes -->
+      <div class="flex flex-col gap-5">
+        <a href="/" aria-label="Inicio">
+          <img
+            width="200"
+            height="55"
+            class="h-12 w-auto"
+            src="/assets/icons/logo.webp"
+            alt="Logo de Pani Construcciones"
+          />
+        </a>
+        <p class="text-white/55 text-sm leading-relaxed max-w-xs">
+          Construimos hogares modernos y eficientes con Steel Framing e Isopanel en todo Uruguay.
+        </p>
+        <!-- Redes sociales -->
+        <div class="flex items-center gap-2">
+          <a
+            href="https://www.facebook.com/PaniConstrucciones2022"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-social-icon"
+            aria-label="Facebook"
+          >
+            <svg viewBox="0,0,256,256" width="20" height="20">
+              <g fill="#008fd0"><g transform="scale(4,4)"><path d="M40.227,12c10.919,0 11.773,0.854 11.773,11.773v16.453c0,10.919 -0.854,11.774 -11.773,11.774h-2.089v-14.562h5.134l0.807,-5.77h-5.941c0,0 -0.009,-3.378 0,-4.221c0.017,-1.649 1.394,-2.483 2.577,-2.471c1.183,0.012 3.634,0.004 3.634,0.004v-5.317c0,0 -2.123,-0.275 -4.349,-0.298c-1.871,-0.019 -3.937,0.487 -5.604,2.167c-1.696,1.709 -1.963,4.254 -1.996,7.364c-0.009,0.9 0,2.772 0,2.772h-5.024v5.77h5.024v14.562h-8.626c-10.92,0 -11.774,-0.855 -11.774,-11.773v-16.454c0,-10.919 0.854,-11.773 11.773,-11.773z"></path></g></g>
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/pani_construcciones"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-social-icon"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0,0,256,256" width="20" height="20">
+              <g fill="#008fd0"><g transform="scale(4,4)"><path d="M31.82031,12c-18.382,0 -19.82031,1.43931 -19.82031,19.82031v0.35938c0,18.381 1.43831,19.82031 19.82031,19.82031h0.35938c18.382,0 19.82031,-1.43931 19.82031,-19.82031v-0.17969c0,-18.548 -1.452,-20 -20,-20zM43.99414,18c1.105,-0.003 2.00286,0.88914 2.00586,1.99414c0.003,1.105 -0.88914,2.00286 -1.99414,2.00586c-1.105,0.003 -2.00286,-0.88914 -2.00586,-1.99414c-0.003,-1.105 0.88914,-2.00286 1.99414,-2.00586zM31.97656,22c5.522,-0.013 10.01044,4.45456 10.02344,9.97656c0.013,5.522 -4.45456,10.01044 -9.97656,10.02344c-5.522,0.013 -10.01044,-4.45456 -10.02344,-9.97656c-0.013,-5.522 4.45456,-10.01044 9.97656,-10.02344zM31.98633,26c-3.314,0.008 -5.99433,2.70163 -5.98633,6.01563c0.008,3.313 2.70067,5.99238 6.01367,5.98438c3.314,-0.008 5.99433,-2.70067 5.98633,-6.01367c-0.008,-3.314 -2.70067,-5.99433 -6.01367,-5.98633z"></path></g></g>
+            </svg>
+          </a>
+          <a
+            href="https://www.tiktok.com/@pani_construcciones"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-social-icon"
+            aria-label="TikTok"
+          >
+            <svg viewBox="0,0,256,256" width="20" height="20">
+              <g fill="#008fd0"><g transform="scale(4,4)"><path d="M40.227,12c10.919,0 11.773,0.854 11.773,11.773v16.453c0,10.919 -0.854,11.774 -11.773,11.774h-16.454c-10.918,0 -11.773,-0.855 -11.773,-11.773v-16.454c0,-10.919 0.855,-11.773 11.773,-11.773zM42.732,29.737v-4.196c0,0 -2.218,0.011 -4.091,-1.705c-1.574,-1.442 -1.705,-4.143 -1.705,-4.143h-4.196c0,0 0,14.318 0,16.6c0,2.281 -1.985,3.462 -3.409,3.462c-1.073,0 -3.514,-0.841 -3.514,-3.488c0,-2.778 2.806,-3.488 3.54,-3.488c0.734,0 1.023,0.157 1.023,0.157v-4.429c0,0 -0.682,-0.065 -1.18,-0.082c-4.235,-0.143 -7.736,3.657 -7.736,7.841c0,3.535 2.765,7.815 7.815,7.815c5.379,0 7.841,-4.486 7.841,-7.789c0,-2.413 0,-8.234 0,-8.234c0,0 1.547,0.865 2.806,1.259c1.259,0.394 2.806,0.42 2.806,0.42z"></path></g></g>
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/@paniconstrucciones"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-social-icon"
+            aria-label="YouTube"
+          >
+            <svg viewBox="0,0,256,256" width="20" height="20">
+              <g fill="#008fd0"><g transform="scale(4,4)"><path d="M53.527,17.427c2.187,2.25 2.473,5.825 2.473,14.573c0,8.748 -0.286,12.323 -2.473,14.573c-2.187,2.249 -4.465,2.427 -21.527,2.427c-17.062,0 -19.34,-0.178 -21.527,-2.427c-2.187,-2.25 -2.473,-5.825 -2.473,-14.573c0,-8.748 0.286,-12.323 2.473,-14.573c2.187,-2.25 4.465,-2.427 21.527,-2.427c17.062,0 19.34,0.178 21.527,2.427zM27.95,39.417l12.146,-7.038l-12.146,-6.928z"></path></g></g>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2 — Links rápidos -->
+      <div>
+        <p class="text-xs font-bold uppercase tracking-widest text-custom-original mb-5">Navegación</p>
+        <ul class="space-y-3">
+          <li><a class="footer-link" href="/#steelframing">Proyectos Steel Framing</a></li>
+          <li><a class="footer-link" href="/isopanel">Proyectos Isopanel</a></li>
+          <li><a class="footer-link" href="/obras">Obras realizadas</a></li>
+          <li><a class="footer-link" href="/contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3 — Contacto -->
+      <div>
+        <p class="text-xs font-bold uppercase tracking-widest text-custom-original mb-5">Contacto</p>
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3">
+            <span class="footer-social-icon shrink-0">
+              <svg class="w-4 h-4 text-custom-original" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </span>
+            <span class="text-white/60 text-sm">Lun a Vie · 9:00 — 17:00</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="footer-social-icon shrink-0">
+              <svg class="w-4 h-4 text-custom-original" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+              </svg>
+            </span>
+            <a href="mailto:contacto@paniconstrucciones.com" class="footer-link text-sm">
+              contacto@paniconstrucciones.com
+            </a>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="footer-social-icon shrink-0">
+              <svg class="w-4 h-4 text-custom-original" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 8.25h3"/>
+              </svg>
+            </span>
+            <div class="text-sm text-white/60 space-y-0.5">
+              <a href="tel:099491227" class="footer-link block">099 491 227</a>
+              <a href="tel:26820961" class="footer-link block">2682 0961</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div
-    class="flex flex-col w-full h-auto lg:w-1/2 pb-4 text-white justify-center lg:mt-2"
-  >
-    <div class="flex justify-center items-center w-auto h-auto">
-      <svg
-        class="p-1 w-auto h-auto"
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        stroke-width="1"
-        stroke="#008fd0"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-        <path d="M12 12h-3.5"></path>
-        <path d="M12 7v5"></path>
-      </svg>
-      <p class="px-1 w-auto h-auto">Lun a Vie de 9:00 a 17:00</p>
-    </div>
-    <div class="flex justify-center items-center px-2 w-auto h-auto">
-      <svg
-        class="p-1 w-auto h-auto"
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        stroke-width="1"
-        stroke="#008fd0"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path
-          d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
-        ></path>
-        <path d="M3 7l9 6l9 -6"></path>
-      </svg>
-      <a
-        class="px-1 text-sm md:text-base"
-        href="mailto:contacto@paniconstrucciones.com"
-        aria-label="Enviar mensaje a por correo electrónico"
-      >
-        <p>contacto@paniconstrucciones.com</p>
-      </a>
-    </div>
-    <div class="flex justify-center items-center px-2 w-auto h-auto">
-      <svg
-        class="p-1 w-auto h-auto"
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        stroke-width="1"
-        stroke="#008fd0"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path
-          d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14z"
-        ></path>
-        <path d="M11 4h2"></path>
-        <path d="M12 17v.01"></path>
-      </svg>
-      <p class="px-1 w-auto h-auto">
-        <a href="tel:099491227" aria-label="Llamar a número celular"
-          >099 491 227</a
-        >
+
+  <!-- Divider -->
+  <div class="border-t border-white/8">
+    <div class="max-w-6xl mx-auto px-5 lg:px-10 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-white/35 text-[0.65rem] sm:text-xs uppercase tracking-widest text-center sm:text-left">
+        © 2026 Pani Construcciones <span class="hidden sm:inline">·</span><br class="sm:hidden" /> Todos los derechos reservados
       </p>
-      <svg
-        class="p-1"
-        width="44"
-        height="44"
-        viewBox="0 0 24 24"
-        stroke-width="1"
-        stroke="#008fd0"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <path
-          d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
-        ></path>
-      </svg><p class="px-1 w-auto h-auto">
-        <a href="tel:26820961" aria-label="Llamar a número de teléfono"
-          >2682 0961</a
-        >
-      </p>
+      <Powered />
     </div>
   </div>
-  <div class="bg-custom-blue w-full h-auto text-white p-2 text-center">
-    <p class="text-sm md:text-base uppercase font-bold w-auto h-auto">
-      Todos los derechos reservados © 2024
-    </p>
-  </div>
-  <div
-    class="bg-custom-white flex justify-center items-center w-full h-auto py-2"
-  >
-    <Powered />
-  </div>
-</div>
+</footer>

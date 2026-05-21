@@ -5,29 +5,32 @@ import Gallery from "../components/Gallery.astro";
 ---
 
 <Layout
-  title="Galería de obras realizadas en Steel Framing e Isopanel | Proyectos| Pani Construcciones"
-  description="Explora nuestra amplia galería de obras realizadas en Steel Framing e Isopanel. Descrubre la calidad y la innovación que caracterizan a nuestros proyectos. ¡Encuentra inspiración para tu próximo proyecto de construcción!">
-  <section class="flex flex-col w-full h-auto mx-auto">
-    <h1
-      class="font-[Archivo] font-bold text-md lg:text-3xl text-center uppercase px-2 pt-2 border-b-4 border-custom-blue mx-auto w-auto h-auto"
-    >
+  title="Galería de obras realizadas en Steel Framing e Isopanel | Pani Construcciones"
+  description="Explorá nuestra galería de obras realizadas en Steel Framing e Isopanel. Descubrí la calidad e innovación en cada proyecto. ¡Inspirate para tu próxima construcción!"
+>
+  <!-- Hero de página -->
+  <div class="bg-gradient-to-br from-custom-gray via-custom-blue-dark to-custom-blue text-white px-5 lg:px-10 py-14 lg:py-20 text-center -mt-[4.5rem] lg:-mt-[5.5rem] pt-28 lg:pt-32">
+    <span class="section-badge bg-white/15 border border-white/20 inline-flex mb-4">
+      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+      </svg>
+      Portafolio
+    </span>
+    <h1 class="font-archivo font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-3">
       Obras realizadas
     </h1>
-    <p
-      class="text-sm px-2 lg:px-8 pb-2 pt-2 lg:text-lg w-full h-auto flex justify-center items-center text-justify"
-    >
-      En Pani Construcciones, nos enorgullecemos de transformar ideas en
-      realidad con precisión y dedicación. A lo largo de los años, hemos
-      trabajado en una variedad de proyectos que destacan por su calidad y
-      atención al detalle. Cada proyecto refleja nuestro compromiso con la
-      excelencia y la satisfacción del cliente. A continuación, te invitamos a
-      explorar algunos de nuestros trabajos realizados, donde podrás ver ejemplos
-      de nuestro esfuerzo y pasión por lo que hacemos.
+    <p class="text-white/65 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+      Más de 90 casas y 100 ampliaciones a lo largo de todo el Uruguay. Cada proyecto refleja nuestro compromiso con la calidad y la satisfacción del cliente.
     </p>
-    <div>
-      <Gallery />
-    </div>
+    <div class="section-divider mt-6" style="background: linear-gradient(to right, rgba(255,255,255,0.4), rgba(255,255,255,0.8), rgba(255,255,255,0.4));"></div>
+  </div>
+
+  <!-- Galería -->
+  <section class="py-8 lg:py-12 px-4">
+    <Gallery />
   </section>
+
+  <!-- About -->
   <section>
     <About />
   </section>

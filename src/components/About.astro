@@ -1,42 +1,119 @@
-<div
-  class="bg-custom-white mt-2 flex flex-col w-full h-auto py-4 p-2 lg:p-6 items-center justify-center aspect-w-16 aspect-h-9"
->
-  <h4
-    class="font-[Archivo] uppercase font-bold text-xl md:text-3xl my-2 text-center"
-  >
-    Misión y visión:
-  </h4>
-  <p
-    class="px-2 lg:pt-2 lg:py-0 lg:px-10 leading-relaxed text-xs lg:text-lg text-justify mb-2"
-  >
-    ¿Estás buscando construir <span class="font-bold"
-      >el hogar de tus sueños</span
-    >? ¡Bienvenido! Estás en el lugar correcto. Sabemos que una casa es mucho
-    más que cuatro paredes, es el lugar donde se construyen recuerdos y se viven
-    experiencias inolvidables.
-    <p
-      class="px-2 lg:pt-2 lg:py-0 lg:px-10 leading-relaxed text-xs lg:text-lg text-justify lg:mb-0 mb-2"
-    >
-      Combinamos la belleza estética con la eficiencia funcional, utilizando
-      materiales de la más alta calidad del Uruguay y asegurando un acabado <span
-        class="underline">impecable</span
-      > en cada proyecto. Imagina despertarte cada mañana en la casa perfecta, diseñada
-      especialmente para ti. Una casa donde cada detalle refleja tu estilo y personalidad.
-      ¿Quieres una cocina amplia para esas reuniones familiares? ¿ O prefieres un
-      estudio tranquilo para trabajar desde casa? Sea lo que sea que tengas en mente,
-      <span class="font-bold">podemos hacerlo realidad</span>.
-    </p>
-  </p>
-  <p
-    class="px-2 lg:pt-2 lg:py-0 lg:px-10 leading-relaxed text-xs lg:text-lg text-justify font-bold text-custom-blue lg:mb-0 mb-2 uppercase"
-  >
-    ¡Es hora de construir la casa de tus sueños!
-  </p>
-  <p
-    class="px-2 lg:pt-2 lg:py-0 lg:px-10 leading-relaxed text-xs lg:text-lg text-justify"
-  >
-    Nuestro equipo está listo para escucharte y comenzar a planificar tu
-    proyecto. Toma el primer paso hacia la casa que siempre has querido.
-    Hablemos de tus ideas y juntos las haremos realidad.
-  </p>
-</div>
+<section class="bg-custom-surface py-16 lg:py-24 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-5 lg:px-10">
+
+    <!-- Grid 2 columnas en desktop -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      <!-- Columna izquierda — texto -->
+      <div class="reveal">
+        <span class="section-badge mb-4 inline-flex">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+          </svg>
+          Misión y visión
+        </span>
+
+        <h2 class="font-archivo font-extrabold text-2xl sm:text-3xl lg:text-4xl text-custom-black leading-tight mb-6">
+          Construimos el hogar<br/>
+          <span class="text-custom-blue">de tus sueños</span>
+        </h2>
+
+        <div class="space-y-4 text-custom-gray/80 text-sm sm:text-base leading-relaxed">
+          <p>
+            ¿Estás buscando construir <strong class="text-custom-black">el hogar de tus sueños</strong>? Estás en el lugar correcto. Sabemos que una casa es mucho más que cuatro paredes — es el lugar donde se construyen recuerdos y se viven experiencias inolvidables.
+          </p>
+          <p>
+            Combinamos belleza estética con eficiencia funcional, utilizando materiales de la más alta calidad y asegurando un acabado <span class="font-semibold text-custom-blue">impecable</span> en cada proyecto.
+          </p>
+          <p>
+            Sea lo que sea que tengas en mente, <strong class="text-custom-black">podemos hacerlo realidad</strong>. Nuestro equipo está listo para escucharte y comenzar a planificar tu proyecto.
+          </p>
+        </div>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a class="btn-primary" href="/contacto" id="about-cta-contacto">
+            Empezar proyecto
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a
+            href="/obras"
+            id="about-cta-obras"
+            class="inline-flex items-center gap-2 border-2 border-custom-blue text-custom-blue font-archivo font-bold text-sm uppercase px-6 py-3 rounded-full tracking-wide transition-all duration-200 hover:bg-custom-blue hover:text-white"
+          >
+            Ver obras
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna derecha — stats -->
+      <div class="reveal reveal-delay-2">
+        <div class="grid grid-cols-2 gap-4">
+
+          <!-- Stat 1 -->
+          <div class="bg-white rounded-2xl p-6 shadow-card-base border border-custom-white/60 text-center">
+            <p class="stat-number about-counter" data-target="90">0</p>
+            <p class="stat-label">Casas construidas</p>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="bg-white rounded-2xl p-6 shadow-card-base border border-custom-white/60 text-center">
+            <p class="stat-number about-counter" data-target="100">0</p>
+            <p class="stat-label">Ampliaciones</p>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="bg-gradient-to-br from-custom-blue to-custom-original rounded-2xl p-6 shadow-card-base text-center">
+            <p class="font-archivo font-extrabold leading-none" style="font-size:clamp(2rem,5vw,3rem); color:#fff;">15</p>
+            <p class="text-white/70 text-xs uppercase tracking-widest font-semibold mt-1">Años de experiencia</p>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="bg-white rounded-2xl p-6 shadow-card-base border border-custom-white/60 text-center">
+            <p class="font-archivo font-extrabold leading-none text-custom-blue" style="font-size:clamp(2rem,5vw,3rem);">UY</p>
+            <p class="stat-label">Todo el país</p>
+          </div>
+        </div>
+
+        <!-- Quote -->
+        <div class="mt-5 bg-white rounded-2xl p-5 border-l-4 border-custom-original shadow-card-base">
+          <p class="text-custom-gray text-sm leading-relaxed italic">
+            "Incluimos anteproyecto, proyecto ejecutivo, trámites ante BPS, DGI, MTSS, FOCER e Intendencia. Solo tenés que disfrutar el proceso."
+          </p>
+          <p class="mt-3 text-custom-blue font-bold text-sm uppercase tracking-wide">— Equipo Pani Construcciones</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const counters = document.querySelectorAll(".about-counter");
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = parseInt(el.dataset.target, 10);
+          const duration = 1400;
+          const start = performance.now();
+
+          function tick(now) {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.floor(eased * target) + "+";
+            if (progress < 1) requestAnimationFrame(tick);
+            else el.textContent = target + "+";
+          }
+
+          requestAnimationFrame(tick);
+          io.unobserve(el);
+        });
+      },
+      { threshold: 0.4 }
+    );
+    counters.forEach((el) => io.observe(el));
+  });
+</script>

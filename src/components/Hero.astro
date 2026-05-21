@@ -1,39 +1,133 @@
-<div class="flex flex-col w-full justify-center items-center">
-  <h1
-    class="font-[Archivo] font-bold text-md lg:text-3xl text-center uppercase px-2 pt-2 border-b-4 border-custom-blue mx-auto h-auto"
+<section class="hero-section w-full min-h-[88vh] lg:min-h-[92vh] flex items-center justify-center relative">
+
+  <!-- Imagen de fondo (primera obra de la galería) -->
+  <div
+    class="hero-bg"
+    style="background-image: url('/assets/images/obras/1.webp');"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Overlay -->
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <!-- Contenido -->
+  <div class="relative z-10 w-full max-w-5xl mx-auto px-5 lg:px-10 py-16 lg:py-24 text-center text-white">
+
+    <!-- Badge -->
+    <div class="flex justify-center mb-5 reveal" style="animation-delay:0.1s">
+      <span class="section-badge">
+        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+        </svg>
+        Empresa familiar · 15 años de trayectoria
+      </span>
+    </div>
+
+    <!-- Título principal -->
+    <h1 class="font-archivo font-extrabold text-3xl sm:text-4xl lg:text-6xl leading-tight mb-4 reveal reveal-delay-1">
+      Proyectos<br class="hidden sm:block" />
+      <span class="text-custom-original"> Llave en Mano</span>
+    </h1>
+
+    <!-- Subtítulo -->
+    <p class="text-base sm:text-lg lg:text-xl text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed reveal reveal-delay-2">
+      Construimos hogares modernos y eficientes con Steel Framing e Isopanel.
+      Tu proyecto desde el anteproyecto hasta la entrega de llaves.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14 reveal reveal-delay-3">
+      <a class="btn-primary text-sm lg:text-base px-7 py-3.5" href="/#steelframing" id="hero-cta-proyectos">
+        Ver proyectos
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a class="btn-secondary text-sm lg:text-base px-7 py-3.5" href="/contacto" id="hero-cta-contacto">
+        Contactanos
+      </a>
+    </div>
+
+    <!-- Stats / Contadores -->
+    <div class="grid grid-cols-3 gap-3 sm:gap-6 max-w-lg mx-auto reveal reveal-delay-4">
+      <div class="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2 border border-white/15">
+        <p class="font-archivo font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-none">
+          <span class="stat-counter" data-target="90">0</span>+
+        </p>
+        <p class="text-white/65 text-xs sm:text-sm mt-1 uppercase tracking-wide font-semibold">Casas</p>
+      </div>
+      <div class="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2 border border-white/15">
+        <p class="font-archivo font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-none">
+          <span class="stat-counter" data-target="100">0</span>+
+        </p>
+        <p class="text-white/65 text-xs sm:text-sm mt-1 uppercase tracking-wide font-semibold">Reformas</p>
+      </div>
+      <div class="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2 border border-white/15">
+        <p class="font-archivo font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-none">
+          <span class="stat-counter" data-target="15">0</span>
+        </p>
+        <p class="text-white/65 text-xs sm:text-sm mt-1 uppercase tracking-wide font-semibold">Años</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flecha scroll down -->
+  <a
+    href="/#steelframing"
+    aria-label="Ver proyectos"
+    class="absolute bottom-7 left-1/2 -translate-x-1/2 text-white/60 hover:text-white transition-colors"
+    style="animation: pulse 2s ease-in-out infinite;"
   >
-    Proyectos llave en mano
-  </h1>
-  <p class="text-xs px-2 lg:px-8 pb-2 pt-2 lg:text-lg text-justify h-auto">
-    Somos una empresa familiar con amplia trayectoria, especializada en la
-    <strong>construcción de hogares</strong> diseñados para adaptarse a tus necesidades.
-    A lo largo de nuestra historia, hemos desarrollado proyectos que van desde módulos
-    habitacionales hasta grandes viviendas, utilizando sistemas constructivos de
-    vanguardia como Steel Framing e Isopanel. Con más de 90 casas y 100 ampliaciones
-    o reformas realizadas en todo el país, nuestro compromiso es ofrecerte calidad
-    y confianza en cada detalle. Contamos con un equipo multidisciplinario de profesionales:
-    arquitectos, ingenieros, técnicos electricistas aprobados por UTE, jefes de obra
-    y obreros altamente calificados que nos acompañan hace más de una década, aportando
-    su experiencia para garantizar que tu proyecto sea un éxito.
-  </p>
-  <p class="text-xs px-2 lg:px-8 pb-2 pt-2 lg:text-lg text-justify h-auto">
-    Queremos brindarte tranquilidad y seguridad a la hora de construir tu hogar.
-    <strong>Nuestro equipo de profesionales</strong> te acompañará durante todo el
-    proceso, encargándose de todas las gestiones, proveedores y detalles. Incluimos
-    el <span class="underline">anteproyecto</span>, adaptando los diseños a tus
-    necesidades o generando uno nuevo, el <span class="underline"
-      >proyecto ejecutivo</span
-    >, el <span class="underline">proyecto de ingeniería a detalle</span>;
-    fundamental para asegurar la integridad estructural y constructiva de la
-    edificación, así como los trámites, gestiones y pagos ante los entes
-    públicos, como BPS, DGI, MTSS, FOCER e Intendencia, para que solo tengas que
-    disfrutar el paso a paso de la construcción de tu casa. Si tienes alguna
-    consulta, estamos a tu servicio ya sea mediante <a
-      class="underline font-bold text-custom-green"
-      href="https://wa.me/598099491227">whatsapp</a
-    > o completando el formulario de <a
-      class="font-bold underline text-custom-blue"
-      href="/contacto">contacto</a
-    >.
-  </p>
-</div>
+    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </a>
+</section>
+
+<script is:inline>
+  // Intersection Observer para animaciones reveal
+  document.addEventListener("astro:page-load", () => {
+    const reveals = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    reveals.forEach((el) => observer.observe(el));
+
+    // Contadores animados
+    const counters = document.querySelectorAll(".stat-counter");
+    const counterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = parseInt(el.dataset.target, 10);
+          const duration = 1200;
+          const start = performance.now();
+
+          function update(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease-out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.floor(eased * target);
+            if (progress < 1) requestAnimationFrame(update);
+            else el.textContent = target;
+          }
+
+          requestAnimationFrame(update);
+          counterObserver.unobserve(el);
+        });
+      },
+      { threshold: 0.5 }
+    );
+    counters.forEach((el) => counterObserver.observe(el));
+  });
+</script>

@@ -44,134 +44,152 @@ const finished = [
   { id: 42, details: "Garage - Barrio Golf | 36m²", city: "Maldonado" },
   { id: 43, details: "Altos de la Tahona | 19m²", city: "Canelones" },
 ];
+const total = finished.length;
 ---
 
-<div
-  id="animation-carousel"
-  class="relative mx-auto w-full lg:w-[80%] pt-2 lg:p-6"
-  data-carousel="static"
->
-  <div
-    class="relative overflow-hidden max-h-screen flex items-center justify-center"
-  >
+<div class="relative w-full lg:w-[85%] mx-auto py-4 lg:py-8" id="gallery-root">
+
+  <!-- Contador de imagen -->
+  <div class="flex items-center justify-between px-2 mb-3">
+    <p class="text-xs text-custom-gray/50 font-semibold uppercase tracking-widest">Obras realizadas</p>
+    <p class="text-xs font-bold text-custom-blue" id="gallery-counter">1 / {total}</p>
+  </div>
+
+  <!-- Contenedor de imágenes -->
+  <div class="relative overflow-hidden rounded-xl shadow-card-hover" style="aspect-ratio: 16/9;">
     <div
-      class="w-full flex transition-transform duration-500 ease-in-out"
+      class="flex w-full h-full transition-transform duration-500 ease-in-out"
       id="carousel-items"
     >
       {
         finished.map(({ id, details, city }) => (
-          <div class="w-full flex-shrink-0 relative">
+          <div class="w-full h-full flex-shrink-0 relative">
             <img
               width="1360"
-              height="595"
+              height="765"
               src={`/assets/images/obras/${id}.webp`}
-              class="block w-full mx-auto h-full lg:w-auto object-contain"
-              alt={`Imagen de obra en ${details}`}
+              class="w-full h-full object-cover"
+              alt={`Obra en ${details} — ${city}`}
               loading="lazy"
             />
-            <div class="absolute w-full bottom-0 left-0 bg-custom-black/75 text-white px-2 lg:py-2">
-              <p class="text-center text-base font-bold lg:text-xl">
-                {details} | {city}
-              </p>
+            <!-- Caption overlay -->
+            <div class="gallery-caption">
+              <div class="flex items-end justify-between gap-2">
+                <div>
+                  <p class="text-white font-bold text-sm sm:text-base lg:text-lg leading-tight">{details}</p>
+                  <p class="text-white/70 text-xs sm:text-sm flex items-center gap-1 mt-0.5">
+                    <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                    </svg>
+                    {city}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         ))
       }
     </div>
+
+    <!-- Barra de progreso -->
+    <div class="gallery-progress" id="gallery-progress" style="width: calc(100% / 43)"></div>
+
+    <!-- Botón anterior -->
+    <button
+      type="button"
+      class="gallery-btn left-3"
+      id="gallery-prev"
+      aria-label="Imagen anterior"
+      disabled
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+      </svg>
+    </button>
+
+    <!-- Botón siguiente -->
+    <button
+      type="button"
+      class="gallery-btn right-3"
+      id="gallery-next"
+      aria-label="Imagen siguiente"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+      </svg>
+    </button>
   </div>
-  <button
-    type="button"
-    class="absolute top-1/2 left-0 lg:left-3 z-10 flex items-center justify-center px-4 cursor-pointer group focus:outline-none"
-    data-carousel-prev
-    disabled
-  >
-    <span
-      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-custom-blue/40 dark:bg-custom-blue/40 transition-transform duration-200 ease-linear lg:dark:group-hover:bg-custom-blue group-focus:outline-none"
-    >
-      <svg
-        class="w-4 h-4 text-white dark:text-custom-white rtl:rotate-180"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 6 10"
-      >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M5 1 1 5l4 4"></path>
-      </svg>
-      <span class="sr-only">Anterior</span>
-    </span>
-  </button>
-  <button
-    type="button"
-    class="absolute top-1/2 right-0 lg:right-3 z-10 flex items-center justify-center px-4 cursor-pointer group focus:outline-none"
-    data-carousel-next
-  >
-    <span
-      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-custom-blue/40 dark:bg-custom-blue/40 transition-transform duration-200 ease-linear lg:dark:group-hover:bg-custom-blue group-focus:outline-none"
-    >
-      <svg
-        class="w-4 h-4 text-white dark:text-custom-white rtl:rotate-180"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 6 10"
-      >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="m1 9 4-4-4-4"></path>
-      </svg>
-      <span class="sr-only">Siguiente</span>
-    </span>
-  </button>
+
+  <!-- Puntos de navegación (solo móvil — máx 10 puntos visibles) -->
+  <div class="flex justify-center gap-1.5 mt-4 lg:hidden" id="gallery-dots" aria-hidden="true">
+    {finished.slice(0, 10).map((_, i) => (
+      <button
+        data-dot={i}
+        class={`w-2 h-2 rounded-full transition-all duration-300 ${i === 0 ? "bg-custom-blue w-5" : "bg-custom-white"}`}
+        aria-label={`Ir a imagen ${i + 1}`}
+      ></button>
+    ))}
+    <span class="text-xs text-custom-gray/40 self-center ml-1">+{total - 10}</span>
+  </div>
 </div>
 
 <script is:inline>
   document.addEventListener("astro:page-load", () => {
-    const prevButton = document.querySelector("[data-carousel-prev]");
-    const nextButton = document.querySelector("[data-carousel-next]");
-    const itemsContainer = document.getElementById("carousel-items");
-    const items = document.querySelectorAll("#carousel-items > div");
-    const totalItems = items.length;
+    const prevBtn = document.getElementById("gallery-prev");
+    const nextBtn = document.getElementById("gallery-next");
+    const container = document.getElementById("carousel-items");
+    const progressBar = document.getElementById("gallery-progress");
+    const counterEl = document.getElementById("gallery-counter");
+    const dots = document.querySelectorAll("[data-dot]");
 
-    if (!prevButton || !nextButton || !itemsContainer) {
-      return;
-    }
+    if (!prevBtn || !nextBtn || !container) return;
 
-    let activeIndex = 0;
+    const items = container.querySelectorAll(":scope > div");
+    const total = items.length;
+    let idx = 0;
 
-    function updateButtons() {
-      prevButton.disabled = activeIndex === 0;
-      nextButton.disabled = activeIndex === totalItems - 1;
-    }
+    function goTo(newIdx) {
+      idx = Math.max(0, Math.min(newIdx, total - 1));
+      container.style.transform = `translateX(-${idx * 100}%)`;
 
-    function updateCarousel(newIndex) {
-      const offset = -newIndex * 100;
-      itemsContainer.style.transform = `translateX(${offset}%)`;
-      activeIndex = newIndex;
-      updateButtons();
-    }
-
-    prevButton.addEventListener("click", () => {
-      if (activeIndex > 0) {
-        const newIndex = activeIndex - 1;
-        updateCarousel(newIndex);
+      // Progreso
+      if (progressBar) {
+        progressBar.style.width = `${((idx + 1) / total) * 100}%`;
       }
+
+      // Contador
+      if (counterEl) counterEl.textContent = `${idx + 1} / ${total}`;
+
+      // Botones
+      prevBtn.disabled = idx === 0;
+      nextBtn.disabled = idx === total - 1;
+
+      // Dots (solo los 10 primeros)
+      dots.forEach((dot) => {
+        const dotIdx = parseInt(dot.dataset.dot, 10);
+        dot.classList.toggle("bg-custom-blue", dotIdx === idx);
+        dot.classList.toggle("w-5", dotIdx === idx);
+        dot.classList.toggle("bg-custom-white", dotIdx !== idx);
+        dot.classList.toggle("w-2", dotIdx !== idx);
+      });
+    }
+
+    prevBtn.addEventListener("click", () => goTo(idx - 1));
+    nextBtn.addEventListener("click", () => goTo(idx + 1));
+
+    // Touch swipe
+    let touchStartX = 0;
+    container.addEventListener("touchstart", (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    container.addEventListener("touchend", (e) => {
+      const delta = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(delta) > 40) goTo(delta > 0 ? idx + 1 : idx - 1);
+    }, { passive: true });
+
+    // Dots
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => goTo(parseInt(dot.dataset.dot, 10)));
     });
 
-    nextButton.addEventListener("click", () => {
-      if (activeIndex < totalItems - 1) {
-        const newIndex = activeIndex + 1;
-        updateCarousel(newIndex);
-      }
-    });
-
-    updateButtons();
+    goTo(0);
   });
 </script>

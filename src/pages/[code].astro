@@ -22,16 +22,14 @@ export function getStaticPaths() {
   const paths = allProducts.map((product) => ({
     params: { code: product.code },
   }));
-
   return paths;
 }
+
 const { code } = Astro.params;
 const productData = allProducts.find((product) => product.code === code);
 
 if (!productData) {
-  return {
-    notFound: true,
-  };
+  return { notFound: true };
 }
 
 const {
@@ -54,175 +52,240 @@ const {
   extras,
 } = productData;
 
+const isPremium = line === "Premium";
 const proyectUrl = `https://paniconstrucciones.com/${code}`;
 const imageUrl = `https://paniconstrucciones.com/assets/images/proyectos/${category}/${code}.webp`;
+
+// Características según tipo
+const caracteristicas = line === "Isopanel"
+  ? [
+      "Cimentación de platea de hormigón reforzada.",
+      "Muros de Isopanel de 10cm de espesor.",
+      `Cubierta de Isopanel de ${cover}`,
+      "Terminación exterior con pintura texturada.",
+      "Terminación interior de yeso.",
+      ...(front ? [front] : []),
+      `Pintura interior ${paint}.`,
+      `Aberturas en aluminio serie ${serie}, color a elección.`,
+      `Pisos y revestimientos de ${floor}.`,
+      "Loza sanitaria y griferías.",
+      `${counter} de granito, color a elección.`,
+      "Muebles en melamínico 18mm, diseño a medida y color a elección.",
+      "Instalación sanitaria y eléctrica completas según reglamentos y ordenanzas vigentes.",
+    ]
+  : [
+      "Cimentación de platea de hormigón reforzada.",
+      "Muros de perfilería de Steel Framing (acero galvanizado).",
+      `Cubierta de Isopanel de ${cover}`,
+      ...(coating ? [coating] : []),
+      "Terminación exterior con revoque fino.",
+      ...(front ? [front] : []),
+      `Pintura interior ${paint}.`,
+      "Pintura exterior Sherwin Williams Loxon.",
+      `Aberturas en aluminio serie ${serie}, color a elección.`,
+      ...(isPremium ? ["Mosquiteros en aberturas de aluminio."] : []),
+      `Pisos y revestimientos de ${floor}.`,
+      "Loza sanitaria y griferías.",
+      `${counter} de granito, color a elección.`,
+      "Muebles en melamínico 18mm, diseño a medida y color a elección.",
+      "Instalación sanitaria y eléctrica completas según reglamentos y ordenanzas vigentes.",
+    ];
 ---
 
 <Layout
   title={`Proyecto ${code} | Pani Construcciones`}
-  description={`Conoce el proyecto ${code}, una residencia moderna en ${line === "Isopanel" ? "Isopanel" : "Steel Framing"}. Descubre sus características. ¡Construye tu casa con nosotros!`}
+  description={`Conocé el proyecto ${code}, una residencia moderna en ${line === "Isopanel" ? "Isopanel" : "Steel Framing"}. Descubrí sus características. ¡Construí tu casa con nosotros!`}
   imageUrl={imageUrl}
 >
-  <section class="w-full">
-    <div
-      class="flex justify-between items-center px-2 lg:px-10 py-3 bg-custom-gray text-white font-[Archivo]"
-    >
-      <h1 class="text-lg lg:text-2xl font-bold uppercase font-[DMSans]">
-        {line}
-      </h1>
+  <article class="w-full">
+
+    <!-- ── Hero con imagen full width ── -->
+    <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/6; min-height: 240px;">
+      <img
+        width="1360"
+        height="510"
+        class="w-full h-full object-cover"
+        src={`/assets/images/proyectos/${category}/${code}.webp`}
+        alt={imgAlt}
+        loading="eager"
+      />
+      <!-- Overlay degradado -->
+      <div class="absolute inset-0 bg-gradient-to-r from-custom-black/80 via-custom-black/30 to-transparent"></div>
+
+      <!-- Info flotante sobre imagen -->
+      <div class="absolute inset-0 flex flex-col justify-end p-5 lg:p-10">
+        <div class="flex flex-wrap items-center gap-2 mb-2">
+          <span class={`line-badge text-xs ${isPremium ? "gold" : ""}`}>
+            {line}
+          </span>
+          <span class="text-white/60 text-xs">Código: {code}</span>
+        </div>
+        <h1 class="font-archivo font-extrabold text-white text-2xl sm:text-3xl lg:text-5xl leading-tight">
+          {size}m² · Techo {roof}
+        </h1>
+      </div>
+
+      <!-- Botón compartir -->
       <a
         href={`https://wa.me/?text=${encodeURIComponent(proyectUrl)}`}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Compartir proyecto por WhatsApp"
+        class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/15 backdrop-blur-sm border border-white/25 text-white flex items-center justify-center hover:bg-white/25 transition-colors"
       >
-        <svg class="w-5" viewBox="0 0 512 512"
-          ><path
-            fill="#fff"
-            d="M307 34.8c-11.5 5.1-19 16.6-19 29.2l0 64-112 0C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96l96 0 0 64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"
-          ></path></svg
-        >
+        <svg class="w-4 h-4" viewBox="0 0 512 512">
+          <path fill="currentColor" d="M307 34.8c-11.5 5.1-19 16.6-19 29.2l0 64-112 0C78.8 128 0 206.8 0 304C0 417.3 81.5 467.9 100.2 478.1c2.5 1.4 5.3 1.9 8.1 1.9c10.9 0 19.7-8.9 19.7-19.7c0-7.5-4.3-14.4-9.8-19.5C108.8 431.9 96 414.4 96 384c0-53 43-96 96-96l96 0 0 64c0 12.6 7.4 24.1 19 29.2s25 3 34.4-5.4l160-144c6.7-6.1 10.6-14.7 10.6-23.8s-3.8-17.7-10.6-23.8l-160-144c-9.4-8.5-22.9-10.6-34.4-5.4z"/>
+        </svg>
       </a>
-      <h2 class="text-lg lg:text-2xl uppercase font-bold font-[DMSans]">
-        Código: {code}
-      </h2>
     </div>
-    <div class="flex flex-col justify-center -mt-1">
-      <img
-        width="1360px"
-        height="768px"
-        class="w-full h-auto"
-        src={`/assets/images/proyectos/${category}/${code}.webp`}
-        alt={imgAlt}
-      />
-    </div>
-    <div
-      class="p-2 w-full h-auto flex flex-col lg:flex-row justify-center items-center"
-    >
-      <div
-        class="w-full h-auto flex flex-col items-start justify-center p-2 lg:pl-20"
-      >
-        <h2
-          class="font-bold pt-4 pb-2 text-xl border-b-4 border-custom-blue inline-block"
-        >
-          {size}m² | Techo {roof}
-        </h2>
-        <p class="pt-6 px-2 text-xs lg:text-base lg:whitespace-nowrap">
-          {description}
-        </p>
-        {
-          extras && (
-            <p class=" p-2 px-2 text-xs lg:text-base italic">{extras}</p>
-          )
-        }
-        <h2
-          class="uppercase font-bold pt-4 pb-2 text-xl border-b-4 border-custom-blue inline-block"
-        >
-          Características
-        </h2>
-        {
-          line === "Isopanel" ? (
-            <ul class="list-disc list-inside p-2 lg:p-4 space-y-2 text-xs lg:text-base">
-              <li>Cimentación de platea de hormigón reforzada.</li>
-              <li>Muros de Isopanel de 10cm de espesor.</li>
-              <li>Cubierta de Isopanel de {cover}</li>
-              <li>Terminación exterior con pintura texturada.</li>
-              <li>Terminación interior de yeso.</li>
-              {front !== "" ? <li>{front}</li> : ""}
-              <li>Pintura interior {paint}.</li>
-              <li>Aberturas en aluminio serie {serie}, color a elección.</li>
-              <li>Pisos y revestimientos de {floor}.</li>
-              <li>Loza sanitaria y griferías.</li>
-              <li>{counter} de granito, color a elección.</li>
-              <li>
-                Muebles en melaminico 18mm, diseño a medida y color a elección.
-              </li>
-              <li>
-                Instalación sanitaria y eléctrica completas según reglamentos y
-                ordenanzas vigentes.
-              </li>
-            </ul>
-          ) : (
-            <ul class="list-disc list-inside p-2 lg:p-4 space-y-2 text-xs lg:text-base">
-              <li>Cimentación de platea de hormigón reforzada.</li>
-              <li>Muros de perfilería de Steel Framing (acero galvanizado).</li>
-              <li>Cubierta de Isopanel de {cover}</li>
-              <li>{coating}</li>
-              <li>Terminación exterior con revoque fino.</li>
-              {front !== "" ? <li>{front}</li> : ""}
-              <li>Pintura interior {paint}.</li>
-              <li>Pintura exterior Sherwin Williams Loxon.</li>
-              <li>Aberturas en aluminio serie {serie}, color a elección.</li>
-              {line === "Premium" ? (
-                <li>Mosquiteros en aberturas de aluminio.</li>
-              ) : (
-                ""
-              )}
-              <li>Pisos y revestimientos de {floor}.</li>
-              <li>Loza sanitaria y griferías.</li>
-              <li>{counter} de granito, color a elección.</li>
-              <li>
-                Muebles en melaminico 18mm, diseño a medida y color a elección.
-              </li>
-              <li>
-                Instalación sanitaria y eléctrica completas según reglamentos y
-                ordenanzas vigentes.
-              </li>
-            </ul>
-          )
-        }
-      </div>
-      <div class="w-full flex flex-col justify-center items-center">
-        <Modal
-          src={`/assets/images/proyectos/${category}/${code}/plano.webp`}
-          alt={`plano de obra del proyecto ${code}`}
-        />
-        <p class="py-4 text-xs lg:text-base">
-          Tiempo de obra: {estimated} días hábiles.
-        </p>
-        <p class="text-custom-blue font-bold text-5xl">U$S {price}</p>
-        <p class="text-xs lg:text-sm font-bold italic">
-          con terminación de techo {roof}
-        </p>
-        <p class="py-4 w-[75%] text-xs lg:text-base">
-          Se incluye mano de obra, materiales, anteproyecto y proyecto
-          ejecutivo. Trámites, gestiones y pagos ante BPS, DGI, MTSS, FOCER e
-          Intendencia.
-        </p>
-        <p class="lg:text-sm font-bold text-xs">
-          (*) Consultar por opcionales y accesorios:
-        </p>
-        <p class="lg:text-sm font-bold text-xs">
-          (parrillero, pérgola, deck, piscina, vereda perimetral, etc).
-        </p>
-      </div>
-    </div>
-    <h5
-      class="font-bold text-md lg:text-2xl text-center uppercase mt-8 lg:my-4 mb-4"
-    >
-      Más información sobre este proyecto
-    </h5>
-    <div class="flex justify-center items-center gap-10 mb-10">
-      <CallToAction/>
 
-      <a
-        class="bg-custom-green text-white font-[Archivo] uppercase font-bold py-4 px-4 rounded-full transition-transform duration-200 ease-in-out lg:active:scale-90 lg:hover:scale-110"
-        href={`https://wa.me/598099491227?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20${code}%20de%20la%20línea%20${line}.`}
-        >Whatsapp</a
-      >
-    </div>
-    <div
-      class="w-full mb-2 lg:mb-8 lg:w-[80%] mx-auto px-4 flex flex-wrap justify-center lg:grid lg:grid-cols-3"
-    >
-      {
-        images.map((image) => (
-          <div class="w-full px-4 lg:px-10 mx-auto">
-            <Modal
-              src={`/assets/images/proyectos/${category}/${code}/${image}.webp`}
-              alt={`Imagen de maqueta de proyecto ${code}`}
-            />
+    <!-- ── Contenido principal ── -->
+    <div class="max-w-6xl mx-auto px-5 lg:px-10 py-10 lg:py-14 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+
+      <!-- Columna izquierda — descripción + características -->
+      <div class="reveal">
+        <p class="text-custom-gray/70 text-sm sm:text-base leading-relaxed mb-6">{description}</p>
+        {extras && (
+          <p class="text-custom-gray/60 text-sm italic mb-6 pl-3 border-l-2 border-custom-original">{extras}</p>
+        )}
+
+        <h2 class="font-archivo font-bold text-xl text-custom-black mb-5 flex items-center gap-2">
+          <span class="w-1.5 h-6 bg-gradient-to-b from-custom-blue to-custom-original rounded-full inline-block shrink-0"></span>
+          Características incluidas
+        </h2>
+
+        <ul class="space-y-2.5">
+          {caracteristicas.map((item) => (
+            <li class="flex items-start gap-3 text-sm text-custom-gray/80">
+              <svg class="w-4 h-4 text-custom-original mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        <!-- Nota de opcionales -->
+        <p class="mt-5 text-xs text-custom-gray/50 italic">
+          (*) Consultar por opcionales: parrillero, pérgola, deck, piscina, vereda perimetral, etc.
+        </p>
+      </div>
+
+      <!-- Columna derecha — precio + plano + CTAs -->
+      <div class="reveal reveal-delay-2">
+
+        <!-- Card de precio -->
+        <div class="bg-gradient-to-br from-custom-gray to-custom-blue-dark text-white rounded-2xl p-6 lg:p-8 mb-6 relative overflow-hidden">
+          <div class="absolute inset-0 opacity-5" aria-hidden="true"
+            style="background-image: radial-gradient(circle at 80% 20%, white 1px, transparent 1px); background-size: 20px 20px;">
           </div>
-        ))
-      }
+          <p class="text-white/60 text-xs uppercase tracking-widest mb-1">Precio final llave en mano</p>
+          <p class="font-archivo font-extrabold text-4xl lg:text-5xl text-white mb-1">U$S {price}</p>
+          <p class="text-white/55 text-xs italic mb-5">con terminación de techo {roof}</p>
+
+          <div class="space-y-2 text-xs text-white/70 border-t border-white/15 pt-4">
+            <p class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-custom-original shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Incluye mano de obra y materiales
+            </p>
+            <p class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-custom-original shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Anteproyecto y proyecto ejecutivo
+            </p>
+            <p class="flex items-center gap-2">
+              <svg class="w-3.5 h-3.5 text-custom-original shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Trámites ante BPS, DGI, MTSS, FOCER e Intendencia
+            </p>
+          </div>
+
+          <div class="mt-4 flex items-center gap-2 text-white/60 text-xs">
+            <svg class="w-4 h-4 text-custom-original" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Tiempo de obra: <strong class="text-white">{estimated} días hábiles</strong>
+          </div>
+        </div>
+
+        <!-- Plano -->
+        <div class="mb-6">
+          <p class="text-xs font-bold uppercase tracking-widest text-custom-gray/50 mb-2">Plano del proyecto</p>
+          <Modal
+            src={`/assets/images/proyectos/${category}/${code}/plano.webp`}
+            alt={`Plano de obra del proyecto ${code}`}
+          />
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mt-2">
+          <a
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-custom-blue to-custom-original hover:brightness-110 text-white font-archivo font-bold text-sm uppercase px-6 py-3.5 rounded-full transition-all duration-200 shadow-lg"
+            href="/contacto"
+          >
+            Contacto
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-custom-green hover:bg-custom-whatsapp text-white font-archivo font-bold text-sm uppercase px-6 py-3.5 rounded-full transition-all duration-200 shadow-lg"
+            href={`https://wa.me/598099491227?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20proyecto%20${code}%20de%20la%20l%C3%ADnea%20${line}.`}
+            target="_blank"
+            rel="noopener noreferrer"
+            id={`whatsapp-project-${code}`}
+          >
+            <svg class="w-4 h-4" viewBox="0 0 448 512">
+              <path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
     </div>
-  </section>
+
+    <!-- ── Galería de imágenes del proyecto ── -->
+    {images && images.length > 0 && (
+      <div class="bg-custom-surface py-10 lg:py-14">
+        <div class="max-w-6xl mx-auto px-5 lg:px-10">
+          <h2 class="font-archivo font-bold text-xl lg:text-2xl text-custom-black mb-6 flex items-center gap-2">
+            <span class="w-1.5 h-6 bg-gradient-to-b from-custom-blue to-custom-original rounded-full inline-block shrink-0"></span>
+            Más imágenes del proyecto
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {images.map((image) => (
+              <Modal
+                src={`/assets/images/proyectos/${category}/${code}/${image}.webp`}
+                alt={`Imagen del proyecto ${code}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    )}
+
+  </article>
+
+  <!-- Intersection Observer para esta página -->
+  <script is:inline>
+    document.addEventListener("astro:page-load", () => {
+      const reveals = document.querySelectorAll(".reveal:not(.visible)");
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.08 }
+      );
+      reveals.forEach((el) => io.observe(el));
+    });
+  </script>
 </Layout>

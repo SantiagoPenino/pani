@@ -9,44 +9,93 @@ import {
 } from "../../public/proyectos.json";
 ---
 
-<div class="w-full h-auto md:w-[80%] flex flex-col mx-auto">
-  <h2
-    id="steelframing"
-    class="font-[Archivo] w-full h-auto flex items-center uppercase justify-center text-md md:text-xl font-bold bg-gradient-to-r from-custom-blue to-custom-original text-white py-2 mt-2"
-  >
-    Proyectos en steel framing
-  </h2>
-  <h3
-    class="uppercase font-bold py-2 px-4 text-lg md:text-2xl mb-4 text-center w-full h-auto bg-gradient-to-r from-custom-blue to-custom-original text-white md:rounded-sm font-[Archivo]"
-  >
-    Línea Premium
-  </h3>
-  <div class="grid h-auto w-auto justify-center grid-cols-1 lg:grid-cols-3">
+<div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+
+  <!-- ── Encabezado Steel Framing ── -->
+  <div id="steelframing" class="pt-10 pb-4 text-center reveal">
+    <span class="section-badge">
+      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+      </svg>
+      Proyectos en Steel Framing
+    </span>
+    <h2 class="font-archivo font-extrabold text-2xl sm:text-3xl lg:text-4xl text-custom-black mt-1">
+      Construí tu hogar ideal
+    </h2>
+    <p class="text-custom-gray/60 text-sm sm:text-base mt-2 max-w-xl mx-auto">
+      Elegí tu proyecto y personalizá los detalles. Todo incluido, llave en mano.
+    </p>
+    <div class="section-divider mt-4"></div>
+  </div>
+
+  <!-- ── Línea Premium ── -->
+  <div class="mt-8 mb-3 reveal">
+    <div class="flex items-center gap-3">
+      <div class="flex-1 h-px bg-gradient-to-r from-custom-gold/40 to-transparent"></div>
+      <span class="line-badge gold px-4 py-1.5 text-xs">★ Línea Premium</span>
+      <div class="flex-1 h-px bg-gradient-to-l from-custom-gold/40 to-transparent"></div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7">
     {premium.map((card) => <Cards {...card} />)}
   </div>
-  <h3
-    class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full h-auto bg-gradient-to-r from-custom-blue to-custom-original text-white md:rounded-sm font-[Archivo]"
-  >
-    Línea ejecutiva plus
-  </h3>
-  <div class="grid h-auto w-auto justify-center grid-cols-1 lg:grid-cols-3">
+
+  <!-- ── Línea Ejecutiva Plus ── -->
+  <div class="mt-12 mb-3 reveal">
+    <div class="flex items-center gap-3">
+      <div class="flex-1 h-px bg-gradient-to-r from-custom-blue/30 to-transparent"></div>
+      <span class="line-badge px-4 py-1.5 text-xs">Línea Ejecutiva Plus</span>
+      <div class="flex-1 h-px bg-gradient-to-l from-custom-blue/30 to-transparent"></div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7">
     {executivePlus.map((card) => <Cards {...card} />)}
   </div>
+
+  <!-- ── Contact CTA ── -->
   <Contact />
-  <h3
-    class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full h-auto bg-gradient-to-r from-custom-blue to-custom-original text-white md:rounded-sm font-[Archivo]"
-  >
-    Línea ejecutiva
-  </h3>
-  <div class="grid h-auto w-auto justify-center grid-cols-1 lg:grid-cols-3">
+
+  <!-- ── Línea Ejecutiva ── -->
+  <div class="mt-12 mb-3 reveal">
+    <div class="flex items-center gap-3">
+      <div class="flex-1 h-px bg-gradient-to-r from-custom-blue/30 to-transparent"></div>
+      <span class="line-badge px-4 py-1.5 text-xs">Línea Ejecutiva</span>
+      <div class="flex-1 h-px bg-gradient-to-l from-custom-blue/30 to-transparent"></div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7">
     {executive.map((card) => <Cards {...card} />)}
   </div>
-  <h3
-    class="uppercase font-bold py-2 px-4 text-lg md:text-2xl my-4 text-center w-full h-auto bg-gradient-to-r from-custom-blue to-custom-original text-white md:rounded-sm font-[Archivo]"
-  >
-    Línea básica
-  </h3>
-  <div class="grid h-auto w-auto justify-center grid-cols-1 lg:grid-cols-3">
+
+  <!-- ── Línea Básica ── -->
+  <div class="mt-12 mb-3 reveal">
+    <div class="flex items-center gap-3">
+      <div class="flex-1 h-px bg-gradient-to-r from-custom-blue/30 to-transparent"></div>
+      <span class="line-badge px-4 py-1.5 text-xs">Línea Básica</span>
+      <div class="flex-1 h-px bg-gradient-to-l from-custom-blue/30 to-transparent"></div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 pb-10">
     {basic.map((card) => <Cards {...card} />)}
   </div>
+
 </div>
+
+<!-- Intersection Observer global para .reveal -->
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const reveals = document.querySelectorAll(".reveal:not(.visible)");
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.08 }
+    );
+    reveals.forEach((el) => io.observe(el));
+  });
+</script>

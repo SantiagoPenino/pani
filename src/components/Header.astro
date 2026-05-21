@@ -3,47 +3,94 @@ import Navbar from "./Navbar.astro";
 ---
 
 <header
-  class="fixed bg-white flex w-full top-0 justify-between items-center pt-4 lg:pt-2 p-2 lg:px-4 shadow-md transition-top duration-500 z-30"
+  id="site-header"
+  class="fixed w-full top-0 left-0 z-40 transition-all duration-400"
 >
-  <a class="flex justify-center items-center" href="/">
-    <img width="250px" height="67px" class="h-12 lg:h-16 w-auto" src="/assets/icons/logo.webp" alt="logo de pani construcciones" />
-  </a>
-  <p class="font-bold text-xs lg:text-sm uppercase italic text-custom-blue absolute lg:relative top-2 lg:top-0 left-0 right-0 w-full lg:w-auto text-center z-1">Construyendo a Uruguay hace 15 años</p>
-  <input class="z-5 inline-flex hidden" type="checkbox" id="check" />
-  <label class="z-5 cursor-pointer inline-flex lg:hidden" for="check">
-    <svg
-      id="menu"
-      class="block"
-      width="48"
-      height="48"
-      viewBox="0 0 24 24"
-      stroke-width="2"
-      stroke="#008fd0"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M4 6l16 0"></path>
-      <path d="M4 12l16 0"></path>
-      <path d="M4 18l16 0"></path>
-    </svg>
-    <svg
-      id="close"
-      class="hidden"
-      width="48"
-      height="48"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="#008fd0"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path d="M18 6l-12 12"></path>
-      <path d="M6 6l12 12"></path>
-    </svg>
-  </label>
-  <Navbar />
+  <div class="flex w-full justify-between items-center px-4 lg:px-8 py-3 lg:py-2">
+    <!-- Logo -->
+    <a class="flex items-center shrink-0" href="/" aria-label="Inicio — Pani Construcciones">
+      <img
+        width="220"
+        height="60"
+        class="h-11 lg:h-14 w-auto"
+        src="/assets/icons/logo.webp"
+        alt="Logo de Pani Construcciones"
+      />
+    </a>
+
+    <!-- Eslogan centrado — solo desktop -->
+    <p class="hidden lg:block font-bold text-xs uppercase italic text-custom-blue tracking-widest select-none">
+      Construyendo a Uruguay hace 15 años
+    </p>
+
+    <!-- Hamburger + Nav -->
+    <div class="flex items-center gap-3">
+      <input class="hidden" type="checkbox" id="check" />
+      <label
+        class="cursor-pointer flex lg:hidden items-center justify-center w-10 h-10 rounded-lg hover:bg-custom-surface transition-colors"
+        for="check"
+        aria-label="Abrir menú"
+      >
+        <!-- Hamburger icon -->
+        <svg
+          id="menu"
+          class="block"
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="#006494"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M4 6l16 0"></path>
+          <path d="M4 12l16 0"></path>
+          <path d="M4 18l16 0"></path>
+        </svg>
+        <!-- Close icon -->
+        <svg
+          id="close"
+          class="hidden"
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          stroke-width="1.8"
+          stroke="#006494"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M18 6l-12 12"></path>
+          <path d="M6 6l12 12"></path>
+        </svg>
+      </label>
+      <Navbar />
+    </div>
+  </div>
 </header>
+
+<script is:inline>
+  // Glassmorphism al hacer scroll
+  const header = document.getElementById("site-header");
+  let ticking = false;
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 40) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll(); // estado inicial
+</script>
