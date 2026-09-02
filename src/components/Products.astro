@@ -1,35 +1,30 @@
 ---
 import Cards from "../components/Cards.astro";
 import Contact from "./Contact.astro";
+import LineComparator from "./LineComparator.astro";
 import {
   premium,
   executivePlus,
-  executive,
   basic,
-} from "../../public/proyectos.json";
+} from "../utils/projects.js";
 ---
 
 <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
 
-  <!-- ── Encabezado Steel Framing ── -->
-  <div id="steelframing" class="pt-10 pb-4 text-center reveal">
-    <span class="section-badge">
-      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
-      </svg>
-      Proyectos en Steel Framing
+  <div id="steelframing"></div>
+
+  <!-- ── Toggle Sistema ── -->
+  <div class="flex lg:hidden gap-2 mt-1 mb-4">
+    <span class="flex-1 inline-flex items-center justify-center gap-2 font-archivo font-bold text-xs uppercase tracking-wide py-1 rounded-full bg-gradient-to-r from-custom-blue to-custom-original text-white opacity-60 cursor-default select-none border-2 border-transparent">
+      Steel Framing
     </span>
-    <h2 class="font-archivo font-extrabold text-2xl sm:text-3xl lg:text-4xl text-custom-black mt-1">
-      Construí tu hogar ideal
-    </h2>
-    <p class="text-custom-gray/60 text-sm sm:text-base mt-2 max-w-xl mx-auto">
-      Elegí tu proyecto y personalizá los detalles. Todo incluido, llave en mano.
-    </p>
-    <div class="section-divider mt-4"></div>
+    <a href="/isopanel" class="flex-1 inline-flex items-center justify-center gap-2 font-archivo font-bold text-xs uppercase tracking-wide py-1 rounded-full border-2 border-custom-blue text-custom-blue hover:bg-custom-blue hover:text-white transition-all duration-200">
+      Ver Isopanel
+    </a>
   </div>
 
   <!-- ── Línea Premium ── -->
-  <div class="mt-8 mb-3 reveal">
+  <div id="sf-premium" class="scroll-mt-24 mt-6 mb-3 reveal">
     <div class="flex items-center gap-3">
       <div class="flex-1 h-px bg-gradient-to-r from-custom-gold/40 to-transparent"></div>
       <span class="line-badge gold px-4 py-1.5 text-xs">★ Línea Premium</span>
@@ -41,7 +36,7 @@ import {
   </div>
 
   <!-- ── Línea Ejecutiva Plus ── -->
-  <div class="mt-12 mb-3 reveal">
+  <div id="sf-exeplus" class="scroll-mt-24 mt-12 mb-3 reveal">
     <div class="flex items-center gap-3">
       <div class="flex-1 h-px bg-gradient-to-r from-custom-blue/30 to-transparent"></div>
       <span class="line-badge px-4 py-1.5 text-xs">Línea Ejecutiva Plus</span>
@@ -52,32 +47,24 @@ import {
     {executivePlus.map((card) => <Cards {...card} />)}
   </div>
 
-  <!-- ── Contact CTA ── -->
-  <Contact />
-
-  <!-- ── Línea Ejecutiva ── -->
-  <div class="mt-12 mb-3 reveal">
-    <div class="flex items-center gap-3">
-      <div class="flex-1 h-px bg-gradient-to-r from-custom-blue/30 to-transparent"></div>
-      <span class="line-badge px-4 py-1.5 text-xs">Línea Ejecutiva</span>
-      <div class="flex-1 h-px bg-gradient-to-l from-custom-blue/30 to-transparent"></div>
-    </div>
-  </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7">
-    {executive.map((card) => <Cards {...card} />)}
-  </div>
-
   <!-- ── Línea Básica ── -->
-  <div class="mt-12 mb-3 reveal">
+  <div id="sf-basic" class="scroll-mt-24 mt-12 mb-3 reveal">
     <div class="flex items-center gap-3">
       <div class="flex-1 h-px bg-gradient-to-r from-custom-blue/30 to-transparent"></div>
       <span class="line-badge px-4 py-1.5 text-xs">Línea Básica</span>
       <div class="flex-1 h-px bg-gradient-to-l from-custom-blue/30 to-transparent"></div>
     </div>
   </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 pb-10">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7">
     {basic.map((card) => <Cards {...card} />)}
   </div>
+
+  <!-- ── Comparador de Líneas ── -->
+  <LineComparator system="Steel Framing" />
+
+  <!-- ── Contact CTA (desactivado por ahora) ──
+  <Contact />
+  -->
 
 </div>
 

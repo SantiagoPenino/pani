@@ -44,7 +44,16 @@ import CallToAction from "./CallToAction.astro";
 
   <!-- CTAs -->
   <div class="reveal reveal-delay-3 flex flex-col sm:flex-row gap-3 items-center">
-    <CallToAction />
+    <a
+      href="/contacto"
+      id="contact-cta-btn"
+      class="inline-flex items-center gap-2 bg-gradient-to-r from-custom-blue to-custom-original hover:brightness-110 text-white font-archivo font-bold text-sm uppercase px-7 py-3.5 rounded-full transition-all duration-200 hover:scale-105 shadow-lg"
+    >
+      Contacto
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </a>
     <a
       href="https://wa.me/598099491227"
       target="_blank"

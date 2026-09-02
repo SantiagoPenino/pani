@@ -1,0 +1,2228 @@
+{
+  "precioM2": {
+    "sf_basic": {
+      "plano": 1490
+    },
+    "sf_exeplus": {
+      "plano": 1630,
+      "a aguas": 1695
+    },
+    "sf_premium": {
+      "plano": 1775,
+      "a aguas": 1840
+    },
+    "iso_basic": {
+      "plano": 1000
+    },
+    "iso_exeplus": {
+      "plano": 1200,
+      "a aguas": 1300
+    },
+    "iso_premium": {
+      "plano": 1500,
+      "a aguas": 1600
+    }
+  },
+  "defaults": {
+    "sf_basic": {
+      "category": "sf-basic",
+      "line": "Básica",
+      "system": "Steel Framing",
+      "features": [
+        "Cimentación de platea de hormigón reforzada con vigas.",
+        "Muros de perfilería de Steel Framing (acero galvanizado) con perfiles aprobados y cálculo de ingeniería.",
+        "Cubierta de Isopanel de 10cm.",
+        "Muros perimetrales con placa cementicia.",
+        "Terminación exterior con revoque fino.",
+        "Revestimiento de WPC clásico en fachada.",
+        "Pintura interior color blanco.",
+        "Pintura exterior Sherwin Williams Loxon.",
+        "Instalación sanitaria y eléctrica completas según reglamentos y ordenanzas vigentes.",
+        "Instalación de agua potable.",
+        "Aberturas de aluminio serie 25 con vidrio simple.",
+        "Puerta exterior semiblindada.",
+        "Puertas interiores en MDF con recubrimiento de PVC.",
+        "Pisos y revestimientos de paredes en cerámica.",
+        "Mesada de cocina de granito.",
+        "Mueble bajo mesada en melamínico de 18mm.",
+        "Baño equipado con inodoro, mueble con pileta y griferías.",
+        "Vereda perimetral de hormigón, de 60cm de ancho.",
+        "Se incluye mano de obra, materiales, anteproyecto y proyecto ejecutivo.",
+        "Trámites, gestiones y pagos ante BPS, DGI, MTSS, FOCER e Intendencia."
+      ]
+    },
+    "sf_exeplus": {
+      "category": "sf-exeplus",
+      "line": "Ejecutiva Plus",
+      "system": "Steel Framing",
+      "features": [
+        "Cimentación de platea de hormigón reforzada con vigas.",
+        "Muros de perfilería de Steel Framing (acero galvanizado) con perfiles aprobados y cálculo de ingeniería.",
+        "Cubierta de Isopanel de 15cm.",
+        "Revestimiento con escudo térmico (sistema EIFS) en exteriores.",
+        "Terminación exterior con revoque fino.",
+        "Revestimiento de WPC clásico en fachada (según proyecto).",
+        "Pintura interior color a elección.",
+        "Pintura exterior Sherwin Williams.",
+        "Instalación sanitaria y eléctrica completas según reglamentos y ordenanzas vigentes.",
+        "Instalación de agua potable.",
+        "Aberturas de aluminio serie Probba con DVH, color a elección.",
+        "Puerta exterior de madera maciza (modelo a elección).",
+        "Puertas interiores importadas de buena calidad (modelos a elección).",
+        "Pisos y revestimientos de paredes en porcelanato.",
+        "Mesada de cocina de granito.",
+        "Mueble aéreo de cocina y bajo mesada en melamínico de 18mm.",
+        "Baño equipado con inodoro, bidet, mueble con pileta y griferías.",
+        "Vereda perimetral de hormigón, de 60cm de ancho.",
+        "Se incluye mano de obra, materiales, anteproyecto y proyecto ejecutivo.",
+        "Trámites, gestiones y pagos ante BPS, DGI, MTSS, FOCER e Intendencia."
+      ]
+    },
+    "sf_premium": {
+      "category": "sf-premium",
+      "line": "Premium",
+      "system": "Steel Framing",
+      "features": [
+        "Cimentación de platea de hormigón reforzada con vigas.",
+        "Muros de perfilería de Steel Framing (acero galvanizado) con perfiles aprobados y cálculo de ingeniería.",
+        "Cubierta de Isopanel de 15cm.",
+        "Revestimiento con escudo térmico (sistema EIFS) en exteriores.",
+        "Terminación exterior con revoque fino.",
+        "Revestimiento de WPC clásico en fachada (según proyecto).",
+        "Pintura interior lavable, color a elección.",
+        "Pintura exterior Sherwin Williams.",
+        "Instalación sanitaria y eléctrica completas según reglamentos y ordenanzas vigentes.",
+        "Instalación de agua potable.",
+        "Aberturas de aluminio serie Gala con DVH, color a elección.",
+        "Mosquiteros en las aberturas de aluminio (ventanas).",
+        "Puerta exterior de madera maciza.",
+        "Puertas interiores importadas de buena calidad (modelos a elección).",
+        "Pisos y revestimientos de paredes en porcelanato.",
+        "Isla de cocina incluida.",
+        "Mesadas de isla y bajo mesada de granito, color a elección.",
+        "Mueble aéreo de cocina y bajo mesada en melamínico de 18mm, color a elección.",
+        "Placares (vestidor) incluidos.",
+        "Baño equipado con inodoro, bidet, mueble con pileta y griferías.",
+        "Vereda perimetral de hormigón, de 60cm de ancho.",
+        "Se incluye mano de obra, materiales, anteproyecto y proyecto ejecutivo.",
+        "Trámites, gestiones y pagos ante BPS, DGI, MTSS, FOCER e Intendencia."
+      ]
+    },
+    "iso_basic": {
+      "category": "iso-basic",
+      "line": "Básica",
+      "system": "Isopanel",
+      "features": [
+        "Cimentación de platea de hormigón.",
+        "Muros de Isopanel de 10cm de espesor.",
+        "Cubierta de Isopanel de 10cm.",
+        "Terminación interior y exterior de Isopanel color blanco.",
+        "Instalación sanitaria y eléctrica completas según reglamentos y ordenanzas vigentes.",
+        "Instalación de agua potable.",
+        "Aberturas de aluminio serie 25 con vidrio simple.",
+        "Puerta exterior semiblindada.",
+        "Puertas interiores en MDF con recubrimiento de PVC.",
+        "Pisos y revestimientos de paredes en cerámica.",
+        "Mesada de cocina de granito.",
+        "Mueble bajo mesada en melamínico de 18mm.",
+        "Baño equipado con inodoro, mueble con pileta y griferías.",
+        "Vereda perimetral de hormigón, de 60cm de ancho.",
+        "Se incluye mano de obra, materiales, anteproyecto y proyecto ejecutivo.",
+        "Trámites, gestiones y pagos ante BPS, DGI, MTSS, FOCER e Intendencia."
+      ]
+    },
+    "iso_exeplus": {
+      "category": "iso-exeplus",
+      "line": "Ejecutiva Plus",
+      "system": "Isopanel",
+      "features": [
+        "Cimentación de platea de hormigón reforzada.",
+        "Muros de Isopanel de 10cm de espesor.",
+        "Cubierta de Isopanel de 10cm.",
+        "Terminación exterior con pintura texturada, color a elección.",
+        "Terminación interior de yeso.",
+        "Pintura interior color a elección.",
+        "Instalación sanitaria y eléctrica completas según reglamentos y ordenanzas vigentes.",
+        "Instalación de agua potable.",
+        "Aberturas de aluminio serie Probba con vidrio simple, color a elección.",
+        "Puerta exterior madera maciza.",
+        "Puertas interiores en MDF con recubrimiento de PVC.",
+        "Pisos y revestimientos de paredes en cerámica.",
+        "Mesada de cocina de granito, color a elección.",
+        "Mueble bajo mesada en melamínico de 18mm, color a elección.",
+        "Baño equipado con inodoro, mueble con pileta y griferías.",
+        "Vereda perimetral de hormigón, de 60cm de ancho.",
+        "Se incluye mano de obra, materiales, anteproyecto y proyecto ejecutivo.",
+        "Trámites, gestiones y pagos ante BPS, DGI, MTSS, FOCER e Intendencia."
+      ]
+    },
+    "iso_premium": {
+      "category": "iso-premium",
+      "line": "Premium",
+      "system": "Isopanel",
+      "features": [
+        "Cimentación de platea de hormigón reforzada de 12cm.",
+        "Muros de Isopanel de 15cm de espesor.",
+        "Cubierta de Isopanel de 15cm.",
+        "Cielorraso con yeso y lana de vidrio.",
+        "Terminación exterior con sistema EIFS, 3 manos de revoque con malla de fibra, revoque fino o texturado.",
+        "Terminación interior de yeso y masillado.",
+        "Pintura interior y exterior color a elección.",
+        "Instalación sanitaria y eléctrica completas según reglamentos y ordenanzas vigentes.",
+        "Instalación de agua potable.",
+        "Aberturas de aluminio serie Probba con vidrio doble, color a elección. Mosquiteros incluidos.",
+        "Puerta exterior madera maciza.",
+        "Puertas interiores importadas.",
+        "Pisos y revestimientos de paredes de baño y cocina en porcelanato.",
+        "Mesada de cocina de granito, color a elección.",
+        "Mueble bajo mesada y aéreo de cocina en melamínico de 18mm, color a elección.",
+        "Baño equipado con inodoro, bidet, mueble con pileta y griferías.",
+        "Vereda perimetral de hormigón, de 60cm de ancho.",
+        "Se incluye mano de obra, materiales, anteproyecto y proyecto ejecutivo.",
+        "Trámites, gestiones y pagos ante BPS, DGI, MTSS, FOCER e Intendencia."
+      ]
+    }
+  },
+  "projects": [
+    {
+      "code": "60p-a",
+      "type": "sf_premium",
+      "size": 60,
+      "bed": 2,
+      "bath": 1,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "70p-a",
+      "type": "sf_premium",
+      "size": 70,
+      "bed": 2,
+      "bath": 1,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "70p-b",
+      "type": "sf_premium",
+      "size": 70,
+      "bed": 2,
+      "bath": 2,
+      "imgs": 9,
+      "est": 50
+    },
+    {
+      "code": "75p-a",
+      "type": "sf_premium",
+      "size": 75,
+      "bed": 3,
+      "bath": 1,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "75p-b",
+      "type": "sf_premium",
+      "size": 75,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80p-a",
+      "type": "sf_premium",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80p-b",
+      "type": "sf_premium",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80p-c",
+      "type": "sf_premium",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80p-d",
+      "type": "sf_premium",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80p-e",
+      "type": "sf_premium",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80p-f",
+      "type": "sf_premium",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80p-g",
+      "type": "sf_premium",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "85p-a",
+      "type": "sf_premium",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "85p-b",
+      "type": "sf_premium",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "85p-c",
+      "type": "sf_premium",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "85p-d",
+      "type": "sf_premium",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "85p-e",
+      "type": "sf_premium",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "85p-f",
+      "type": "sf_premium",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "code": "85p-g",
+      "type": "sf_premium",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "code": "90p-a",
+      "type": "sf_premium",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "code": "90p-b",
+      "type": "sf_premium",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 8,
+      "est": 55
+    },
+    {
+      "code": "90p-c",
+      "type": "sf_premium",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "code": "90p-d",
+      "type": "sf_premium",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "90p-e",
+      "type": "sf_premium",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "code": "95p-a",
+      "type": "sf_premium",
+      "size": 95,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 60
+    },
+    {
+      "code": "100p-a",
+      "type": "sf_premium",
+      "size": 100,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 9,
+      "est": 60
+    },
+    {
+      "code": "115p-a",
+      "type": "sf_premium",
+      "size": 115,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 9,
+      "est": 60
+    },
+    {
+      "code": "120p-a",
+      "type": "sf_premium",
+      "size": 120,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 65
+    },
+    {
+      "code": "135p-a",
+      "type": "sf_premium",
+      "size": 135,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 9,
+      "est": 70
+    },
+    {
+      "code": "140p-a",
+      "type": "sf_premium",
+      "size": 140,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 8,
+      "est": 70
+    },
+    {
+      "code": "140p-b",
+      "type": "sf_premium",
+      "size": 140,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 10,
+      "est": 70,
+      "roof": "a aguas"
+    },
+    {
+      "code": "140p-c",
+      "type": "sf_premium",
+      "size": 140,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 11,
+      "est": 70
+    },
+    {
+      "code": "145p-a",
+      "type": "sf_premium",
+      "size": 145,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 8,
+      "est": 75
+    },
+    {
+      "code": "150p-a",
+      "type": "sf_premium",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 9,
+      "est": 75,
+      "roof": "a aguas"
+    },
+    {
+      "code": "150p-b",
+      "type": "sf_premium",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 9,
+      "est": 75
+    },
+    {
+      "code": "150p-c",
+      "type": "sf_premium",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 8,
+      "est": 75,
+      "roof": "a aguas"
+    },
+    {
+      "code": "150p-d",
+      "type": "sf_premium",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 8,
+      "est": 75
+    },
+    {
+      "code": "150p-e",
+      "type": "sf_premium",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 9,
+      "est": 75,
+      "roof": "a aguas"
+    },
+    {
+      "code": "150p-f",
+      "type": "sf_premium",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 12,
+      "est": 75
+    },
+    {
+      "code": "150p-g",
+      "type": "sf_premium",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 10,
+      "est": 75,
+      "roof": "a aguas"
+    },
+    {
+      "code": "150p-h",
+      "type": "sf_premium",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 11,
+      "est": 75
+    },
+    {
+      "code": "150p-i",
+      "type": "sf_premium",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 11,
+      "est": 75
+    },
+    {
+      "code": "150p-j",
+      "type": "sf_premium",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 12,
+      "est": 75
+    },
+    {
+      "code": "150p-k",
+      "type": "sf_premium",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 11,
+      "est": 75
+    },
+    {
+      "code": "160p-a",
+      "type": "sf_premium",
+      "size": 160,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 11,
+      "est": 80
+    },
+    {
+      "code": "163p-a",
+      "type": "sf_premium",
+      "size": 163,
+      "bed": 4,
+      "bath": 2,
+      "imgs": 14,
+      "est": 85
+    },
+    {
+      "code": "165p-a",
+      "type": "sf_premium",
+      "size": 165,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 12,
+      "est": 85
+    },
+    {
+      "code": "178p-a",
+      "type": "sf_premium",
+      "size": 178,
+      "bed": 4,
+      "bath": 3,
+      "imgs": 13,
+      "est": 90
+    },
+    {
+      "code": "235p-a",
+      "type": "sf_premium",
+      "size": 235,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 11,
+      "est": 95,
+      "roof": "a aguas"
+    },
+    {
+      "code": "285p-a",
+      "type": "sf_premium",
+      "size": 285,
+      "bed": 5,
+      "bath": 4,
+      "imgs": 15,
+      "est": 110
+    },
+    {
+      "code": "35ep-a",
+      "type": "sf_exeplus",
+      "size": 35,
+      "bed": 1,
+      "bath": 1,
+      "imgs": 5,
+      "est": 30
+    },
+    {
+      "code": "45ep-a",
+      "type": "sf_exeplus",
+      "size": 45,
+      "bed": 2,
+      "bath": 1,
+      "imgs": 7,
+      "est": 40
+    },
+    {
+      "code": "55ep-a",
+      "type": "sf_exeplus",
+      "size": 55,
+      "bed": 2,
+      "bath": 1,
+      "imgs": 7,
+      "est": 45
+    },
+    {
+      "code": "60ep-a",
+      "type": "sf_exeplus",
+      "size": 60,
+      "bed": 2,
+      "bath": 1,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "70ep-a",
+      "type": "sf_exeplus",
+      "size": 70,
+      "bed": 2,
+      "bath": 1,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "70ep-b",
+      "type": "sf_exeplus",
+      "size": 70,
+      "bed": 2,
+      "bath": 2,
+      "imgs": 9,
+      "est": 50
+    },
+    {
+      "code": "75ep-a",
+      "type": "sf_exeplus",
+      "size": 75,
+      "bed": 3,
+      "bath": 1,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "75ep-b",
+      "type": "sf_exeplus",
+      "size": 75,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80ep-a",
+      "type": "sf_exeplus",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50,
+      "roof": "a aguas"
+    },
+    {
+      "code": "80ep-b",
+      "type": "sf_exeplus",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80ep-c",
+      "type": "sf_exeplus",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80ep-d",
+      "type": "sf_exeplus",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80ep-f",
+      "type": "sf_exeplus",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80ep-g",
+      "type": "sf_exeplus",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80ep-h",
+      "type": "sf_exeplus",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "85ep-a",
+      "type": "sf_exeplus",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55,
+      "roof": "a aguas"
+    },
+    {
+      "code": "85ep-b",
+      "type": "sf_exeplus",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55,
+      "roof": "a aguas"
+    },
+    {
+      "code": "85ep-c",
+      "type": "sf_exeplus",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "85ep-d",
+      "type": "sf_exeplus",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55,
+      "roof": "a aguas"
+    },
+    {
+      "code": "85ep-e",
+      "type": "sf_exeplus",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55,
+      "roof": "a aguas"
+    },
+    {
+      "code": "85ep-f",
+      "type": "sf_exeplus",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "code": "85ep-g",
+      "type": "sf_exeplus",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "code": "90ep-a",
+      "type": "sf_exeplus",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55,
+      "roof": "a aguas"
+    },
+    {
+      "code": "90ep-b",
+      "type": "sf_exeplus",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 8,
+      "est": 55
+    },
+    {
+      "code": "90ep-c",
+      "type": "sf_exeplus",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "code": "90ep-d",
+      "type": "sf_exeplus",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "90ep-e",
+      "type": "sf_exeplus",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "code": "95ep-a",
+      "type": "sf_exeplus",
+      "size": 95,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 60
+    },
+    {
+      "code": "100ep-a",
+      "type": "sf_exeplus",
+      "size": 100,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 9,
+      "est": 60
+    },
+    {
+      "code": "115ep-a",
+      "type": "sf_exeplus",
+      "size": 115,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 9,
+      "est": 60
+    },
+    {
+      "code": "120ep-a",
+      "type": "sf_exeplus",
+      "size": 120,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 65
+    },
+    {
+      "code": "135ep-a",
+      "type": "sf_exeplus",
+      "size": 135,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 9,
+      "est": 70
+    },
+    {
+      "code": "140ep-a",
+      "type": "sf_exeplus",
+      "size": 140,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 8,
+      "est": 70
+    },
+    {
+      "code": "140ep-b",
+      "type": "sf_exeplus",
+      "size": 140,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 10,
+      "est": 70
+    },
+    {
+      "code": "140ep-c",
+      "type": "sf_exeplus",
+      "size": 140,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 11,
+      "est": 70
+    },
+    {
+      "code": "35b-a",
+      "type": "sf_basic",
+      "size": 35,
+      "bed": 1,
+      "bath": 1,
+      "imgs": 5,
+      "est": 30
+    },
+    {
+      "code": "45b-a",
+      "type": "sf_basic",
+      "size": 45,
+      "bed": 2,
+      "bath": 1,
+      "imgs": 7,
+      "est": 40
+    },
+    {
+      "code": "55b-a",
+      "type": "sf_basic",
+      "size": 55,
+      "bed": 2,
+      "bath": 1,
+      "imgs": 7,
+      "est": 45
+    },
+    {
+      "code": "60b-a",
+      "type": "sf_basic",
+      "size": 60,
+      "bed": 2,
+      "bath": 1,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "70b-a",
+      "type": "sf_basic",
+      "size": 70,
+      "bed": 2,
+      "bath": 1,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "70b-b",
+      "type": "sf_basic",
+      "size": 70,
+      "bed": 2,
+      "bath": 2,
+      "imgs": 9,
+      "est": 50
+    },
+    {
+      "code": "75b-a",
+      "type": "sf_basic",
+      "size": 75,
+      "bed": 3,
+      "bath": 1,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "75b-b",
+      "type": "sf_basic",
+      "size": 75,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80b-a",
+      "type": "sf_basic",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80b-b",
+      "type": "sf_basic",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80b-c",
+      "type": "sf_basic",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80b-d",
+      "type": "sf_basic",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80b-e",
+      "type": "sf_basic",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80b-f",
+      "type": "sf_basic",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "80b-g",
+      "type": "sf_basic",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 50
+    },
+    {
+      "code": "85b-a",
+      "type": "sf_basic",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "85b-b",
+      "type": "sf_basic",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "85b-c",
+      "type": "sf_basic",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "85b-d",
+      "type": "sf_basic",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "85b-e",
+      "type": "sf_basic",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "85b-f",
+      "type": "sf_basic",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "code": "85b-g",
+      "type": "sf_basic",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "code": "90b-a",
+      "type": "sf_basic",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "code": "90b-b",
+      "type": "sf_basic",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 8,
+      "est": 55
+    },
+    {
+      "code": "90b-c",
+      "type": "sf_basic",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "code": "90b-d",
+      "type": "sf_basic",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 6,
+      "est": 55
+    },
+    {
+      "code": "90b-e",
+      "type": "sf_basic",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "imgs": 7,
+      "est": 55
+    },
+    {
+      "type": "iso_premium",
+      "code": "60ip-a",
+      "size": 60,
+      "bed": 2,
+      "bath": 1,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "70ip-a",
+      "size": 70,
+      "bed": 2,
+      "bath": 1,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "70ip-b",
+      "size": 70,
+      "bed": 2,
+      "bath": 2,
+      "est": 50,
+      "imgs": 9
+    },
+    {
+      "type": "iso_premium",
+      "code": "75ip-a",
+      "size": 75,
+      "bed": 3,
+      "bath": 1,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "75ip-b",
+      "size": 75,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "80ip-a",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "80ip-b",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "80ip-c",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "80ip-d",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "80ip-e",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "80ip-f",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "80ip-g",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "85ip-a",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "85ip-b",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "85ip-c",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "85ip-d",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "85ip-e",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "85ip-f",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    },
+    {
+      "type": "iso_premium",
+      "code": "85ip-g",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    },
+    {
+      "type": "iso_premium",
+      "code": "90ip-a",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    },
+    {
+      "type": "iso_premium",
+      "code": "90ip-b",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 8
+    },
+    {
+      "type": "iso_premium",
+      "code": "90ip-c",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    },
+    {
+      "type": "iso_premium",
+      "code": "90ip-d",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_premium",
+      "code": "90ip-e",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    },
+    {
+      "type": "iso_premium",
+      "code": "95ip-a",
+      "size": 95,
+      "bed": 3,
+      "bath": 2,
+      "est": 60,
+      "imgs": 7
+    },
+    {
+      "type": "iso_premium",
+      "code": "100ip-a",
+      "size": 100,
+      "bed": 3,
+      "bath": 2,
+      "est": 60,
+      "imgs": 9
+    },
+    {
+      "type": "iso_premium",
+      "code": "115ip-a",
+      "size": 115,
+      "bed": 3,
+      "bath": 2,
+      "est": 60,
+      "imgs": 9
+    },
+    {
+      "type": "iso_premium",
+      "code": "120ip-a",
+      "size": 120,
+      "bed": 3,
+      "bath": 2,
+      "est": 65,
+      "imgs": 7
+    },
+    {
+      "type": "iso_premium",
+      "code": "135ip-a",
+      "size": 135,
+      "bed": 3,
+      "bath": 2,
+      "est": 70,
+      "imgs": 9
+    },
+    {
+      "type": "iso_premium",
+      "code": "140ip-a",
+      "size": 140,
+      "bed": 3,
+      "bath": 2,
+      "est": 70,
+      "imgs": 8
+    },
+    {
+      "type": "iso_premium",
+      "code": "140ip-b",
+      "size": 140,
+      "bed": 3,
+      "bath": 2,
+      "est": 70,
+      "imgs": 10,
+      "roof": "a aguas"
+    },
+    {
+      "type": "iso_premium",
+      "code": "140ip-c",
+      "size": 140,
+      "bed": 3,
+      "bath": 2,
+      "est": 70,
+      "imgs": 11
+    },
+    {
+      "type": "iso_premium",
+      "code": "145ip-a",
+      "size": 145,
+      "bed": 3,
+      "bath": 2,
+      "est": 75,
+      "imgs": 8
+    },
+    {
+      "type": "iso_premium",
+      "code": "150ip-a",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "est": 75,
+      "imgs": 9,
+      "roof": "a aguas"
+    },
+    {
+      "type": "iso_premium",
+      "code": "150ip-b",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "est": 75,
+      "imgs": 9
+    },
+    {
+      "type": "iso_premium",
+      "code": "150ip-c",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "est": 75,
+      "imgs": 8,
+      "roof": "a aguas"
+    },
+    {
+      "type": "iso_premium",
+      "code": "150ip-d",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "est": 75,
+      "imgs": 8
+    },
+    {
+      "type": "iso_premium",
+      "code": "150ip-e",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "est": 75,
+      "imgs": 9,
+      "roof": "a aguas"
+    },
+    {
+      "type": "iso_premium",
+      "code": "150ip-f",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "est": 75,
+      "imgs": 12
+    },
+    {
+      "type": "iso_premium",
+      "code": "150ip-g",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "est": 75,
+      "imgs": 10,
+      "roof": "a aguas"
+    },
+    {
+      "type": "iso_premium",
+      "code": "150ip-h",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "est": 75,
+      "imgs": 11
+    },
+    {
+      "type": "iso_premium",
+      "code": "150ip-i",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "est": 75,
+      "imgs": 11
+    },
+    {
+      "type": "iso_premium",
+      "code": "150ip-j",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "est": 75,
+      "imgs": 12
+    },
+    {
+      "type": "iso_premium",
+      "code": "150ip-k",
+      "size": 150,
+      "bed": 3,
+      "bath": 2,
+      "est": 75,
+      "imgs": 11
+    },
+    {
+      "type": "iso_premium",
+      "code": "160ip-a",
+      "size": 160,
+      "bed": 3,
+      "bath": 2,
+      "est": 80,
+      "imgs": 11
+    },
+    {
+      "type": "iso_premium",
+      "code": "163ip-a",
+      "size": 163,
+      "bed": 4,
+      "bath": 2,
+      "est": 85,
+      "imgs": 14
+    },
+    {
+      "type": "iso_premium",
+      "code": "165ip-a",
+      "size": 165,
+      "bed": 3,
+      "bath": 2,
+      "est": 85,
+      "imgs": 12
+    },
+    {
+      "type": "iso_premium",
+      "code": "178ip-a",
+      "size": 178,
+      "bed": 4,
+      "bath": 3,
+      "est": 90,
+      "imgs": 13
+    },
+    {
+      "type": "iso_premium",
+      "code": "235ip-a",
+      "size": 235,
+      "bed": 3,
+      "bath": 2,
+      "est": 95,
+      "imgs": 11,
+      "roof": "a aguas"
+    },
+    {
+      "type": "iso_premium",
+      "code": "285ip-a",
+      "size": 285,
+      "bed": 5,
+      "bath": 4,
+      "est": 110,
+      "imgs": 15
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "35iep-a",
+      "size": 35,
+      "bed": 1,
+      "bath": 1,
+      "est": 30,
+      "imgs": 5
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "45iep-a",
+      "size": 45,
+      "bed": 2,
+      "bath": 1,
+      "est": 40,
+      "imgs": 7
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "55iep-a",
+      "size": 55,
+      "bed": 2,
+      "bath": 1,
+      "est": 45,
+      "imgs": 7
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "60iep-a",
+      "size": 60,
+      "bed": 2,
+      "bath": 1,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "70iep-a",
+      "size": 70,
+      "bed": 2,
+      "bath": 1,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "70iep-b",
+      "size": 70,
+      "bed": 2,
+      "bath": 2,
+      "est": 50,
+      "imgs": 9
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "75iep-a",
+      "size": 75,
+      "bed": 3,
+      "bath": 1,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "75iep-b",
+      "size": 75,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "80iep-a",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6,
+      "roof": "a aguas"
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "80iep-b",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "80iep-c",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "80iep-d",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "80iep-e",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "80iep-f",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "80iep-g",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "85iep-a",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6,
+      "roof": "a aguas"
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "85iep-b",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6,
+      "roof": "a aguas"
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "85iep-c",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "85iep-d",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6,
+      "roof": "a aguas"
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "85iep-e",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6,
+      "roof": "a aguas"
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "85iep-f",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "85iep-g",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "90iep-a",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7,
+      "roof": "a aguas"
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "90iep-b",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 8
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "90iep-c",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "90iep-d",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "90iep-e",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "95iep-a",
+      "size": 95,
+      "bed": 3,
+      "bath": 2,
+      "est": 60,
+      "imgs": 7
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "100iep-a",
+      "size": 100,
+      "bed": 3,
+      "bath": 2,
+      "est": 60,
+      "imgs": 9
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "115iep-a",
+      "size": 115,
+      "bed": 3,
+      "bath": 2,
+      "est": 60,
+      "imgs": 9
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "120iep-a",
+      "size": 120,
+      "bed": 3,
+      "bath": 2,
+      "est": 65,
+      "imgs": 7
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "135iep-a",
+      "size": 135,
+      "bed": 3,
+      "bath": 2,
+      "est": 70,
+      "imgs": 9
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "140iep-a",
+      "size": 140,
+      "bed": 3,
+      "bath": 2,
+      "est": 70,
+      "imgs": 8
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "140iep-b",
+      "size": 140,
+      "bed": 3,
+      "bath": 2,
+      "est": 70,
+      "imgs": 10
+    },
+    {
+      "type": "iso_exeplus",
+      "code": "140iep-c",
+      "size": 140,
+      "bed": 3,
+      "bath": 2,
+      "est": 70,
+      "imgs": 11
+    },
+    {
+      "type": "iso_basic",
+      "code": "35ib-a",
+      "size": 35,
+      "bed": 1,
+      "bath": 1,
+      "est": 30,
+      "imgs": 5
+    },
+    {
+      "type": "iso_basic",
+      "code": "45ib-a",
+      "size": 45,
+      "bed": 2,
+      "bath": 1,
+      "est": 40,
+      "imgs": 7
+    },
+    {
+      "type": "iso_basic",
+      "code": "55ib-a",
+      "size": 55,
+      "bed": 2,
+      "bath": 1,
+      "est": 45,
+      "imgs": 7
+    },
+    {
+      "type": "iso_basic",
+      "code": "60ib-a",
+      "size": 60,
+      "bed": 2,
+      "bath": 1,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "70ib-a",
+      "size": 70,
+      "bed": 2,
+      "bath": 1,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "70ib-b",
+      "size": 70,
+      "bed": 2,
+      "bath": 2,
+      "est": 50,
+      "imgs": 9
+    },
+    {
+      "type": "iso_basic",
+      "code": "75ib-a",
+      "size": 75,
+      "bed": 3,
+      "bath": 1,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "75ib-b",
+      "size": 75,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "80ib-a",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "80ib-b",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "80ib-c",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "80ib-d",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "80ib-e",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "80ib-f",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "80ib-g",
+      "size": 80,
+      "bed": 3,
+      "bath": 2,
+      "est": 50,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "85ib-a",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "85ib-b",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "85ib-c",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "85ib-d",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "85ib-e",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "85ib-f",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    },
+    {
+      "type": "iso_basic",
+      "code": "85ib-g",
+      "size": 85,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    },
+    {
+      "type": "iso_basic",
+      "code": "90ib-a",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    },
+    {
+      "type": "iso_basic",
+      "code": "90ib-b",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 8
+    },
+    {
+      "type": "iso_basic",
+      "code": "90ib-c",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    },
+    {
+      "type": "iso_basic",
+      "code": "90ib-d",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 6
+    },
+    {
+      "type": "iso_basic",
+      "code": "90ib-e",
+      "size": 90,
+      "bed": 3,
+      "bath": 2,
+      "est": 55,
+      "imgs": 7
+    }
+  ]
+}

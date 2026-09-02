@@ -1,11 +1,11 @@
 ---
-const { src, alt } = Astro.props;
+const { src, alt, noOverlay = false } = Astro.props;
 ---
 
 <div class="relative group cursor-pointer">
-  <div class="overflow-hidden rounded-xl shadow-card-base">
+  <div class="overflow-hidden rounded-xl shadow-card-base aspect-video w-full">
     <img
-      class="toggle-modal w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+      class="toggle-modal w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       width="476"
       height="268"
       src={src}
@@ -13,7 +13,7 @@ const { src, alt } = Astro.props;
       loading="lazy"
     />
     <!-- Hover hint -->
-    <div class="absolute inset-0 bg-custom-black/0 group-hover:bg-custom-black/30 transition-colors duration-300 rounded-xl flex items-center justify-center pointer-events-none">
+    <div class={`absolute inset-0 transition-colors duration-300 rounded-xl flex items-center justify-center pointer-events-none ${noOverlay ? '' : 'bg-custom-black/0 group-hover:bg-custom-black/30'}`}>
       <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border border-white/30">
         Ampliar
       </span>

@@ -2,7 +2,7 @@
   "name": "PANI CONSTRUCCIONES",
   "short_name": "PANI CONSTRUCCIONES",
   "description": "Empresa constructora en SteelFraming e Isopanel",
-  "start_url": "/index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#006494",
@@ -24,6 +24,32 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Steel Framing",
+      "short_name": "Steel Framing",
+      "url": "/",
+      "icons": [{ "src": "/assets/icons/144.png", "sizes": "144x144" }]
+    },
+    {
+      "name": "Isopanel",
+      "short_name": "Isopanel",
+      "url": "/isopanel",
+      "icons": [{ "src": "/assets/icons/144.png", "sizes": "144x144" }]
+    },
+    {
+      "name": "Obras Realizadas",
+      "short_name": "Obras",
+      "url": "/obras",
+      "icons": [{ "src": "/assets/icons/144.png", "sizes": "144x144" }]
+    },
+    {
+      "name": "Contacto",
+      "short_name": "Contacto",
+      "url": "/contacto",
+      "icons": [{ "src": "/assets/icons/144.png", "sizes": "144x144" }]
     }
   ]
 }

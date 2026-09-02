@@ -3,38 +3,85 @@ import Layout from "../layouts/Layout.astro";
 import Cards from "../components/Cards.astro";
 import About from "../components/About.astro";
 import Contact from "../components/Contact.astro";
-import { isopanel } from "../../public/proyectos.json";
+import LineComparator from "../components/LineComparator.astro";
+import {
+  isopanelPremium,
+  isopanelExeplus,
+  isopanel,
+} from "../utils/projects.js";
 ---
 
 <Layout
   title="Proyectos en Isopanel | Pani Construcciones"
   description="Descubrí nuestros proyectos en Isopanel y encontrá la solución perfecta para tu nuevo hogar. Construcciones modernas, eficientes y de alta calidad."
 >
-  <!-- Hero de página -->
-  <div class="bg-gradient-to-br from-custom-gray via-custom-blue-dark to-custom-blue text-white px-5 lg:px-10 py-14 lg:py-20 text-center -mt-[4.5rem] lg:-mt-[5.5rem] pt-28 lg:pt-32">
-    <span class="section-badge bg-white/15 border border-white/20 inline-flex mb-4">
-      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+  <!-- Hero de página (solo desktop) -->
+  <div class="hidden lg:flex bg-gradient-to-br from-custom-gray via-custom-blue-dark to-custom-blue text-white px-5 lg:px-10 py-8 lg:py-10 text-center -mt-[4.5rem] lg:-mt-[5.5rem] pt-24 lg:pt-28 justify-center items-center">
+    <h1 class="inline-flex items-center justify-center gap-2.5 font-archivo font-extrabold text-2xl sm:text-3xl lg:text-4xl leading-tight">
+      <svg class="w-7 h-7 sm:w-8 sm:h-8 text-white shrink-0" fill="currentColor" viewBox="0 0 20 20">
         <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
       </svg>
-      Proyectos en Isopanel
-    </span>
-    <h1 class="font-archivo font-extrabold text-3xl sm:text-4xl lg:text-5xl leading-tight mb-3">
-      Construcciones<br/>
-      <span class="text-custom-original">en Isopanel</span>
+      <span>Construcciones <span class="text-custom-original">en Isopanel</span></span>
     </h1>
-    <p class="text-white/65 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-      Soluciones constructivas modernas, eficientes y versátiles. Desde módulos habitacionales hasta grandes viviendas.
-    </p>
-    <div class="section-divider mt-6" style="background: linear-gradient(to right, rgba(255,255,255,0.4), rgba(255,255,255,0.8), rgba(255,255,255,0.4));"></div>
   </div>
 
   <!-- Proyectos -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-0 pb-2 sm:py-6">
+
+    <div id="isopanel"></div>
+
+    <!-- ── Toggle Sistema ── -->
+    <div class="flex lg:hidden gap-2 mt-1 mb-4">
+      <a href="/" class="flex-1 inline-flex items-center justify-center gap-2 font-archivo font-bold text-xs uppercase tracking-wide py-1 rounded-full border-2 border-custom-blue text-custom-blue hover:bg-custom-blue hover:text-white transition-all duration-200">
+        Ver Steel Framing
+      </a>
+      <span class="flex-1 inline-flex items-center justify-center gap-2 font-archivo font-bold text-xs uppercase tracking-wide py-1 rounded-full bg-gradient-to-r from-custom-blue to-custom-original text-white opacity-60 cursor-default select-none border-2 border-transparent">
+        Isopanel
+      </span>
+    </div>
+
+    <!-- ── Línea Premium ── -->
+    <div id="iso-premium" class="scroll-mt-24 mt-6 mb-3 reveal">
+      <div class="flex items-center gap-3">
+        <div class="flex-1 h-px bg-gradient-to-r from-custom-gold/40 to-transparent"></div>
+        <span class="line-badge gold px-4 py-1.5 text-xs">★ Línea Premium</span>
+        <div class="flex-1 h-px bg-gradient-to-l from-custom-gold/40 to-transparent"></div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7">
+      {isopanelPremium.map((card) => <Cards {...card} />)}
+    </div>
+
+    <!-- ── Línea Ejecutiva Plus ── -->
+    <div id="iso-exeplus" class="scroll-mt-24 mt-12 mb-3 reveal">
+      <div class="flex items-center gap-3">
+        <div class="flex-1 h-px bg-gradient-to-r from-custom-blue/30 to-transparent"></div>
+        <span class="line-badge px-4 py-1.5 text-xs">Línea Ejecutiva Plus</span>
+        <div class="flex-1 h-px bg-gradient-to-l from-custom-blue/30 to-transparent"></div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7">
+      {isopanelExeplus.map((card) => <Cards {...card} />)}
+    </div>
+
+    <!-- ── Línea Básica ── -->
+    <div id="iso-basic" class="scroll-mt-24 mt-12 mb-3 reveal">
+      <div class="flex items-center gap-3">
+        <div class="flex-1 h-px bg-gradient-to-r from-custom-blue/30 to-transparent"></div>
+        <span class="line-badge px-4 py-1.5 text-xs">Línea Básica</span>
+        <div class="flex-1 h-px bg-gradient-to-l from-custom-blue/30 to-transparent"></div>
+      </div>
+    </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7">
       {isopanel.map((card) => <Cards {...card} />)}
     </div>
 
+    <!-- ── Comparador de Líneas ── -->
+    <LineComparator system="Isopanel" />
+
+    <!-- Contact CTA (desactivado por ahora) ──
     <Contact />
+    -->
   </section>
 
   <!-- About -->

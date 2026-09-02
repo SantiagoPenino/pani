@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
 import Products from "../components/Products.astro";
 import About from "../components/About.astro";
 import Map from "../components/Map.astro";
@@ -10,12 +9,17 @@ import Map from "../components/Map.astro";
   title="Pani Construcciones | Casas en Steel Framing e Isopanel"
   description="¡Líder en la construcción de casas modernas, eficientes y de alta calidad! Descubre nuestra variedad de proyectos en Steel Framing e Isopanel."
 >
-  <!-- Hero anula el pt del main para ocupar el viewport completo desde el header -->
-  <div class="-mt-[4.5rem] lg:-mt-[5.5rem]">
-    <Hero />
+  <!-- Hero de página (solo desktop) -->
+  <div class="hidden lg:flex bg-gradient-to-br from-custom-gray via-custom-blue-dark to-custom-blue text-white px-5 lg:px-10 py-8 lg:py-10 text-center -mt-[4.5rem] lg:-mt-[5.5rem] pt-24 lg:pt-28 justify-center items-center">
+    <h1 class="inline-flex items-center justify-center gap-2.5 font-archivo font-extrabold text-2xl sm:text-3xl lg:text-4xl leading-tight">
+      <svg class="w-7 h-7 sm:w-8 sm:h-8 text-white shrink-0" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+      </svg>
+      <span>Construcciones <span class="text-custom-original">en Steel Framing</span></span>
+    </h1>
   </div>
 
-  <section class="py-2">
+  <section class="pt-0 pb-2 sm:py-6">
     <Products />
   </section>
 

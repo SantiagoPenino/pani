@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer.astro";
 import WhatsappButton from "../components/WhatsappButton.astro";
+import ScrollTopButton from "../components/ScrollTopButton.astro";
 
 export function getCanonicalUrl(pathname: string) {
   const baseUrl = "https://paniconstrucciones.com";
@@ -81,10 +82,63 @@ const pixelId = import.meta.env.PUBLIC_PIXEL_ID;
   </head>
   <body class="bg-white relative overflow-x-hidden w-full">
     <WhatsappButton />
+    <ScrollTopButton />
     <Header />
     <main class="pt-[4.5rem] lg:pt-[5.5rem]">
       <slot />
     </main>
     <Footer />
+
+    <!-- Favorites System -->
+    <script is:inline>
+      // Favorites manager
+      window.getFavs = () => JSON.parse(localStorage.getItem('pani-favs') || '[]');
+      window.saveFavs = (favs) => localStorage.setItem('pani-favs', JSON.stringify(favs));
+      
+      window.toggleFav = (btn) => {
+        const code = btn.dataset.code;
+        let favs = window.getFavs();
+        const idx = favs.indexOf(code);
+        if (idx > -1) {
+          favs.splice(idx, 1);
+        } else {
+          favs.push(code);
+        }
+        window.saveFavs(favs);
+        window.syncFavButtons();
+        // Notify navbar badge to update
+        window.dispatchEvent(new Event('favs-changed'));
+      };
+
+      window.syncFavButtons = () => {
+        const favs = window.getFavs();
+        document.querySelectorAll('.fav-btn').forEach(btn => {
+          const code = btn.dataset.code;
+          const isFav = favs.includes(code);
+          btn.classList.toggle('is-fav', isFav);
+          btn.querySelector('.fav-icon-empty').classList.toggle('hidden', isFav);
+          btn.querySelector('.fav-icon-full').classList.toggle('hidden', !isFav);
+        });
+      };
+
+      document.addEventListener('astro:page-load', () => window.syncFavButtons());
+      document.addEventListener('DOMContentLoaded', () => window.syncFavButtons());
+    </script>
+
+    <!-- Desactivar y limpiar Service Worker si quedó cacheado -->
+    <script is:inline>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.getRegistrations().then((regs) => {
+          for (const reg of regs) {
+            reg.unregister();
+          }
+        });
+      }
+      if ("caches" in window) {
+        caches.keys().then((keys) => {
+          keys.forEach((k) => caches.delete(k));
+        });
+      }
+    </script>
   </body>
 </html>
