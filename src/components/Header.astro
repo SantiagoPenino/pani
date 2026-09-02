@@ -21,7 +21,7 @@ import Navbar from "./Navbar.astro";
     <!-- Eslogan centrado — solo desktop -->
     <p class="hidden lg:flex items-center gap-2 font-bold text-xs uppercase italic text-custom-blue tracking-widest select-none">
       <img src="https://flagcdn.com/w40/uy.png" alt="Uruguay" class="w-5 h-auto rounded-sm shadow-sm" />
-      Construyendo a Uruguay hace 20 años
+      Construyendo a Uruguay hace más de 15 años
     </p>
 
     <!-- Favoritos mobile (centrado entre logo y hamburguesa) -->
@@ -96,24 +96,29 @@ import Navbar from "./Navbar.astro";
 </header>
 
 <script is:inline>
-  // Glassmorphism al hacer scroll
-  const header = document.getElementById("site-header");
-  let ticking = false;
+  // Glassmorphism al hacer scroll.
+  // Con ViewTransitions el <header> se reemplaza en cada navegación y este script
+  // no se vuelve a ejecutar, así que el elemento se busca en cada actualización
+  // en vez de capturarlo una sola vez (si no, la clase iba al header viejo).
+  (() => {
+    let ticking = false;
 
-  function onScroll() {
-    if (!ticking) {
+    function updateHeader() {
+      const header = document.getElementById("site-header");
+      if (header) header.classList.toggle("scrolled", window.scrollY > 40);
+    }
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
       window.requestAnimationFrame(() => {
-        if (window.scrollY > 40) {
-          header.classList.add("scrolled");
-        } else {
-          header.classList.remove("scrolled");
-        }
+        updateHeader();
         ticking = false;
       });
-      ticking = true;
     }
-  }
 
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll(); // estado inicial
+    window.addEventListener("scroll", onScroll, { passive: true });
+    document.addEventListener("astro:after-swap", updateHeader);
+    updateHeader(); // estado inicial
+  })();
 </script>

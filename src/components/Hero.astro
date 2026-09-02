@@ -1,133 +1,195 @@
-<section class="hero-section w-full min-h-screen -mt-[4.5rem] lg:-mt-[5.5rem] pt-[4.5rem] lg:pt-[5.5rem] flex items-center justify-center relative">
+---
+/**
+ * Hero de la portada. Basado en la referencia de diseño (hero desktop / hero mobile):
+ * estructura de steel framing a la izquierda, casa a la derecha y, al centro, logo,
+ * eslogan, titular, cinta "Steel Framing e Isopanel" y tres claims.
+ * En mobile las fotos ocupan una franja superior y el contenido va debajo.
+ */
+const claims = [
+  {
+    text: "Más de 100 casas llave en mano",
+    icon: "M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25",
+  },
+  {
+    text: "Más de 50 reformas y ampliaciones",
+    icon: "M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z",
+  },
+  {
+    text: "Construimos con materiales de excelente calidad",
+    icon: "M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z",
+  },
+];
+---
 
-  <!-- Imagen de fondo (primera obra de la galería) -->
-  <div
-    class="hero-bg"
-    style="background-image: url('/assets/images/obras/1.webp');"
-    aria-hidden="true"
-  ></div>
+<section class="hero relative overflow-hidden bg-white" aria-labelledby="hero-title">
+  <div class="hero-sky absolute inset-0" aria-hidden="true"></div>
 
-  <!-- Overlay -->
-  <div class="hero-overlay" aria-hidden="true"></div>
-
-  <!-- Contenido -->
-  <div class="relative z-10 w-full max-w-5xl mx-auto px-5 lg:px-10 py-16 lg:py-24 text-center text-white">
-
-    <!-- Badge -->
-    <div class="flex justify-center mb-5 reveal" style="animation-delay:0.1s">
-      <span class="section-badge">
-        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
-        </svg>
-        Empresa familiar · 20 años de trayectoria
-      </span>
-    </div>
-
-    <!-- Título principal -->
-    <h1 class="font-archivo font-extrabold text-3xl sm:text-4xl lg:text-6xl leading-tight mb-4 reveal reveal-delay-1">
-      Proyectos<br class="hidden sm:block" />
-      <span class="text-custom-original"> Llave en Mano</span>
-    </h1>
-
-    <!-- Subtítulo -->
-    <p class="text-base sm:text-lg lg:text-xl text-white/80 max-w-2xl mx-auto mb-8 leading-relaxed reveal reveal-delay-2">
-      Construimos hogares modernos y eficientes con Steel Framing e Isopanel.
-      Tu proyecto desde el anteproyecto hasta la entrega de llaves.
-    </p>
-
-    <!-- CTAs -->
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14 reveal reveal-delay-3">
-      <a class="btn-primary text-sm lg:text-base px-7 py-3.5" href="/#steelframing" id="hero-cta-proyectos">
-        Ver proyectos
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </a>
-      <a class="btn-secondary text-sm lg:text-base px-7 py-3.5" href="/contacto" id="hero-cta-contacto">
-        Contactanos
-      </a>
-    </div>
-
-    <!-- Stats / Contadores -->
-    <div class="grid grid-cols-3 gap-3 sm:gap-6 max-w-lg mx-auto reveal reveal-delay-4">
-      <div class="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2 border border-white/15">
-        <p class="font-archivo font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-none">
-          <span class="stat-counter" data-target="120">0</span>+
-        </p>
-        <p class="text-white/65 text-xs sm:text-sm mt-1 uppercase tracking-wide font-semibold">Casas</p>
-      </div>
-      <div class="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2 border border-white/15">
-        <p class="font-archivo font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-none">
-          <span class="stat-counter" data-target="100">0</span>+
-        </p>
-        <p class="text-white/65 text-xs sm:text-sm mt-1 uppercase tracking-wide font-semibold">Reformas</p>
-      </div>
-      <div class="text-center bg-white/10 backdrop-blur-sm rounded-2xl py-4 px-2 border border-white/15">
-        <p class="font-archivo font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-none">
-          <span class="stat-counter" data-target="20">0</span>
-        </p>
-        <p class="text-white/65 text-xs sm:text-sm mt-1 uppercase tracking-wide font-semibold">Años</p>
-      </div>
-    </div>
+  <!-- Fotos: estructura de steel framing (izq.) y casa (der.) -->
+  <div class="hero-photos" aria-hidden="true">
+    <img
+      class="hero-photo hero-photo-left"
+      src="/assets/images/hero/steelframing-800.webp"
+      srcset="/assets/images/hero/steelframing-800.webp 800w, /assets/images/hero/steelframing-1400.webp 1400w"
+      sizes="(min-width: 1024px) 34vw, 58vw"
+      width="800"
+      height="1423"
+      alt=""
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <img
+      class="hero-photo hero-photo-right"
+      src="/assets/images/hero/casa-800.webp"
+      srcset="/assets/images/hero/casa-800.webp 800w, /assets/images/hero/casa-1400.webp 1400w"
+      sizes="(min-width: 1024px) 42vw, 58vw"
+      width="800"
+      height="391"
+      alt=""
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
   </div>
 
-  <!-- Flecha scroll down -->
-  <a
-    href="/#steelframing"
-    aria-label="Ver proyectos"
-    class="absolute bottom-7 left-1/2 -translate-x-1/2 text-white/60 hover:text-white transition-colors"
-    style="animation: pulse 2s ease-in-out infinite;"
-  >
-    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-    </svg>
-  </a>
+  <!-- Contenido -->
+  <div class="hero-content relative z-10 mx-auto max-w-4xl px-5 sm:px-8 text-center -mt-14 lg:mt-0 lg:pt-12 xl:pt-16">
+    <!-- Logo: ícono + nombre en texto (escala sin pixelarse) -->
+    <a href="/" class="inline-flex items-center gap-2.5 sm:gap-4" aria-label="Pani Construcciones">
+      <img
+        src="/assets/icons/512.png"
+        width="512"
+        height="512"
+        alt=""
+        class="h-16 w-16 sm:h-20 sm:w-20 lg:h-28 lg:w-28 shrink-0"
+      />
+      <span class="text-left leading-none text-custom-logo">
+        <span class="block font-archivo font-extrabold tracking-tight text-[2.75rem] sm:text-6xl lg:text-7xl">PANI</span>
+        <span class="block font-archivo font-bold tracking-[0.04em] text-[1.05rem] sm:text-[1.45rem] lg:text-[1.75rem] mt-1">CONSTRUCCIONES</span>
+      </span>
+    </a>
+    <p class="mt-2 font-archivo font-bold uppercase tracking-[0.18em] text-custom-logo text-[0.6rem] sm:text-xs lg:text-sm">
+      Ingeniería – Arquitectura – Construcción
+    </p>
+
+    <!-- Eslogan -->
+    <div class="mt-5 lg:mt-7 flex items-center justify-center gap-3 sm:gap-4">
+      <span class="hero-rule" aria-hidden="true"></span>
+      <p class="font-bold italic uppercase tracking-[0.12em] text-custom-gray text-[0.62rem] sm:text-xs lg:text-sm">
+        Construyendo a Uruguay hace más de 15 años
+      </p>
+      <span class="hero-rule hero-rule-end" aria-hidden="true"></span>
+    </div>
+
+    <!-- Titular -->
+    <h1
+      id="hero-title"
+      class="mt-4 lg:mt-5 font-archivo font-extrabold uppercase leading-[0.95] tracking-tight text-custom-black text-[clamp(2.25rem,5.4vw,3.5rem)]"
+    >
+      Construimos<br class="sm:hidden" /> tu hogar<br />
+      <span class="text-custom-blue">llave en mano</span>
+    </h1>
+
+    <!-- Cinta -->
+    <p class="mt-5 lg:mt-6 inline-block rounded-md bg-custom-gray px-5 py-2.5 lg:px-7 lg:py-3 font-archivo font-bold uppercase tracking-[0.15em] text-white text-xs sm:text-sm lg:text-base shadow-lg">
+      Steel Framing e Isopanel
+    </p>
+
+    <!-- Claims -->
+    <ul class="mt-8 lg:mt-12 grid grid-cols-3 divide-x divide-custom-blue/20">
+      {claims.map(({ text, icon }) => (
+        <li class="flex flex-col items-center gap-2 px-2 sm:px-4 lg:px-6">
+          <svg class="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-custom-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d={icon} />
+          </svg>
+          <p class="font-archivo font-bold uppercase leading-snug text-custom-black text-[0.6rem] sm:text-xs lg:text-sm max-w-[11rem]">{text}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <!-- Barra inferior -->
+  <div class="relative z-10 mt-8 lg:mt-12 h-2 lg:h-2.5 bg-gradient-to-r from-custom-blue-dark via-custom-blue to-custom-original" aria-hidden="true"></div>
 </section>
 
-<script is:inline>
-  // Intersection Observer para animaciones reveal
-  document.addEventListener("astro:page-load", () => {
-    const reveals = document.querySelectorAll(".reveal");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    reveals.forEach((el) => observer.observe(el));
+<style>
+  .hero-sky {
+    background: linear-gradient(180deg, #d9ecfb 0%, #f2f8fd 45%, #ffffff 100%);
+  }
 
-    // Contadores animados
-    const counters = document.querySelectorAll(".stat-counter");
-    const counterObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const el = entry.target;
-          const target = parseInt(el.dataset.target, 10);
-          const duration = 1200;
-          const start = performance.now();
+  /* Mobile: franja de fotos arriba, fundida hacia el centro y hacia abajo */
+  .hero-photos {
+    position: relative;
+    height: 15rem;
+  }
+  .hero-photo {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 58%;
+    object-fit: cover;
+  }
+  .hero-photo-left {
+    left: 0;
+    object-position: 45% 50%;
+    -webkit-mask-image: linear-gradient(to right, #000 50%, transparent 100%);
+    mask-image: linear-gradient(to right, #000 50%, transparent 100%);
+  }
+  .hero-photo-right {
+    right: 0;
+    object-position: 60% 50%;
+    -webkit-mask-image: linear-gradient(to left, #000 50%, transparent 100%);
+    mask-image: linear-gradient(to left, #000 50%, transparent 100%);
+  }
+  .hero-photos::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 55%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+  }
 
-          function update(now) {
-            const elapsed = now - start;
-            const progress = Math.min(elapsed / duration, 1);
-            // Ease-out cubic
-            const eased = 1 - Math.pow(1 - progress, 3);
-            el.textContent = Math.floor(eased * target);
-            if (progress < 1) requestAnimationFrame(update);
-            else el.textContent = target;
-          }
+  .hero-rule {
+    height: 1px;
+    flex: 1 1 1.5rem;
+    max-width: 7rem;
+    background: linear-gradient(to right, transparent, #006494);
+  }
+  .hero-rule-end {
+    background: linear-gradient(to left, transparent, #006494);
+  }
 
-          requestAnimationFrame(update);
-          counterObserver.unobserve(el);
-        });
-      },
-      { threshold: 0.5 }
-    );
-    counters.forEach((el) => counterObserver.observe(el));
-  });
-</script>
+  /* Desktop: fotos a los lados, a toda altura, fundidas hacia el contenido */
+  @media (min-width: 1024px) {
+    .hero-photos {
+      position: absolute;
+      inset: 0;
+      height: auto;
+    }
+    .hero-photos::after {
+      display: none;
+    }
+    .hero-photo-left {
+      width: 34%;
+      object-position: 50% 50%;
+      -webkit-mask-image: linear-gradient(to right, #000 30%, transparent 88%);
+      mask-image: linear-gradient(to right, #000 30%, transparent 88%);
+    }
+    .hero-photo-right {
+      width: 42%;
+      object-position: 55% 50%;
+      -webkit-mask-image: linear-gradient(to left, #000 35%, transparent 88%);
+      mask-image: linear-gradient(to left, #000 35%, transparent 88%);
+    }
+    /* Halo blanco detrás del contenido para que el texto no compita con las fotos */
+    .hero-content::before {
+      content: "";
+      position: absolute;
+      inset: -1rem -4rem;
+      z-index: -1;
+      background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.92) 45%, rgba(255, 255, 255, 0) 75%);
+    }
+  }
+</style>

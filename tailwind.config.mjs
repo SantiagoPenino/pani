@@ -9,6 +9,7 @@ export default {
         "custom-blue": "#006494",
         "custom-blue-dark": "#004e75",
         "custom-blue-light": "#0aa8f0",
+        "custom-logo": "#0070a8", /* azul del logotipo */
         /* Neutrales */
         "custom-black": "#0d1117",
         "custom-gray": "#061826",

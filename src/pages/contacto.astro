@@ -86,11 +86,13 @@ import Layout from "../layouts/Layout.astro";
             <div class="flex flex-col gap-1.5">
               <label for="phone" class="text-xs font-bold uppercase tracking-widest text-custom-gray/60">Teléfono *</label>
               <input
-                type="number"
+                type="tel"
+                inputmode="tel"
+                autocomplete="tel"
                 id="phone"
                 name="phone"
                 placeholder="Ej: 099 123 456"
-                class="form-input no-spinner"
+                class="form-input"
                 required
               />
             </div>
@@ -120,7 +122,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <button
-            class="btn-primary w-full justify-center text-sm py-3.5"
+            class="btn-primary w-full justify-center text-sm py-3.5 disabled:opacity-60 disabled:cursor-not-allowed"
             type="submit"
             id="submit-contact-btn"
           >

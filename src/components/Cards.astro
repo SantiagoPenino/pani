@@ -8,10 +8,12 @@ interface Props {
   bathrooms: string;
   category: string;
   line?: string;
+  /** Carga la imagen principal de inmediato (para las primeras tarjetas visibles). */
+  eager?: boolean;
 }
 
-const { code, imgAlt, price, size, bedrooms, bathrooms, category, line } = Astro.props;
-const isPremium = category === "premium" || line === "Premium";
+const { code, imgAlt, price, size, bedrooms, bathrooms, category, line, eager = false } = Astro.props;
+const isPremium = line === "Premium";
 ---
 
 <article class="project-card reveal">
@@ -24,7 +26,8 @@ const isPremium = category === "premium" || line === "Premium";
         height="268"
         src={`/assets/images/proyectos/${category}/${code}/1.webp`}
         alt={imgAlt}
-        loading={category !== "premium" && category !== "isopanel" ? "lazy" : "eager"}
+        loading={eager ? "eager" : "lazy"}
+        fetchpriority={eager ? "high" : undefined}
       />
       <img
         width="476"

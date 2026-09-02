@@ -27,9 +27,9 @@ const { src, alt, noOverlay = false } = Astro.props;
   >
     <!-- Cerrar -->
     <button
-      class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors z-10"
+      type="button"
+      class="modal-close absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors z-10"
       aria-label="Cerrar imagen"
-      id="modal-close-btn"
     >
       <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
@@ -48,66 +48,64 @@ const { src, alt, noOverlay = false } = Astro.props;
   </div>
 </div>
 
-<script is:inline data-astro-rerun>
-  document.addEventListener("astro:page-load", () => {
-    const modalElements = document.querySelectorAll(".toggle-modal");
+<script is:inline>
+  // Los modales se mueven al final del <body> para escapar del stacking context que
+  // genera el transform de .reveal (rompe el position: fixed). Este script se renderiza
+  // una vez por imagen y con ViewTransitions no se re-ejecuta al navegar, así que cada
+  // imagen se vincula una sola vez en cada página nueva y los listeners sobre document
+  // se registran una única vez para que no se acumulen entre navegaciones.
+  (() => {
+    function openModal(modal) {
+      const image = modal.querySelector(".modal-image");
+      modal.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+      setTimeout(() => {
+        image?.classList.remove("scale-0");
+        image?.classList.add("scale-100");
+      }, 10);
+    }
 
-    modalElements.forEach((modalElement) => {
-      const wrapper = modalElement.closest(".relative");
-      if (!wrapper) return;
-      // Extraer el modal y moverlo al final del body para escapar del contexto de apilamiento
-      // que genera el transform de .reveal y que rompe el position: fixed
-      let modal = wrapper.querySelector(".modal-backdrop");
-      if (modal) {
+    function closeModal(modal) {
+      const image = modal.querySelector(".modal-image");
+      image?.classList.remove("scale-100");
+      image?.classList.add("scale-0");
+      setTimeout(() => {
+        modal.classList.add("hidden");
+        document.body.style.overflow = "";
+      }, 250);
+    }
+
+    function bindModals() {
+      document.querySelectorAll(".toggle-modal").forEach((img) => {
+        if (img.dataset.modalBound) return;
+        const modal = img.closest(".relative")?.querySelector(".modal-backdrop");
+        if (!modal) return;
+        img.dataset.modalBound = "true";
         document.body.appendChild(modal);
-      } else {
-        // En caso de que ya se haya movido previamente (ej: view transitions)
-        // buscamos si hay algún modal que le corresponda a esta imagen
-        // Para simplificar, asumimos que cada click abre su respectivo modal movido
-        // Como movemos todos al body, la variable modal que captura al inicio es clave
-      }
-      
-      const modalImage = modal?.querySelector(".modal-image");
-      if (!modal || !modalImage) return;
 
-      function openModal() {
-        modal.classList.remove("hidden");
-        document.body.style.overflow = "hidden";
-        setTimeout(() => {
-          modalImage.classList.remove("scale-0");
-          modalImage.classList.add("scale-100");
-        }, 10);
-      }
-
-      function closeModal() {
-        modalImage.classList.remove("scale-100");
-        modalImage.classList.add("scale-0");
-        setTimeout(() => {
-          modal.classList.add("hidden");
-          document.body.style.overflow = "";
-        }, 250);
-      }
-
-      modalElement.addEventListener("click", openModal);
-
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal || e.target.closest(".modal-content")) {
-          closeModal();
-        }
+        img.addEventListener("click", () => openModal(modal));
+        modal.addEventListener("click", (e) => {
+          const target = e.target instanceof Element ? e.target : null;
+          if (e.target === modal || target?.closest(".modal-content") || target?.closest(".modal-close")) {
+            closeModal(modal);
+          }
+        });
       });
+    }
 
-      const closeBtn = modal.querySelector("#modal-close-btn");
-      closeBtn?.addEventListener("click", (e) => {
-        e.stopPropagation();
-        closeModal();
-      });
-
-      // Esc para cerrar
+    if (!window.__paniModalBound) {
+      window.__paniModalBound = true;
       document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-          closeModal();
-        }
+        if (e.key !== "Escape") return;
+        const open = document.querySelector(".modal-backdrop:not(.hidden)");
+        if (open) closeModal(open);
       });
-    });
-  });
+      document.addEventListener("DOMContentLoaded", bindModals);
+      document.addEventListener("astro:after-swap", bindModals);
+    }
+
+    // Al llegar por ViewTransitions desde una página sin modales este script se ejecuta
+    // después de astro:after-swap, así que se vinculan igual los ya presentes.
+    bindModals();
+  })();
 </script>

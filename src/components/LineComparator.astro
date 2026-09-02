@@ -4,9 +4,14 @@
  * Props:
  *  - system: "Steel Framing" | "Isopanel"
  */
+import { precioM2, formatPrice } from "../utils/projects.js";
+
 const { system = "Steel Framing" } = Astro.props;
 
 const isSF = system === "Steel Framing";
+
+// "Precio desde" = precio por m² con techo plano, tomado del JSON de proyectos
+const priceFrom = (type) => `U$S ${formatPrice(precioM2[type].plano)}`;
 
 // Datos comparativos basados en las features reales del JSON
 const rows = isSF ? [
@@ -23,7 +28,7 @@ const rows = isSF ? [
   { feature: "Mueble cocina",           premium: "Aéreo + bajo mesada",      exeplus: "Aéreo + bajo mesada",      basica: "Bajo mesada" },
   { feature: "Placares / Vestidor",     premium: "✓ Incluidos",              exeplus: "—",                        basica: "—" },
   { feature: "Baño",                    premium: "Inodoro + bidet + mueble", exeplus: "Inodoro + bidet + mueble", basica: "Inodoro + mueble" },
-  { feature: "Precio desde (m²)",       premium: "U$S 1.775",               exeplus: "U$S 1.630",                basica: "U$S 1.490" },
+  { feature: "Precio desde (m²)",       premium: priceFrom("sf_premium"),               exeplus: priceFrom("sf_exeplus"),                basica: priceFrom("sf_basic") },
 ] : [
   { feature: "Muros Isopanel",          premium: "15 cm",                    exeplus: "10 cm",                    basica: "10 cm" },
   { feature: "Cubierta Isopanel",       premium: "15 cm",                    exeplus: "10 cm",                    basica: "10 cm" },
@@ -37,7 +42,7 @@ const rows = isSF ? [
   { feature: "Pintura",                 premium: "Interior + exterior a elección", exeplus: "Interior a elección", basica: "—" },
   { feature: "Mueble cocina",           premium: "Aéreo + bajo mesada",      exeplus: "Bajo mesada",              basica: "Bajo mesada" },
   { feature: "Baño",                    premium: "Inodoro + bidet + mueble", exeplus: "Inodoro + mueble",         basica: "Inodoro + mueble" },
-  { feature: "Precio desde (m²)",       premium: "U$S 1.500",               exeplus: "U$S 1.200",                basica: "U$S 1.000" },
+  { feature: "Precio desde (m²)",       premium: priceFrom("iso_premium"),               exeplus: priceFrom("iso_exeplus"),                basica: priceFrom("iso_basic") },
 ];
 ---
 

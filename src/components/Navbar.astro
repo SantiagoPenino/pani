@@ -228,200 +228,123 @@ import CallToAction from "./CallToAction.astro";
     });
   }
 
+  // DOMContentLoaded cubre la carga inicial (así el menú funciona antes de que
+  // terminen de cargar las imágenes) y astro:after-swap las navegaciones con
+  // ViewTransitions; after-swap no dispara en la carga inicial, así que el setup
+  // corre exactamente una vez por página en vez de duplicar listeners.
   document.addEventListener("DOMContentLoaded", setupDrawer);
-  document.addEventListener("astro:page-load", setupDrawer);
+  document.addEventListener("astro:after-swap", setupDrawer);
 
-  // ── Favorites dropdown ──
-  function setupFavDropdown() {
-    const btn = document.getElementById("fav-nav-btn");
-    const dropdown = document.getElementById("fav-dropdown");
-    const favList = document.getElementById("fav-list");
-    const favEmpty = document.getElementById("fav-empty");
-    const favCount = document.getElementById("fav-count");
-    if (!btn || !dropdown) return;
+  // ── Favoritos (dropdown desktop + mobile) ──
+  // Con ViewTransitions los nodos del header se reemplazan en cada navegación pero
+  // document y window persisten: los listeners se registran una sola vez (delegación)
+  // y buscan los elementos actuales en cada evento, en vez de acumularse.
+  (() => {
+    // Carpeta de imágenes según el sufijo del código (p, ep, b, ip, iep, ib);
+    // se corresponde con "category" en src/data/proyectos.json.
+    const FAV_FOLDERS = {
+      p: "sf-premium",
+      ep: "sf-exeplus",
+      b: "sf-basic",
+      ip: "iso-premium",
+      iep: "iso-exeplus",
+      ib: "iso-basic",
+    };
+    const OPEN_CLASSES = ["opacity-100", "visible", "pointer-events-auto", "translate-y-0"];
+    const CLOSED_CLASSES = ["opacity-0", "invisible", "pointer-events-none", "translate-y-2"];
 
-    let isOpen = false;
+    function favThumb(code) {
+      const m = /^\d+(iep|ip|ib|ep|p|b)-/.exec(code);
+      const folder = (m && FAV_FOLDERS[m[1]]) || "sf-premium";
+      return `/assets/images/proyectos/${folder}/${code}/1.webp`;
+    }
+
+    function readFavs() {
+      return JSON.parse(localStorage.getItem("pani-favs") || "[]");
+    }
+
+    function isOpen(dropdown) {
+      return !!dropdown && dropdown.classList.contains("visible");
+    }
+
+    function setOpen(dropdown, open) {
+      if (!dropdown) return;
+      dropdown.classList.remove(...(open ? CLOSED_CLASSES : OPEN_CLASSES));
+      dropdown.classList.add(...(open ? OPEN_CLASSES : CLOSED_CLASSES));
+    }
+
+    function buildFavItem(code) {
+      const item = document.createElement("a");
+      item.href = "/" + code;
+      item.className = "fav-item flex items-center gap-3 p-2 rounded-xl hover:bg-custom-surface/60 transition-colors group";
+      item.innerHTML = `
+        <img src="${favThumb(code)}" alt="${code}" class="w-12 h-12 rounded-lg object-cover shrink-0" />
+        <div class="flex-1 min-w-0">
+          <p class="font-archivo font-bold text-xs text-custom-black leading-tight">Proyecto ${code}</p>
+          <p class="text-[10px] text-custom-gray/50 mt-0.5">Ver detalles →</p>
+        </div>
+        <button type="button" class="fav-remove shrink-0 p-1 text-gray-300 hover:text-red-500 transition-colors" aria-label="Quitar favorito">
+          <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      `;
+      item.querySelector(".fav-remove").addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        localStorage.setItem("pani-favs", JSON.stringify(readFavs().filter((c) => c !== code)));
+        if (window.syncFavButtons) window.syncFavButtons();
+        renderFavs();
+      });
+      return item;
+    }
+
+    function renderFavList(listEl, emptyEl, favs) {
+      if (!listEl || !emptyEl) return;
+      listEl.querySelectorAll(".fav-item").forEach((el) => el.remove());
+      emptyEl.classList.toggle("hidden", favs.length > 0);
+      favs.forEach((code) => listEl.appendChild(buildFavItem(code)));
+    }
 
     function renderFavs() {
-      const favs = JSON.parse(localStorage.getItem("pani-favs") || "[]");
-
-      // Update counter badges (desktop + mobile)
-      [favCount, document.getElementById("fav-mobile-count")].forEach(badge => {
+      const favs = readFavs();
+      ["fav-count", "fav-mobile-count"].forEach((id) => {
+        const badge = document.getElementById(id);
         if (!badge) return;
-        if (favs.length > 0) {
-          badge.textContent = favs.length;
-          badge.classList.remove("hidden");
-          badge.classList.add("flex");
-        } else {
-          badge.classList.add("hidden");
-          badge.classList.remove("flex");
-        }
+        badge.textContent = favs.length;
+        badge.classList.toggle("hidden", favs.length === 0);
+        badge.classList.toggle("flex", favs.length > 0);
       });
-
-      if (!favList || !favEmpty) return;
-
-      if (favs.length === 0) {
-        favEmpty.classList.remove("hidden");
-        // Remove old project items
-        favList.querySelectorAll(".fav-item").forEach(el => el.remove());
-        return;
-      }
-
-      favEmpty.classList.add("hidden");
-      // Remove old items
-      favList.querySelectorAll(".fav-item").forEach(el => el.remove());
-
-      favs.forEach(code => {
-        const item = document.createElement("a");
-        item.href = "/" + code;
-        item.className = "fav-item flex items-center gap-3 p-2 rounded-xl hover:bg-custom-surface/60 transition-colors group";
-        item.innerHTML = `
-          <img src="/assets/images/proyectos/sf-premium/${code}/1.webp"
-               onerror="this.src='/assets/images/proyectos/sf-exeplus/${code}/1.webp';this.onerror=function(){this.src='/assets/images/proyectos/sf-basic/${code}/1.webp';this.onerror=function(){this.src='/assets/images/proyectos/iso-premium/${code}/1.webp';this.onerror=function(){this.src='/assets/images/proyectos/iso-exeplus/${code}/1.webp';this.onerror=function(){this.src='/assets/images/proyectos/iso-basic/${code}/1.webp';this.onerror=null}}}};"
-               alt="${code}" class="w-12 h-12 rounded-lg object-cover shrink-0" />
-          <div class="flex-1 min-w-0">
-            <p class="font-archivo font-bold text-xs text-custom-black leading-tight">Proyecto ${code}</p>
-            <p class="text-[10px] text-custom-gray/50 mt-0.5">Ver detalles →</p>
-          </div>
-          <button class="fav-remove shrink-0 p-1 text-gray-300 hover:text-red-500 transition-colors" data-code="${code}" aria-label="Quitar favorito" onclick="event.preventDefault();event.stopPropagation();">
-            <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-          </button>
-        `;
-        // Remove button handler
-        item.querySelector(".fav-remove").addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          const c = e.currentTarget.dataset.code;
-          let f = JSON.parse(localStorage.getItem("pani-favs") || "[]");
-          f = f.filter(x => x !== c);
-          localStorage.setItem("pani-favs", JSON.stringify(f));
-          if (window.syncFavButtons) window.syncFavButtons();
-          renderFavs();
-        });
-        favList.appendChild(item);
-      });
+      renderFavList(document.getElementById("fav-list"), document.getElementById("fav-empty"), favs);
+      renderFavList(document.getElementById("fav-mobile-list"), document.getElementById("fav-mobile-empty"), favs);
     }
 
-    function openDropdown() {
-      renderFavs();
-      dropdown.classList.remove("opacity-0", "invisible", "pointer-events-none", "translate-y-2");
-      dropdown.classList.add("opacity-100", "visible", "pointer-events-auto", "translate-y-0");
-      isOpen = true;
-    }
-
-    function closeDropdown() {
-      dropdown.classList.add("opacity-0", "invisible", "pointer-events-none", "translate-y-2");
-      dropdown.classList.remove("opacity-100", "visible", "pointer-events-auto", "translate-y-0");
-      isOpen = false;
-    }
-
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      if (isOpen) {
-        closeDropdown();
-      } else {
-        // Reset mobile styles
-        dropdown.style.position = "";
-        dropdown.style.top = "";
-        dropdown.style.right = "";
-        dropdown.style.left = "";
-        dropdown.style.width = "";
-        openDropdown();
-      }
-    });
+    if (window.__paniFavsBound) return;
+    window.__paniFavsBound = true;
 
     document.addEventListener("click", (e) => {
-      if (isOpen && !dropdown.contains(e.target) && !btn.contains(e.target)) {
-        closeDropdown();
-      }
-    });
+      const target = e.target instanceof Element ? e.target : null;
+      const desktop = document.getElementById("fav-dropdown");
+      const mobile = document.getElementById("fav-mobile-dropdown");
 
-    // Mobile fav button - uses its own dropdown in Header
-    const mobileBtn = document.getElementById("fav-mobile-btn");
-    const mobileDropdown = document.getElementById("fav-mobile-dropdown");
-    const mobileList = document.getElementById("fav-mobile-list");
-    const mobileEmpty = document.getElementById("fav-mobile-empty");
-    let mobileOpen = false;
-
-    function renderMobileFavs() {
-      if (!mobileList || !mobileEmpty) return;
-      const favs = JSON.parse(localStorage.getItem("pani-favs") || "[]");
-      mobileList.querySelectorAll(".fav-item").forEach(el => el.remove());
-      if (favs.length === 0) {
-        mobileEmpty.classList.remove("hidden");
+      if (target?.closest("#fav-nav-btn")) {
+        const open = !isOpen(desktop);
+        if (open) renderFavs();
+        setOpen(desktop, open);
         return;
       }
-      mobileEmpty.classList.add("hidden");
-      favs.forEach(code => {
-        const item = document.createElement("a");
-        item.href = "/" + code;
-        item.className = "fav-item flex items-center gap-3 p-2 rounded-xl hover:bg-custom-surface/60 transition-colors";
-        item.innerHTML = `
-          <img src="/assets/images/proyectos/sf-premium/${code}/1.webp"
-               onerror="this.src='/assets/images/proyectos/sf-exeplus/${code}/1.webp';this.onerror=function(){this.src='/assets/images/proyectos/sf-basic/${code}/1.webp';this.onerror=function(){this.src='/assets/images/proyectos/iso-premium/${code}/1.webp';this.onerror=function(){this.src='/assets/images/proyectos/iso-exeplus/${code}/1.webp';this.onerror=function(){this.src='/assets/images/proyectos/iso-basic/${code}/1.webp';this.onerror=null}}}};"
-               alt="${code}" class="w-12 h-12 rounded-lg object-cover shrink-0" />
-          <div class="flex-1 min-w-0">
-            <p class="font-archivo font-bold text-xs text-custom-black leading-tight">Proyecto ${code}</p>
-            <p class="text-[10px] text-custom-gray/50 mt-0.5">Ver detalles →</p>
-          </div>
-          <button class="fav-remove shrink-0 p-1 text-gray-300 hover:text-red-500 transition-colors" data-code="${code}" aria-label="Quitar favorito" onclick="event.preventDefault();event.stopPropagation();">
-            <svg width="14" height="14" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
-          </button>
-        `;
-        item.querySelector(".fav-remove").addEventListener("click", (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          const c = e.currentTarget.dataset.code;
-          let f = JSON.parse(localStorage.getItem("pani-favs") || "[]");
-          f = f.filter(x => x !== c);
-          localStorage.setItem("pani-favs", JSON.stringify(f));
-          if (window.syncFavButtons) window.syncFavButtons();
-          renderFavs();
-          renderMobileFavs();
-        });
-        mobileList.appendChild(item);
-      });
-    }
-
-    function openMobile() {
-      if (!mobileDropdown) return;
-      renderMobileFavs();
-      mobileDropdown.classList.remove("opacity-0", "invisible", "pointer-events-none", "translate-y-2");
-      mobileDropdown.classList.add("opacity-100", "visible", "pointer-events-auto", "translate-y-0");
-      mobileOpen = true;
-    }
-
-    function closeMobile() {
-      if (!mobileDropdown) return;
-      mobileDropdown.classList.add("opacity-0", "invisible", "pointer-events-none", "translate-y-2");
-      mobileDropdown.classList.remove("opacity-100", "visible", "pointer-events-auto", "translate-y-0");
-      mobileOpen = false;
-    }
-
-    if (mobileBtn) {
-      mobileBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        mobileOpen ? closeMobile() : openMobile();
-      });
-    }
-
-    document.addEventListener("click", (e) => {
-      if (mobileOpen && mobileDropdown && !mobileDropdown.contains(e.target) && !mobileBtn?.contains(e.target)) {
-        closeMobile();
+      if (target?.closest("#fav-mobile-btn")) {
+        const open = !isOpen(mobile);
+        if (open) renderFavs();
+        setOpen(mobile, open);
+        return;
       }
+      // Click fuera del dropdown: cerrar
+      if (isOpen(desktop) && !desktop.contains(target)) setOpen(desktop, false);
+      if (isOpen(mobile) && !mobile.contains(target)) setOpen(mobile, false);
     });
 
-    // Listen for fav changes to update mobile dropdown too
-    window.addEventListener("favs-changed", renderMobileFavs);
-
-    // Initial badge update
-    renderFavs();
-
-    // Listen for real-time fav changes from heart buttons
+    // Los corazones de las tarjetas (window.toggleFav en Layout) avisan con este evento
     window.addEventListener("favs-changed", renderFavs);
-  }
-
-  document.addEventListener("DOMContentLoaded", setupFavDropdown);
-  document.addEventListener("astro:page-load", setupFavDropdown);
+    document.addEventListener("DOMContentLoaded", renderFavs);
+    document.addEventListener("astro:after-swap", renderFavs);
+  })();
 </script>
-

@@ -15,7 +15,8 @@ const { code } = Astro.params;
 const productData = allProducts.find((product) => product.code === code);
 
 if (!productData) {
-  return { notFound: true };
+  // Inalcanzable con getStaticPaths; queda como guarda para el tipado
+  throw new Error(`Proyecto no encontrado: ${code}`);
 }
 
 const {
@@ -36,6 +37,8 @@ const {
 } = productData;
 
 const isPremium = line === "Premium";
+// Volver a la sección de la línea correspondiente (Steel Framing en "/", Isopanel en "/isopanel")
+const backHref = category.startsWith("iso-") ? `/isopanel#${category}` : `/#${category}`;
 const proyectUrl = `https://paniconstrucciones.com/${code}`;
 const imageUrl = `https://paniconstrucciones.com/assets/images/proyectos/${category}/${code}.webp`;
 
@@ -54,7 +57,7 @@ const caracteristicas = features;
     <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/6; min-height: 240px;">
       <!-- Botón Volver -->
       <a
-        href="/#steelframing"
+        href={backHref}
         class="absolute top-4 left-4 z-20 inline-flex items-center gap-1.5 text-white/90 hover:text-white text-sm font-semibold bg-black/30 backdrop-blur-sm px-3.5 py-2 rounded-full border border-white/20 transition-all hover:bg-black/50"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
@@ -238,24 +241,5 @@ const caracteristicas = features;
     )}
 
   </article>
-
-  <!-- Intersection Observer para esta página -->
-  <script is:inline>
-    document.addEventListener("astro:page-load", () => {
-      const reveals = document.querySelectorAll(".reveal:not(.visible)");
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("visible");
-              io.unobserve(e.target);
-            }
-          });
-        },
-        { threshold: 0.08 }
-      );
-      reveals.forEach((el) => io.observe(el));
-    });
-  </script>
 </Layout>
 

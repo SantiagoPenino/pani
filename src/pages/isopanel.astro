@@ -49,7 +49,7 @@ import {
       </div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7">
-      {isopanelPremium.map((card) => <Cards {...card} />)}
+      {isopanelPremium.map((card, i) => <Cards {...card} eager={i < 3} />)}
     </div>
 
     <!-- ── Línea Ejecutiva Plus ── -->
@@ -88,23 +88,4 @@ import {
   <section>
     <About />
   </section>
-
-  <!-- Intersection Observer -->
-  <script is:inline>
-    document.addEventListener("astro:page-load", () => {
-      const reveals = document.querySelectorAll(".reveal:not(.visible)");
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("visible");
-              io.unobserve(e.target);
-            }
-          });
-        },
-        { threshold: 0.08 }
-      );
-      reveals.forEach((el) => io.observe(el));
-    });
-  </script>
 </Layout>

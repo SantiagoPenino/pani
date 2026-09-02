@@ -32,9 +32,10 @@ function resolveProject(proj) {
   const pricePerM2 = priceTable[roof] || priceTable["plano"];
   const price = proj.size * pricePerM2;
 
+  const coverCm = def.features.find(f => f.includes("Cubierta"))?.match(/\d+\s*cm/)?.[0];
   const coverMap = {
-    "plano": def.features.find(f => f.includes("Cubierta"))?.match(/\d+\s*cm/)?.[0] + "." || "10cm.",
-    "a aguas": (def.features.find(f => f.includes("Cubierta"))?.match(/\d+\s*cm/)?.[0] || "15cm") + " con teja asfáltica."
+    "plano": `${coverCm || "10cm"}.`,
+    "a aguas": `${coverCm || "15cm"} con teja asfáltica.`,
   };
 
   return {
@@ -70,3 +71,6 @@ export const isopanelPremium = allResolved.filter(p => p.category === "iso-premi
 
 // Todos en un array plano (para [code].astro)
 export const allProducts = allResolved;
+
+// Tabla de precios por m² y formateador, para que otros componentes no dupliquen los valores
+export { precioM2, formatPrice };
