@@ -21,31 +21,23 @@ const claims = [
 ];
 ---
 
-<section class="hero relative overflow-hidden bg-white" aria-labelledby="hero-title">
+<section class="hero relative overflow-hidden bg-white -mt-[4.5rem] lg:-mt-[5.5rem]" aria-labelledby="hero-title">
   <div class="hero-sky absolute inset-0" aria-hidden="true"></div>
 
   <!-- Fotos: estructura de steel framing (izq.) y casa (der.) -->
   <div class="hero-photos" aria-hidden="true">
     <img
       class="hero-photo hero-photo-left"
-      src="/assets/images/hero/steelframing-800.webp"
-      srcset="/assets/images/hero/steelframing-800.webp 800w, /assets/images/hero/steelframing-1400.webp 1400w"
-      sizes="(min-width: 1024px) 34vw, 58vw"
-      width="800"
-      height="1423"
-      alt=""
+      src="/assets/images/hero/steelframing-new.jpg"
+      alt="Estructura Steel Framing"
       loading="eager"
       fetchpriority="high"
       decoding="async"
     />
     <img
       class="hero-photo hero-photo-right"
-      src="/assets/images/hero/casa-800.webp"
-      srcset="/assets/images/hero/casa-800.webp 800w, /assets/images/hero/casa-1400.webp 1400w"
-      sizes="(min-width: 1024px) 42vw, 58vw"
-      width="800"
-      height="391"
-      alt=""
+      src="/assets/images/hero/casa-new.jpg"
+      alt="Casa terminada"
       loading="eager"
       fetchpriority="high"
       decoding="async"
@@ -53,30 +45,23 @@ const claims = [
   </div>
 
   <!-- Contenido -->
-  <div class="hero-content relative z-10 mx-auto max-w-4xl px-5 sm:px-8 text-center -mt-14 lg:mt-0 lg:pt-12 xl:pt-16">
-    <!-- Logo: ícono + nombre en texto (escala sin pixelarse) -->
-    <a href="/" class="inline-flex items-center gap-2.5 sm:gap-4" aria-label="Pani Construcciones">
+  <div class="hero-content relative z-10 mx-auto max-w-4xl px-5 sm:px-8 text-center lg:mt-0">
+    <!-- Logo -->
+    <a href="/" class="inline-block" aria-label="Pani Construcciones">
       <img
-        src="/assets/icons/512.png"
-        width="512"
-        height="512"
-        alt=""
-        class="h-16 w-16 sm:h-20 sm:w-20 lg:h-28 lg:w-28 shrink-0"
+        src="/assets/icons/logo.webp"
+        width="1144"
+        height="640"
+        alt="Pani Construcciones"
+        class="h-auto w-[240px] sm:w-[320px] lg:w-[420px] mx-auto drop-shadow-md"
       />
-      <span class="text-left leading-none text-custom-logo">
-        <span class="block font-archivo font-extrabold tracking-tight text-[2.75rem] sm:text-6xl lg:text-7xl">PANI</span>
-        <span class="block font-archivo font-bold tracking-[0.04em] text-[1.05rem] sm:text-[1.45rem] lg:text-[1.75rem] mt-1">CONSTRUCCIONES</span>
-      </span>
     </a>
-    <p class="mt-2 font-archivo font-bold uppercase tracking-[0.18em] text-custom-logo text-[0.6rem] sm:text-xs lg:text-sm">
-      Ingeniería – Arquitectura – Construcción
-    </p>
 
     <!-- Eslogan -->
     <div class="mt-5 lg:mt-7 flex items-center justify-center gap-3 sm:gap-4">
       <span class="hero-rule" aria-hidden="true"></span>
-      <p class="font-bold italic uppercase tracking-[0.12em] text-custom-gray text-[0.62rem] sm:text-xs lg:text-sm">
-        Construyendo a Uruguay hace más de 15 años
+      <p class="font-bold uppercase tracking-[0.05em] text-[#0d1b2a] text-[0.62rem] sm:text-xs lg:text-sm whitespace-nowrap">
+        Construyendo a Uruguay hace 15 años
       </p>
       <span class="hero-rule hero-rule-end" aria-hidden="true"></span>
     </div>
@@ -84,14 +69,14 @@ const claims = [
     <!-- Titular -->
     <h1
       id="hero-title"
-      class="mt-4 lg:mt-5 font-archivo font-extrabold uppercase leading-[0.95] tracking-tight text-custom-black text-[clamp(2.25rem,5.4vw,3.5rem)]"
+      class="mt-4 lg:mt-5 font-archivo font-extrabold uppercase leading-[0.95] tracking-tight text-[#0d1b2a] text-[clamp(2.25rem,5.4vw,3.5rem)]"
     >
       Construimos<br class="sm:hidden" /> tu hogar<br />
-      <span class="text-custom-blue">llave en mano</span>
+      <span class="text-[#005bb5]">llave en mano</span>
     </h1>
 
     <!-- Cinta -->
-    <p class="mt-5 lg:mt-6 inline-block rounded-md bg-custom-gray px-5 py-2.5 lg:px-7 lg:py-3 font-archivo font-bold uppercase tracking-[0.15em] text-white text-xs sm:text-sm lg:text-base shadow-lg">
+    <p class="mt-5 lg:mt-6 inline-block bg-[#008fd0] px-5 py-2.5 lg:px-7 lg:py-3 font-archivo font-bold uppercase tracking-[0.15em] text-white text-xs sm:text-sm lg:text-base shadow-lg">
       Steel Framing e Isopanel
     </p>
 
@@ -108,13 +93,27 @@ const claims = [
     </ul>
   </div>
 
-  <!-- Barra inferior -->
-  <div class="relative z-10 mt-8 lg:mt-12 h-2 lg:h-2.5 bg-gradient-to-r from-custom-blue-dark via-custom-blue to-custom-original" aria-hidden="true"></div>
+  <!-- Barra inferior azul — pegada al fondo del viewport -->
+  <div class="hero-bar relative z-10 h-2 lg:h-2.5 bg-[#0b1f38]" aria-hidden="true"></div>
 </section>
 
 <style>
+  @media (min-width: 1024px) {
+    .hero {
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   .hero-sky {
-    background: linear-gradient(180deg, #d9ecfb 0%, #f2f8fd 45%, #ffffff 100%);
+    background: url('/assets/images/hero/sky.jpg') center top / cover no-repeat;
+  }
+  .hero-sky::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.75) 45%, #ffffff 100%);
   }
 
   /* Mobile: franja de fotos arriba, fundida hacia el centro y hacia abajo */
@@ -163,6 +162,14 @@ const claims = [
 
   /* Desktop: fotos a los lados, a toda altura, fundidas hacia el contenido */
   @media (min-width: 1024px) {
+    .hero-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-top: 5.5rem;
+    }
     .hero-photos {
       position: absolute;
       inset: 0;
