@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Modal from "../components/Modal.astro";
-import { allProducts } from "../utils/projects.js";
+import { allProducts, categoryHref } from "../utils/projects.js";
 import CallToAction from "../components/CallToAction.astro";
 
 export function getStaticPaths() {
@@ -37,8 +37,8 @@ const {
 } = productData;
 
 const isPremium = line === "Premium";
-// Volver a la sección de la línea correspondiente (Steel Framing en "/", Isopanel en "/isopanel")
-const backHref = category.startsWith("iso-") ? `/isopanel#${category}` : `/#${category}`;
+// Volver a la página de la línea del proyecto (p. ej. /steelframing/premium)
+const backHref = categoryHref(category);
 const proyectUrl = `https://paniconstrucciones.com/${code}`;
 const imageUrl = `https://paniconstrucciones.com/assets/images/proyectos/${category}/${code}.webp`;
 

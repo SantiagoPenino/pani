@@ -1,0 +1,54 @@
+---
+/**
+ * Tarjeta compacta de un sistema constructivo con los accesos a sus tres líneas
+ * (referencia "hero mobile": foto de fondo, título arriba y tres botones apilados).
+ * Pensada para ir de a dos por fila también en celular.
+ * Props: system ("steelframing" | "isopanel"), image (foto de fondo), id (ancla opcional).
+ */
+import { SYSTEMS, LINES, lineHref } from "../utils/projects.js";
+
+const { system: slug, image, id } = Astro.props;
+const system = SYSTEMS[slug];
+const isIso = slug === "isopanel";
+const accent = isIso
+  ? { border: "border-teal-500", text: "text-teal-700", ring: "ring-teal-500" }
+  : { border: "border-custom-original", text: "text-custom-blue", ring: "ring-custom-original" };
+---
+
+<article id={id} class={`reveal relative overflow-hidden rounded-2xl border-2 sm:rounded-3xl ${accent.border} bg-custom-gray shadow-card-base`}>
+  <img
+    src={image}
+    alt=""
+    width="1360"
+    height="765"
+    loading="lazy"
+    decoding="async"
+    class="absolute inset-0 h-full w-full object-cover"
+  />
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/70" aria-hidden="true"></div>
+
+  <div class="relative flex min-h-[17rem] flex-col p-3 sm:min-h-[21rem] sm:p-5">
+    <h2 class="font-archivo font-extrabold uppercase leading-[0.95] text-white drop-shadow-md">
+      <span class="mb-1 block text-[0.55rem] tracking-[0.2em] sm:text-xs">Proyectos en</span>
+      <span class="block text-lg sm:text-2xl lg:text-3xl">{system.name}</span>
+    </h2>
+
+    <ul class="mt-auto space-y-1.5 pt-6 sm:space-y-2.5">
+      {LINES.map((line) => (
+        <li>
+          <a
+            href={lineHref(slug, line.slug)}
+            class={`block rounded-lg bg-white/95 px-2 py-1.5 text-center shadow-md backdrop-blur-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-white hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 sm:rounded-xl sm:px-4 sm:py-2.5 ${accent.ring}`}
+          >
+            <span class="block text-[0.5rem] font-bold uppercase tracking-[0.15em] text-custom-gray/70 sm:text-[0.6rem]">
+              Ver proyectos en
+            </span>
+            <span class={`block font-archivo text-xs font-extrabold uppercase leading-tight sm:text-base lg:text-lg ${accent.text}`}>
+              <span class="hidden sm:inline">Línea </span>{line.name}
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</article>

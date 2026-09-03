@@ -74,3 +74,43 @@ export const allProducts = allResolved;
 
 // Tabla de precios por m² y formateador, para que otros componentes no dupliquen los valores
 export { precioM2, formatPrice };
+
+// ── Sistemas y líneas: rutas /steelframing/<linea> y /isopanel/<linea> ──
+export const SYSTEMS = {
+  steelframing: { slug: "steelframing", name: "Steel Framing", prefix: "sf" },
+  isopanel: { slug: "isopanel", name: "Isopanel", prefix: "iso" },
+};
+
+export const LINES = [
+  { slug: "basica", name: "Básica", key: "basic" },
+  { slug: "ejecutiva-plus", name: "Ejecutiva Plus", key: "exeplus" },
+  { slug: "premium", name: "Premium", key: "premium" },
+];
+
+export function lineHref(systemSlug, lineSlug) {
+  return `/${systemSlug}/${lineSlug}`;
+}
+
+// Proyectos de un sistema y una línea, p. ej. projectsFor("isopanel", "premium")
+export function projectsFor(systemSlug, lineSlug) {
+  const system = SYSTEMS[systemSlug];
+  const line = LINES.find((l) => l.slug === lineSlug);
+  if (!system || !line) return [];
+  return allResolved.filter((p) => p.category === `${system.prefix}-${line.key}`);
+}
+
+// Página de la línea a la que pertenece una categoría ("sf-premium" → "/steelframing/premium")
+export function categoryHref(category) {
+  const [prefix, key] = category.split("-");
+  const system = Object.values(SYSTEMS).find((s) => s.prefix === prefix);
+  const line = LINES.find((l) => l.key === key);
+  return system && line ? lineHref(system.slug, line.slug) : "/";
+}
+
+// Precio por m² "desde" (techo plano) de un sistema y línea, ya formateado
+export function priceFromFor(systemSlug, lineSlug) {
+  const system = SYSTEMS[systemSlug];
+  const line = LINES.find((l) => l.slug === lineSlug);
+  const table = system && line ? precioM2[`${system.prefix}_${line.key}`] : null;
+  return table ? formatPrice(table.plano) : null;
+}

@@ -1,0 +1,87 @@
+---
+/**
+ * Listado de proyectos por sistema y línea: /steelframing/<linea> y /isopanel/<linea>
+ * (basica, ejecutiva-plus, premium).
+ */
+import Layout from "../../layouts/Layout.astro";
+import Cards from "../../components/Cards.astro";
+import LineComparator from "../../components/LineComparator.astro";
+import About from "../../components/About.astro";
+import { SYSTEMS, LINES, projectsFor, lineHref, priceFromFor } from "../../utils/projects.js";
+
+export function getStaticPaths() {
+  return Object.values(SYSTEMS).flatMap((system) =>
+    LINES.map((line) => ({ params: { sistema: system.slug, linea: line.slug } }))
+  );
+}
+
+const { sistema, linea } = Astro.params;
+const system = SYSTEMS[sistema];
+const line = LINES.find((l) => l.slug === linea);
+if (!system || !line) throw new Error(`Ruta desconocida: /${sistema}/${linea}`);
+
+const projects = projectsFor(sistema, linea);
+const priceFrom = priceFromFor(sistema, linea);
+const otherSystem = Object.values(SYSTEMS).find((s) => s.slug !== sistema);
+const isPremium = line.slug === "premium";
+
+const title = `Línea ${line.name} en ${system.name} | Pani Construcciones`;
+const description = `${projects.length} proyectos de casas llave en mano en ${system.name}, línea ${line.name}, desde U$S ${priceFrom} por m². Precio final, plano y características incluidas.`;
+---
+
+<Layout title={title} description={description}>
+  <!-- Encabezado de página -->
+  <div class="bg-gradient-to-br from-custom-gray via-custom-blue-dark to-custom-blue px-5 py-8 text-center text-white -mt-[4.5rem] pt-24 lg:-mt-[5.5rem] lg:px-10 lg:py-12 lg:pt-28">
+    <p class="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-white/80">
+      Proyectos en {system.name}
+    </p>
+    <h1 class="font-archivo text-3xl font-extrabold leading-tight sm:text-4xl lg:text-5xl">
+      Línea <span class={isPremium ? "text-custom-gold-light" : "text-custom-original"}>{line.name}</span>
+    </h1>
+    <p class="mt-3 text-sm text-white/70 lg:text-base">
+      {projects.length} proyectos · desde U$S {priceFrom} por m² · precio final llave en mano
+    </p>
+  </div>
+
+  <section class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-10 lg:py-8">
+    <!-- Selector de línea -->
+    <nav aria-label="Líneas" class="flex flex-wrap items-center justify-center gap-2">
+      {LINES.map((l) => {
+        const active = l.slug === linea;
+        return (
+          <a
+            href={lineHref(sistema, l.slug)}
+            aria-current={active ? "page" : undefined}
+            class={`inline-flex items-center gap-2 rounded-full border-2 px-4 py-1.5 font-archivo text-xs font-bold uppercase tracking-wide transition-all duration-200 ${
+              active
+                ? "border-transparent bg-gradient-to-r from-custom-blue to-custom-original text-white shadow-btn-blue"
+                : "border-custom-blue text-custom-blue hover:bg-custom-blue hover:text-white"
+            }`}
+          >
+            {l.slug === "premium" ? "★ " : ""}Línea {l.name}
+          </a>
+        );
+      })}
+    </nav>
+    <p class="mt-3 text-center text-xs text-custom-gray/60">
+      <a
+        href={lineHref(otherSystem.slug, linea)}
+        class="font-semibold text-custom-blue underline underline-offset-4 hover:text-custom-original"
+      >
+        Ver la línea {line.name} en {otherSystem.name}
+      </a>
+    </p>
+
+    <!-- Proyectos -->
+    <div class="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+      {projects.map((card, i) => <Cards {...card} eager={i < 3} />)}
+    </div>
+
+    <!-- Comparador de líneas del sistema -->
+    <LineComparator system={system.name} />
+  </section>
+
+  <section>
+    <About />
+  </section>
+</Layout>

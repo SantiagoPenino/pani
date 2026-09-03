@@ -107,7 +107,8 @@
     if (!waBtn) return;
     const path = window.location.pathname.replace(/^\//, "").replace(/\/$/, "");
     let msg = "Hola, me gustaría solicitar más información.";
-    if (path && path !== "" && path !== "contacto" && path !== "obras" && path !== "isopanel") {
+    // Solo las páginas de proyecto llevan un código como "150p-a" en la URL
+    if (/^\d+[a-z]+-[a-z]+$/.test(path)) {
       msg = `Hola, me interesa el proyecto ${path}. ¿Podrían darme más información?`;
     }
     waBtn.href = `https://wa.me/598099491227?text=${encodeURIComponent(msg)}`;

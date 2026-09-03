@@ -45,7 +45,7 @@ const claims = [
   </div>
 
   <!-- Contenido -->
-  <div class="hero-content relative z-10 mx-auto max-w-4xl px-5 sm:px-8 text-center lg:mt-0">
+  <div class="hero-content relative z-10 mx-auto max-w-4xl px-5 sm:px-8 pt-[5.5rem] pb-8 lg:pb-0 text-center lg:mt-0">
     <!-- Logo -->
     <a href="/" class="inline-block" aria-label="Pani Construcciones">
       <img
@@ -53,7 +53,7 @@ const claims = [
         width="1144"
         height="640"
         alt="Pani Construcciones"
-        class="h-auto w-[240px] sm:w-[320px] lg:w-[420px] mx-auto drop-shadow-md"
+        class="h-auto w-[210px] sm:w-[320px] lg:w-[420px] mx-auto drop-shadow-md"
       />
     </a>
 
@@ -69,9 +69,9 @@ const claims = [
     <!-- Titular -->
     <h1
       id="hero-title"
-      class="mt-4 lg:mt-5 font-archivo font-extrabold uppercase leading-[0.95] tracking-tight text-[#0d1b2a] text-[clamp(2.25rem,5.4vw,3.5rem)]"
+      class="mt-4 lg:mt-5 font-archivo font-extrabold uppercase leading-[0.95] tracking-tight text-[#0d1b2a] text-[clamp(1.5rem,6.4vw,3.5rem)]"
     >
-      Construimos<br class="sm:hidden" /> tu hogar<br />
+      Construimos tu hogar<br />
       <span class="text-[#005bb5]">llave en mano</span>
     </h1>
 
@@ -116,29 +116,46 @@ const claims = [
     background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.75) 45%, #ffffff 100%);
   }
 
-  /* Mobile: franja de fotos arriba, fundida hacia el centro y hacia abajo */
+  /* Mobile: misma composición que desktop (referencia "hero mobile"): la estructura
+     a la izquierda desde arriba, la casa a la derecha más abajo y el contenido
+     centrado encima, con las fotos fundidas hacia el centro y hacia la base. */
   .hero-photos {
-    position: relative;
-    height: 15rem;
+    position: absolute;
+    inset: 0;
   }
   .hero-photo {
     position: absolute;
-    top: 0;
-    height: 100%;
-    width: 58%;
     object-fit: cover;
   }
   .hero-photo-left {
     left: 0;
-    object-position: 45% 50%;
-    -webkit-mask-image: linear-gradient(to right, #000 50%, transparent 100%);
-    mask-image: linear-gradient(to right, #000 50%, transparent 100%);
+    top: 0;
+    width: 55%;
+    height: 80%;
+    object-position: 45% 40%;
+    -webkit-mask-image:
+      linear-gradient(to right, #000 25%, transparent 60%),
+      linear-gradient(to bottom, #000 65%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(to right, #000 25%, transparent 60%),
+      linear-gradient(to bottom, #000 65%, transparent 100%);
+    mask-composite: intersect;
   }
   .hero-photo-right {
     right: 0;
-    object-position: 60% 50%;
-    -webkit-mask-image: linear-gradient(to left, #000 50%, transparent 100%);
-    mask-image: linear-gradient(to left, #000 50%, transparent 100%);
+    top: 33%; /* arranca debajo del logo */
+    width: 55%;
+    height: 48%;
+    object-position: 55% 50%;
+    -webkit-mask-image:
+      linear-gradient(to left, #000 25%, transparent 60%),
+      linear-gradient(to bottom, transparent 0%, #000 22%, #000 85%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(to left, #000 25%, transparent 60%),
+      linear-gradient(to bottom, transparent 0%, #000 22%, #000 85%, transparent 100%);
+    mask-composite: intersect;
   }
   .hero-photos::after {
     content: "";
@@ -146,8 +163,16 @@ const claims = [
     left: 0;
     right: 0;
     bottom: 0;
-    height: 55%;
+    height: 30%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+  }
+  /* Halo blanco detrás del contenido para que el texto no compita con las fotos */
+  .hero-content::before {
+    content: "";
+    position: absolute;
+    inset: 2rem -2rem 0;
+    z-index: -1;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0) 72%);
   }
 
   .hero-rule {
@@ -179,12 +204,16 @@ const claims = [
       display: none;
     }
     .hero-photo-left {
+      top: 0;
+      height: 100%;
       width: 34%;
       object-position: 50% 50%;
       -webkit-mask-image: linear-gradient(to right, #000 30%, transparent 88%);
       mask-image: linear-gradient(to right, #000 30%, transparent 88%);
     }
     .hero-photo-right {
+      top: 0;
+      height: 100%;
       width: 42%;
       object-position: 55% 50%;
       -webkit-mask-image: linear-gradient(to left, #000 35%, transparent 88%);
